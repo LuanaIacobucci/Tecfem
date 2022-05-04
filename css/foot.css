@@ -1,0 +1,87 @@
+footer{
+    background-color: rgb(125,35,182);
+    padding:5%;
+    padding-top: 2%;
+    padding-bottom: 0px;
+    font-family: 'Bebas Neue', cursive;
+
+    color: white;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    font-weight: lighter;
+    font-family: 'Bebas Neue', cursive;
+}
+
+a:hover{
+    color:cornflowerblue;
+}
+
+a:active{
+    text-decoration: dotted;
+}
+
+#divlogo{
+ background-color: rgb(255,255,255,0.9);
+ padding:2%;
+ margin:3%;
+ margin-right: 8%;
+ margin-top: 0%;
+ border-radius: 3%;
+ box-shadow: 0px 10px 10px 0px rgb(0,128,55);
+
+}
+
+#logofooter{
+    margin-left: 0% !important;
+}
+
+
+#textofooter{
+  text-align: justify;
+  margin-right: 3%;
+  font-family: 'Bebas Neue', cursive;
+}
+
+#link{
+   padding-top: 2%;
+    border-left: 3px solid rgb(255,255,255,0.4);
+}
+
+#parrafo{
+    font-family: 'Bebas Neue', cursive;
+}
+
+h3{
+    font-family: 'Bebas Neue', cursive;
+}
+#owner{
+    padding-left: 50%;
+    font-size: 15px;
+    margin-top: 5%;
+    margin-bottom: 0px !important;
+    color: rgb(198,177,204);
+    background-color: rgb(0,128,55);
+    font-family: 'Bebas Neue', cursive;
+}
+
+
+/*********************************************
+********RESPONSIVE***************************/
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}

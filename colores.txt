@@ -1,0 +1,6 @@
+Colores:
+-Morado: RGB (125,35,182)
+-Verde: RGB (0,128,55)
+-Morado Clarito: RGB (198,177,204)
+
+FONTS: Títulos: Bebas Neue, Texto: Arial

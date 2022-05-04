@@ -1,0 +1,103 @@
+
+
+
+h1{
+    font-family: 'Bebas Neue', cursive;
+    font-size: large;
+}
+
+#cuerpo{
+   
+     margin-left: 12%;
+     background-color: whitesmoke;
+     margin-top: 1%;
+    
+    
+ }
+ 
+ #bordes{
+     background-color: rgb(243, 236, 245);
+   /*  background-color: rgb(198,177,204);*/
+ }
+ 
+ h1{
+     font-family: 'Bebas Neue';
+     color: rgb(79, 3, 126);
+     text-transform: uppercase;
+     font-weight: bold;
+     font-size: 200%;
+ 
+ }
+ h2{
+     font-family: Arial;
+     color: rgb(0,128,55);
+     font-style: italic;
+     
+ }
+/***********CSS Especifico***********/
+#contenido{
+    height: 550px !important;
+}
+
+#imglog{
+ height: 90%;
+ filter: grayscale(25%) brightness(1.2);;
+ 
+}
+
+#contenido1{
+    padding: 6%;
+}
+
+form button{
+    color: white;
+    background-color: rgb(79, 3, 126) !important;
+    border: rgb(79, 3, 126) !important ;
+    padding: 10%;
+    width: 50%;
+    margin-left: 42%;
+    margin-top: 5%;
+}
+
+form label{
+    color: rgb(79, 3, 126);
+    font-family: 'Bebas Neue', cursive;
+}
+
+form input :placeholder-shown{
+    color: rgb(135, 71, 175);
+}
+
+#noregistrado{
+    color: rgb(172, 108, 170);
+    font-size: 11px;
+    text-decoration: underline solid rgb(172, 108, 170) 1px;
+    margin-left: 50%;
+    margin-top: 0px;
+}
+
+#noregistrado:active{
+    color: rgb(0,128,55);
+}
+
+#noregistrado:hover{
+    text-decoration: underline double rgb(116, 67, 114) 1px;
+}
+
+/*********************************************
+********RESPONSIVE***************************/
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}

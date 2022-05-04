@@ -1,0 +1,223 @@
+*{
+    font-family: Arial;
+    font-size: medium;
+
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+footer{
+    font-family: 'Bebas Neue', cursive;
+}
+
+h1{
+    font-family: 'Bebas Neue', cursive;
+    font-size: large;
+}
+
+#cuerpo{
+    height: 100%;
+     margin-left: 12%;
+     background-color: whitesmoke;
+     margin-top: 1%;
+ }
+ 
+ #bordes{
+     background-color: rgb(243, 236, 245);
+   /*  background-color: rgb(198,177,204);*/
+ }
+ 
+ h1{
+     font-family: 'Bebas Neue';
+     color: rgb(79, 3, 126);
+     text-transform: uppercase;
+     font-weight: bold;
+     font-size: 200%;
+ 
+ }
+ h2{
+     font-family: Arial;
+     color: rgb(0,128,55);
+     font-style: italic;
+     
+ }
+
+ 
+/***CSS Específico***/
+#banner{
+    margin-top: -2%;
+}
+
+
+ 
+ /* cards*/
+ #cards{
+     margin-top: -300px;
+ }
+
+ #card{
+    width: 10%;
+    height: 100%;
+    
+ }
+ 
+ .flip-card h3 {color: white; font-weight: bolder; font-family: Arial; font-size: 20px; padding: 2%; margin-top: 12%;}
+ 
+ .flip-card-back a { color: white;}
+ 
+ 
+ #textflipcard{
+    font-size: 13px; 
+     margin-top: 2%; 
+     padding:10px;
+ }
+
+ .flip-card-back button {
+     width: 50%;
+     font-family: Arial; 
+    font-size: 30px;  
+   
+    background-color: rgb(0,128,55);
+    border: 10px  solid white; 
+    color: white; 
+  }
+
+    .flip-card button:hover{
+        color: white;
+    }
+    .flip-card-back:checked{
+        color: white;
+        padding: 2%;
+    }
+
+ .flip-card {
+       
+     
+    height: 150px;
+    
+     perspective: 1000px; /* Remove this if you don't want the 3D effect */
+   }
+   
+   /* This container is needed to position the front and back side */
+   .flip-card-inner {
+    background-color: rgb(125,35,182);
+    box-shadow: 0px 10px 10px 0px  rgb(79, 3, 126,0.5);
+    height: 150px;
+     position: relative;
+     padding: 2%;
+     text-align: center;
+     transition: transform 0.8s;
+     transform-style: preserve-3d;
+   }
+   
+   /* Do an horizontal flip when you move the mouse over the flip box container */
+   .flip-card:hover .flip-card-inner {
+     transform: rotateY(180deg);
+   }
+   
+   /* Position the front and back side */
+   .flip-card-front, .flip-card-back {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     -webkit-backface-visibility: hidden; /* Safari */
+     backface-visibility: hidden;
+   }
+   
+   /* Style the front side (fallback if image is missing) */
+   .flip-card-front {
+     background-color: rgb(125,35,182);
+     color: white;
+   }
+   
+   /* Style the back side */
+   .flip-card-back {
+     background-color:rgb(0,128,55);
+     color: white;
+   
+     transform: rotateY(180deg);
+   }
+
+   /************Quienes somos************/
+   #txtQuieneSomos{
+       margin-top: 5%;
+       margin-left: 1%;
+       margin-right: 0%;
+       text-align: justify;
+       text-justify: inter-palabra;
+   }
+
+   #imgQuienesSomos{
+       width: 105%;
+       margin-top: 25%;
+       margin-right: 0%;
+       box-shadow: 10px 20px 10px 0px  rgb(79, 3, 126,0.3);
+   }
+
+/*********Que es stem**********/
+#queEsStem{
+    background-color: rgb(0,128,55,0.7);
+    color: white;
+
+    margin-top: 3%;
+    margin-bottom: 5%;
+    margin-left: 3%;
+    padding: 2%;
+    font-size: 8px;
+
+    text-align: justify;
+    box-shadow: 10px 10px 10px 0px  rgb(79, 3, 126,0.3);
+}
+
+#queEsStem h4{
+    font-weight: bold;
+    color: white;
+}
+
+
+/******** categorías destacadas****/
+
+#imgslide{
+    
+    border-radius: 50%;
+ 
+}
+
+#catdes{
+    background-color: rgb(114, 223, 161,0.4);
+    border-radius: 2%;
+}
+
+#catdest h5{
+    padding-left: 10%;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-shadow: rgb(243, 236, 245, 0.2);
+}
+
+/**********Seccion Colaborador********/
+
+#img1, #img2, #img3{
+    background-color: white;
+    margin:500px;
+}
+
+
+/*********************************************
+********RESPONSIVE***************************/
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
