@@ -72,16 +72,277 @@ h3{
 ********RESPONSIVE***************************/
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {}
+@media only screen and (max-width: 600px) {
+    #pantallagrande{
+        display: none;
+    }
+
+    #pantallapequeña{
+        display: block;
+    }
+
+    footer{
+        width:100%;
+
+    }
+
+    #logofooter{
+        width:90%;
+        
+    }
+
+    #divlogo{
+        width: 45%;
+        height: auto;
+        margin:2%;
+
+    }
+
+    #textofooter{
+        width:100%;
+        margin-left: 2%;
+        margin-top: 8%;
+        margin-bottom: 3%;
+        padding: 5%;
+        background-color: rgba(240, 201, 253, 0.6);
+        border-radius: 3%;
+    }
+
+    #parrafo{
+        font-size: 90%;
+        font-family: Arial;
+    }
+
+    #link{
+        font-size: 90%;
+        margin-left: 5%;
+
+    }
+
+    #owner{
+        padding-left: 35%;
+        font-size: 10px;
+        margin-top: 5%;
+        margin-bottom: 0px !important;
+        
+    }
+    
+}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {}
+@media only screen and (min-width: 600px) {
+    #pantallagrande{
+        display: none;
+    }
+
+    #pantallapequeña{
+        display: block;
+    }
+    footer{
+        width:100%;
+
+    }
+
+    #logofooter{
+        width:90%;
+        
+    }
+
+    #divlogo{
+        width: 45%;
+        height: auto;
+        margin:2%;
+
+    }
+
+    #textofooter{
+        width:100%;
+        margin-left: 2%;
+        margin-top: 4%;
+        margin-bottom: 3%;
+        padding: 5%;
+        background-color: rgba(240, 201, 253, 0.6);
+        border-radius: 2%;
+    }
+
+    #parrafo{
+        font-size: 90%;
+        font-family: Arial;
+    }
+
+    #link{
+        font-size: 120%;
+        margin-left: 10%;
+        width: 40%;
+       
+    }
+    #link a{
+        padding: 1%;
+        margin-left: 2%;
+    }
+
+    #owner{
+        padding-left: 35%;
+        font-size: 10px;
+        margin-top: 5%;
+        margin-bottom: 0px !important;
+        
+    }
+    
+}
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 768px) {
+    #pantallagrande{
+        display: none;
+    }
+
+    #pantallapequeña{
+        display: block;
+    }
+
+    footer{
+        width:100%;
+
+    }
+
+    #logofooter{
+        width:90%;
+        
+    }
+
+    #divlogo{
+        width: 45%;
+        height: auto;
+        margin:2%;
+
+    }
+
+    #textofooter{
+        width:100%;
+        margin-left: 2%;
+        margin-top: 4%;
+        margin-bottom: 3%;
+        padding: 5%;
+        background-color: rgba(240, 201, 253, 0.6);
+        border-radius: 2%;
+    }
+
+    #parrafo{
+        font-size: 90%;
+        font-family: Arial;
+    }
+
+    #link{
+        font-size: 120%;
+        margin-left: 10%;
+        width: 40%;
+       
+    }
+    #link a{
+        padding: 1%;
+        margin-left: 2%;
+    }
+
+    #owner{
+        padding-left: 35%;
+        font-size: 10px;
+        margin-top: 5%;
+        margin-bottom: 0px !important;
+        
+    }
+}
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {}
+@media only screen and (min-width: 992px) {
+    #pantallagrande{
+        display: block;
+    }
+
+    #pantallapequeña{
+        display: none;
+    }
+    #divlogo{
+        width: 20%;
+        height: 20%;
+    }
+
+    #logofooter{
+
+    }
+
+    #textofooter{
+        background-color: rgb(125,35,182);
+        width: 30%;
+        padding: 2%;
+        margin: 1%;
+    }
+
+    #parrafo{
+        font: 15px;
+
+    }
+
+    #link{
+        margin-top: 160px;
+        width: 20%;
+        margin:1%;
+        height: 50%;
+        padding: 20px;
+    }
+
+    #links{
+      width: 100%;
+      font-size: 15px;
+      margin-top: 10px;
+    }
+
+}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {}
+@media only screen and (min-width: 1200px) {
+    #pantallagrande{
+        display: block;
+    }
+
+    #pantallapequeña{
+        display: none;
+    }
+
+    #divlogo{
+        width: 20%;
+        height: 20%;
+    }
+
+    #logofooter{
+
+    }
+
+    #textofooter{
+        background-color: rgb(125,35,182);
+        width: 30%;
+        padding: 2%;
+        margin: 1%;
+    }
+
+    #parrafo{
+        font: 15px;
+
+    }
+
+    #link{
+        margin-top: 160px;
+        width: 20%;
+        margin:1%;
+        height: 50%;
+        padding: 20px;
+    }
+
+    #links{
+      width: 100%;
+      font-size: 15px;
+      margin-top: 10px;
+    }
+
+  
+}
