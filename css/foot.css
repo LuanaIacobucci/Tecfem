@@ -115,9 +115,15 @@ h3{
 
     #link{
         font-size: 90%;
-        margin-left: 5%;
+       margin-left: 10%;
+       width: fit-content;
 
     }
+
+     #links{
+        margin-left: 0%;
+     }
+
 
     #owner{
         padding-left: 35%;

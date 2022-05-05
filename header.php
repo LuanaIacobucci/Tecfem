@@ -20,7 +20,7 @@
 <!--hello-->
     <header>
         <div class="row">
-        <div  class="col col-xs-2 col-sm-2 col-md-2 col-lg-3 col-xl-3  float-left m-0">
+        <div  class="col col-xs-1 col-sm-3 col-md-2 col-lg-3 col-xl-3  float-left m-0">
         <img  id="logoHeader" src="img/logopng.png" alt="Logo tefem">
             </div>
 
