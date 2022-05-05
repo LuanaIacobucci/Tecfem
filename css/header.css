@@ -267,16 +267,16 @@ ul,ol{
     }
 
     #logoHeader{
-        width: 25%;
+        width: 55%;
         height: min-content;
     }
 
     nav a{
         font-size: 100%;
-        margin-left: 10%;
+        
     }
 
     nav{
-        margin-left: 38%;
+       
     }
 }
