@@ -5,9 +5,12 @@ h1{
     font-family: 'Bebas Neue', cursive;
     font-size: large;
 }
+header nav ul li ul li a{
+z-index: 3;
+}
 
 #cuerpo{
-   
+   z-index: 1;
      margin-left: 12%;
      background-color: whitesmoke;
      margin-top: 1%;

@@ -261,8 +261,13 @@ h3{
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    #logofooter, #divlogo{
+     #divlogo{
         width: 20%;
+    }
+
+
+    #logofooter{
+        width: 50%;
     }
 }
 
@@ -288,8 +293,12 @@ h3{
     }
 
     #parrafo{
-        font: 15px;
+        font: 35px;
 
+    }
+
+    #logofooter{
+        width: 100%;
     }
 
     #link{
@@ -302,7 +311,7 @@ h3{
 
     #links{
       width: 100%;
-      font-size: 15px;
+      font-size: 25px;
       margin-top: 10px;
     }
 

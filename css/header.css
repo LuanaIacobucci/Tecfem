@@ -48,11 +48,18 @@ nav a:active{
         display: none;
       
     }
+
+html{
+    width: 100%;
+}
+
     header{
         box-shadow: 0px 0px 10px 0px rgb(125,35,182,0.5);
         height: 30%;
         padding-bottom: 2%;
+        width: 100%;
     }
+
 
     #navmovil{
         display: block;
@@ -236,6 +243,7 @@ ul,ol{
 @media only screen and (min-width: 992px) {
     #navdesktop{
         display: block;
+       
     }
 
     #navmovil{
@@ -247,12 +255,13 @@ ul,ol{
    }
 
    nav a{
-       font-size: 85%;
-      margin: 8px;
+       font-size: 20px;
+      margin: 5px;
    }
 
    nav{
-       margin-left: 22%;
+       
+       margin-left: 5%;
    }
 }
 
@@ -272,11 +281,34 @@ ul,ol{
     }
 
     nav a{
-        font-size: 100%;
+        margin-left: 2%;
+        font-size: 22px;
         
     }
 
     nav{
-       
+       margin-left: 5%;
     }
+}
+
+@media only screen and (min-width: 2000px) {
+    #navdesktop{
+        display:block;
+    }
+
+    #navmovil{
+        display: none;
+    }
+
+    #logoHeader{
+        width: 55%;
+        height: min-content;
+    }
+
+    nav a{
+        font-size: 20px;
+        
+    }
+
+   
 }
