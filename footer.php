@@ -19,7 +19,7 @@
     <footer >
       <div class="row">
           
-          <div id="divlogo" class="col col-xs-2 col-sm-2 col-md-3 col-lg-3 col-xl-3">
+          <div id="divlogo" class="col col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-3">
               <img  id="logofooter" class="col col-xs-2 col-sm-2 col-md-12 col-lg-12 col-xl-12" src="img\logopng.png" alt="Logo Tecfem">
           </div>
 
