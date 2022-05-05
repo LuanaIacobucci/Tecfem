@@ -16,7 +16,7 @@ h1{
  }
  
  #bordes{
-     background-color: rgb(243, 236, 245);
+    background-color: rgb(243, 236, 245);
    /*  background-color: rgb(198,177,204);*/
  }
  
@@ -41,7 +41,7 @@ h1{
 
 #imglog{
  height: 90%;
- filter: grayscale(25%) brightness(1.2);;
+ filter: grayscale(25%) brightness(1.2);
  
 }
 
@@ -88,16 +88,283 @@ form input :placeholder-shown{
 ********RESPONSIVE***************************/
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {}
+@media only screen and (max-width: 600px) {
+    #bordes{
+      display: none;
+      
+    }
+
+    #dispPequeños{
+        display: block;
+    }
+    html{
+        background-color: rgb(243, 236, 245);
+    }
+
+  
+    #cuerpo{
+      width: 101%;
+      margin: -1%;
+      padding: 5%;
+      padding-right: 0%;
+      background-color:white;
+    }
+
+
+    #contenido1{
+        width: fit-content;
+     padding: 5%;
+     height: 400px;
+     padding-right: 0%;
+    }
+
+    #contenido1 form{
+       width: 90%;
+       padding: 5%;
+       background-color: rgb(243, 236, 245);
+    }
+
+    #contenido1 form label{
+        
+    }
+
+    #contenido1 form input{
+       
+        
+    }
+
+    #contenido2{
+       display: none !important;
+    }
+
+    footer{
+        width: 100%;
+    }
+}
+
+/* medium small devices (phones, 575px and up) */
+@media only screen and (min-width: 575px) {
+    #bordes{
+      display: none;
+      
+    }
+
+    #dispPequeños{
+        display: block;
+    }
+    html{
+        background-color: rgb(243, 236, 245);
+    }
+    #contenido{
+        width:100%;
+    }
+
+  
+    #cuerpo{
+      width: 100%;
+   
+      padding: 5%;
+      padding-right: 0%;
+      background-color:white;
+    }
+
+
+    #contenido1{
+        width: 100%;
+     padding: 5%;
+     height: 400px;
+     
+    }
+
+    #contenido1 form{
+       width: 100%;
+       padding: 5%;
+       background-color: rgb(243, 236, 245);
+    }
+
+    #contenido1 form label{
+       
+    }
+
+    #contenido1 form input{
+        width:300px;
+        
+    }
+
+   
+
+    footer{
+        width: 100%;
+    }
+}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {}
+@media only screen and (min-width: 600px) {
+    #bordes{
+        display: none;
+        
+      }
+  
+      #dispPequeños{
+          display: block;
+      }
+
+      #cuerpo{
+          margin-left: 0px;
+      }
+
+      #btninit{
+          margin-left: 50%;
+          margin-right: 50px;
+          padding: 1%;
+          width: 120px;
+      }
+
+      #imglog{
+          display: none;
+      }
+}
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 768px) {
+    #bordes{
+      display: block;
+      margin-top: 0%;
+      padding: 2%;
+      padding-bottom: 3%;
+      padding-top: 1%;
+      }
+  
+      #dispPequeños{
+          display: none;
+      }
+
+   
+
+    #contenido{
+        width: 100%;
+        height: auto;
+    }
+
+    #cuerpo{
+        width: 85%;
+        margin-left: 8%;
+        padding: 2%;
+       
+    }
+
+    #contenido1{
+    width: 50%;
+    padding: 0%;
+    
+    height: fit-content;
+    }
+
+   #imglog{
+       display: block;
+       
+       width: 380%;
+        height: 550px;
+
+       border-radius: 1%;
+       filter: grayscale(25%) brightness(1.2);
+       
+   }
+
+   form{
+       margin-right: 3%;
+       padding: 3%;
+       height: 495px;
+       background-color: white !important;
+   }
+    
+}
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {}
+@media only screen and (min-width: 992px) {
+    #bordes{
+        display: block;
+        background-color: rgb(243, 236, 245);
+        height: 100%;
+        margin-top: 0%;
+        padding: 8%;
+        padding-bottom: 3%;
+        padding-top: 1%;
+      }
+      
+      
+      #contenido{
+        padding-bottom: 13%;
+        height: fit-content;
+      }
+  
+      #dispPequeños{
+          display: none;
+      }
+
+      #imglog{
+          width: 165%;
+          height: 550px;
+      }
+
+      #btngrande{
+          margin-left: 30%;
+      }
+
+      #noregistrado{
+        margin-left: 40%; 
+      }
+
+}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {}
+@media only screen and (min-width: 1200px) {
+    #bordes{
+        display: block;
+        margin-top: 0%;
+        padding: 10%;
+        padding-bottom: 3%;
+        padding-top: 1%;
+        
+      }
+  
+      #dispPequeños{
+          display: none;
+      } 
+
+      #cuerpo{
+          padding: 0px;
+      }
+
+      #imglog{
+          width: 100%;
+          height: 549px;
+          border-radius: 0%;
+          margin-left: 1%;
+      }
+
+      #contenido1{
+          padding: 1%;
+      }
+
+      form{
+          padding: 0px;
+          padding-left:90%;
+          width: 10%;
+        
+      }
+
+      #contenido2{
+          padding: 0px;
+      }
+
+      #btngrande{
+          margin-left: 0%;
+          margin-top: 3%;
+      }
+
+      #noregistrado{
+        margin-left: 15%; 
+        margin-top: 10%;
+      }
+}

@@ -95,8 +95,8 @@
     </div>
 
     <div class="row">
-        <div class="col col-xs-8 col-sm-8 col-md-10 col-lg-10 col-xl-10 mt-5">
-            <h2 id="frase">"La fuerza no viene de la capacidad corporal, sino de la voluntad del alma"</h1>
+        <div id="frase" class="col col-xs-8 col-sm-8 col-md-10 col-lg-10 col-xl-8 mt-5">
+            <h2>"La fuerza no viene de la capacidad corporal, sino de la voluntad del alma"</h1>
         </div>
     </div>
 
