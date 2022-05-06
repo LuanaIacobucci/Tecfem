@@ -64,12 +64,13 @@ h1{
  
  .flip-card h3 {color: white; font-weight: bolder; font-family: Arial; font-size: 20px; padding: 2%; margin-top: 12%;}
  
- .flip-card-back a { color: white; font-size: 15px; }
+ .flip-card-back a { color: white;  font-family: Arial, Helvetica, sans-serif;}
  
  .flip-card-back{
-     font-size: 30px;
-     padding: 2%;
-     font-family: Arial;
+     font-size: 30x;
+     padding: 0.5%;
+     padding-top: 2%;
+     font-family: 'Arial';
  }
  
  #textflipcard{
@@ -79,9 +80,9 @@ h1{
  }
 
  .flip-card-back button {
-     width: 20%;
+     width: 50%;
      font-family: Arial; 
-    font-size: 20px;  
+    font-size: 15px;  
    margin-top: 4%;
     background-color: rgb(0,128,55);
     border: 1px  solid white; 
@@ -231,7 +232,109 @@ h1{
 ********RESPONSIVE***************************/
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {}
+@media only screen and (max-width: 600px) {
+   #cuerpo{
+       display: none;
+       
+   }
+
+   footer{
+       width: 100%;
+   }
+
+   #cuerpomovil{
+       display: block;
+       background-color: rgb(243, 236, 245);
+       width: 99%;
+       margin: 0%;
+       padding: 0%;
+   }
+
+   #bannermovil{
+       width: 98%;
+       margin-left: 0.5%;
+       margin-top: 1%;
+   }
+
+   #divfrasemovil{
+       width: 100%;
+       background-color: rgb(0,128,55, 0.5);
+       padding: 2%;
+       border-radius: 3%;
+       
+
+       margin-bottom: 2%;
+   }
+
+   #divfrasemovil h2{
+    font-family: 'Arial';
+    font-size: 11px;
+    color: white;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 0%;
+   }
+
+   #contenedordecards{
+    width: 100%;
+    height: 180px;
+
+    margin-bottom: 1%;
+   }
+
+
+
+   .card{
+       width: 150px;
+       height: 180px;
+       display: inline-block;
+       float: left;
+       margin-right: 5%;
+       margin-bottom: 1%;
+
+     
+   }
+
+   .card-body{
+       padding: 1%;
+    background-color: rgb(125,35,182);
+   }
+
+   #cardcol2{
+    margin-left: 3%;
+}
+
+   .card-title{
+       font-family: 'Bebas Neue';
+       color: white;
+       font-weight: bolder;
+       font-size: 100%;
+       
+   }
+
+   .card-body a{
+       background-color: rgb(0,128,55);
+       font-size: 11px;
+       height: 20px;
+
+   }
+
+   .card-text{
+       color: white;
+       margin-bottom: 1%;
+       font-family: 'Arial';
+       font-size: 50%;
+
+   }
+
+  
+
+ 
+
+
+
+    
+}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {}
@@ -240,7 +343,31 @@ h1{
 @media only screen and (min-width: 768px) {}
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {}
+@media only screen and (min-width: 992px) {
+    #frase{
+        margin-left: 7%;
+        text-align: center;
+        
+    }
+    #frase h2{
+        
+        padding-left: 0%;
+    }
+
+    #txtQuienesSomos p{
+        font-size: 10px;
+    }
+
+
+    #catdest h5{
+        font-size: 15px;
+    }
+}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {}
+@media only screen and (min-width: 1200px) {
+    #frase{
+        margin-left: 15%;
+        text-align: center;
+    }
+}

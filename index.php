@@ -29,7 +29,7 @@
 
     <!--Banner-->
     <div class="row">
-        <div class="col col-xs-10 col-sm-10 col-md-12 col-lg-12 col-xl-12">
+        <div id="divbanner" class="col col-xs-8 col-sm-8 col-md-12 col-lg-12 col-xl-12">
             <img id="banner" src="img/bannerindex.png" class="img-fluid" alt="...">
         </div>        
     </div>
@@ -95,7 +95,7 @@
     </div>
 
     <div class="row">
-        <div id="frase" class="col col-xs-8 col-sm-8 col-md-10 col-lg-10 col-xl-8 mt-5">
+        <div id="frase" class="col col-xs-2 col-sm-2 col-md-10 col-lg-10 col-xl-8 mt-5">
             <h2>"La fuerza no viene de la capacidad corporal, sino de la voluntad del alma"</h1>
         </div>
     </div>
@@ -108,9 +108,9 @@
     https://www.freepik.es/foto-gratis/mejores-amigos-angulo-mirando-abajo_7089950.htm
 -->
 
-  <div  class="row">
+  <div id="divquienessomos" class="row">
 
-    <div id="txtQuieneSomos" class="col col-xs-10 col-sm-10 col-md-5 col-lg-6 col-xl-g">
+    <div id="txtQuieneSomos" class="col col-xs-2 col-sm-10 col-md-5 col-lg-6 col-xl-g">
     <h2>Quienes somos</h2>
     <p>“Somos una organización sin fines de lucro dedicada al ingreso de la mujer a sectores laborales históricamente ejercidos por hombres.
     Sabemos que estas carreras y oficios pueden ser una solución rápida y tangible y es por esto que nos enfocamos en las llamadas carreras STEM (ciencia, tecnología, ingeniería y matemáticas) trabajamos por ese fin, con diferentes herramientas las que son principalmente; nuestro portal web de servicios y trabajo, charlas de género e inclusión, acuerdos con entidades públicas y privadas y capacitación a mujeres de todo Chile a través de nuestra OTEC TECFEM Educa.
@@ -120,7 +120,7 @@
 </p> 
   </div>
 
-    <div class="col col-xs-10 col-sm-10 col-md-5 col-lg-5 col-xl-5">
+    <div class="col col-xs- col-sm-10 col-md-5 col-lg-5 col-xl-5">
     <img id="imgQuienesSomos" src="img\quienessomos.PNG">
     </div>
   </div>
@@ -145,36 +145,36 @@ Históricamente las mujeres han tenido un rol secundario en el ámbito educacion
 
   <div class="row" id="catdes">
     
-  <div class="col col-xs-1 col-sm-1 col-md-2 col-lg-2 col-xl-2 m-2" id="catdest">
+  <div class="col col-xs-1 col-sm-1 col-md-2 col-lg-2 col-xl-2 m-1 ms-4" id="catdestt">
     
-			<img class="col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 m-1" id="imgslide" src="img\informáticas.jpg" alt="Informática" />
-      <h5 class="col col-xs-5 col-sm-5 col-md-8 col-lg-8 col-xl-8 m-1">Informática</h5>
+			<img class="col col-xs-2 col-sm-2 col-md-12 col-lg-10 col-xl-12 m-1" id="imgslide" src="img\informáticas.jpg" alt="Informática" />
+      <h5 class="col col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-8 m-1">Informática</h5>
      
 		</div>
 
-    <div class="col col-xs-1 col-sm-1 col-md-2 col-lg-2 col-xl-2 m-3" id="catdest"  >
+    <div class="col col-xs-1 col-sm-1 col-md-2 col-lg-2 col-xl-2 m-1" id="catdestt"  >
     <div class="row">
-			<img class="col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 m-1" id="imgslide" src="img\ingenierasindex.png" alt="Ingenieras" />
-      <h5 class="col col-xs-5 col-sm-5 col-md-8 col-lg-8 col-xl-8 m-1">Ingenieriería</h5>
+			<img class="col col-xs-2 col-sm-12 col-md-12 col-lg-10 col-xl-12 m-1" id="imgslide" src="img\ingenierasindex.png" alt="Ingenieras" />
+      <h5 class="col col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-8 m-1">Ingenieriería</h5>
       </div>
 		</div>
 
-    <div class="col col-xs-1 col-sm-1 col-md-2 col-lg-2 col-xl-2 m-3"   id="catdest">
+    <div class="col col-xs-1 col-sm-1 col-md-2 col-lg-2 col-xl-2 m-1"   id="catdestt">
     <div class="row">
-			<img class="col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 m-1" id="imgslide" src="img\electrónica.jpg" alt="Electrónica" />
-      <h5 class="col col-xs-5 col-sm-5 col-md-8 col-lg-8 col-xl-8 m-1">Electrónica</h5>
+			<img class="col col-xs-12 col-sm-12 col-md-12 col-lg-10 col-xl-12 m-1" id="imgslide" src="img\electrónica.jpg" alt="Electrónica" />
+      <h5 class="col col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-8 m-1">Electrónica</h5>
       </div>
 		</div>
-    <div class="col col-xs-1 col-sm-1 col-md-2 col-lg-2 col-xl-2 m-3"  id="catdest">
+    <div class="col col-xs-1 col-sm-1 col-md-2 col-lg-2 col-xl-2 m-1"  id="catdestt">
     <div class="row">
-			<img class="col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 m-1" id="imgslide" src="img\electricidad.jpg" alt="Electrcidad" />
-      <h5 class="col col-xs-5 col-sm-5 col-md-8 col-lg-8 col-xl-8 m-1">Electricidad</h5>
+			<img class="col col-xs-12 col-sm-12 col-md-12 col-lg-10 col-xl-12 m-1" id="imgslide" src="img\electricidad.jpg" alt="Electrcidad" />
+      <h5 class="col col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-8 m-1">Electricidad</h5>
       </div>
 		</div>
-    <div class="col col-xs-1 col-sm-1 col-md-2 col-lg-2 col-xl-2 m-3"  id="catdest">
+    <div class="col col-xs-1 col-sm-1 col-md-2 col-lg-2 col-xl-2 m-1"  id="catdestt">
     <div class="row">
-			<img class="col col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 m-1" id="imgslide" src="img\gasfitería.jpg" alt="Gasfitería" />
-      <h5 class="col col-xs-5 col-sm-5 col-md-8 col-lg-8 col-xl-8 m-1">Gasfitería</h5>
+			<img class="col col-xs-12 col-sm-12 col-md-12 col-lg-10 col-xl-12 m-1" id="imgslide" src="img\gasfitería.jpg" alt="Gasfitería" />
+      <h5 class="col col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-8 ">Gasfitería</h5>
       </div>
 		</div>
 
@@ -188,7 +188,7 @@ Históricamente las mujeres han tenido un rol secundario en el ámbito educacion
 
 <!--Seccion de Colaboradores-->
 <div class="row">
-<div class="ms-5" onload="interval()">
+<div class="ms-5" >
 
    
 			<img class="col col-xs-2 col-sm-2 col-md-3 col-lg-2 col-xl-2 m-3 ms-5" id="img1" src="img\auspiciadorBancochile.png" alt="Colaboradores" />
@@ -213,7 +213,75 @@ Históricamente las mujeres han tenido un rol secundario en el ámbito educacion
 <!--Fin del Directorio-->
 
 </div> <!--Fin Div del cuerpo-->
+
 </div>
+<!--Inicio del contenido para dispositivos moviles-->
+<div id="cuerpomovil" class="col col-xs-8 col-sm-8">
+
+<!--Banner-->
+<div id="divbannermovil" class="col col-xs-10 col-sm-10">
+<img id="bannermovil" src="img/bannerindex.png" class="img-fluid" alt="...">
+</div>
+
+<!--Frase-->
+<div id="divfrasemovil" class="col col-xs-5 col-sm-5">
+<h2>"La fuerza no viene de la capacidad corporal, sino de la voluntad del alma".</h1>
+</div>
+
+
+<!--Tarjetas-->
+<div  class="row">
+  <div id="contenedordecards" class="col-xs-1 col-sm-1 ms-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Ofertas laborales para mujeres en STEM</h5>
+        <p class="card-text">¿Buscas nuevas oportunidades de trabajo? Empresas publican sus ofertas en nuestro portal.</p>
+        <a href="#" class="btn btn-primary">Ver Más</a>
+      </div>
+   
+  </div>
+ 
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Servicios de y para mujeres</h5>
+        <p class="card-text">Miles de mujeres ofrecen sus servicios y productos en nuestra web.</p>
+        <a href="#" class="btn btn-primary">Ver Más</a>
+      </div>
+    </div>
+  
+</div>
+<br>
+<div class="row">
+  <div id="contenedordecards" class="col-xs-1 col-sm-1">
+    <div id="cardcol2" class="card">
+      <div class="card-body">
+        <h5 class="card-title">Auspiciadores</h5>
+        <p class="card-text">¿Quieres auspiciar cursos de oficios para mujeres o actividades de nuestra fundación?.</p>
+        <a href="#" class="btn btn-primary">Ver Más</a>
+      </div>
+    </div>
+  
+  
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Capacitaciones de género y oficios</h5>
+        <p class="card-text">Capacitamos mujeres en el área STEM e impulsamos a las empresas con programas de género.</p>
+        <a href="#" class="btn btn-primary">Ver Más</a>
+      </div>
+    </div>
+</div>
+</div>
+
+<!--Quienes somos-->
+
+<!--Qué es Stem-->
+
+
+<!--Colaboradores-->
+
+
+</div>
+
     <!--Inicio del footer-->
     <br><br>
   <footer>
