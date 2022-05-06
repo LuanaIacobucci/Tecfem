@@ -267,6 +267,7 @@ h1{
    
    header{
        width: 100%;
+       margin: 0%;
    }
 
    html{
@@ -280,15 +281,15 @@ h1{
    #cuerpomovil{
        display: block;
        background-color: rgb(243, 236, 245);
-       width: 100%;
+       width:auto;
        margin: 0%;
        padding: 0%;
    }
 
    #bannermovil{
-       width: 98%;
-       margin-left: 2%;
-       margin-right: 0%;
+       width: 80%;
+       margin-left: 10%;
+       margin-right: 1%;
        margin-top: 1%;
    }
 
@@ -314,17 +315,12 @@ h1{
    #cardscont{
        height: auto;
        margin:5%;
-       margin-left: 18%;
+       margin-left: 15%;
    }
-
-   
-   #cardcol2{
-    margin-left: 0.5%;
-}
 
    #contenedordecards{
        padding: 0% !important;
-    width: 90%;
+    width: 100%;
     height: fit-content;
     margin: 0%;
     margin-bottom: 1%;
@@ -333,13 +329,14 @@ h1{
 
 
    .card{
-       width: 150px;
+       width: 160px;
        height: 180px;
-       float: inline-start;
+       position: absolute;
+       float: left;
        display: inline-block;
        margin-left: 0%;
        margin-right: 3%;
-       margin-bottom: 1%;
+      
 
      
    }
@@ -386,7 +383,9 @@ h1{
   #divquienessomosmovil{
     background-color: rgb(0,128,55);
       padding: 5%;
+      margin: 0%;
       margin-bottom:2%;
+      
 
   }
   #txtmovilsomos{
@@ -407,6 +406,7 @@ h1{
       color: white;
       text-align: justify;
     font-family: 'Arial';
+    margin: 0%;
   }
 
   #queEsStemmovil h4{
@@ -513,25 +513,26 @@ h1{
      text-align: center;
      margin-bottom: 0%;
     }
+    
+ 
  
     #cardscont{
-        width: 100%;
-        display: inline-block;
+        
+        height: auto;
         margin:3%;
-        margin-left: 20%;
-        margin-right: 20%;
+        margin-left: 15%;
+        margin-right: 10%;
     }
 
-    #cardcol2{
-        margin-left: 3%;
-    }
+    
  
     #contenedordecards{
         display: inline-block;
         padding: 0% !important;
      width: 100%;
-     height: 180px;
+     height: fit-content;
      margin: 0%;
+     margin-left: 10%;
      margin-bottom: 1%;
     }
  
@@ -540,11 +541,12 @@ h1{
     .card{
         width: 180px;
         height: 180px;
+        position: absolute;
         display: inline-block;
         float: left;
-        margin-left: 0%;
-        margin-right: 3%;
-        margin-bottom: 1%;
+        margin-left: 5%;
+        margin-right: 0%;
+        margin-bottom: 4%;
  
       
     }
@@ -592,7 +594,9 @@ h1{
    #divquienessomosmovil{
      background-color: rgb(0,128,55);
        padding: 5%;
+       margin: 0%;
        margin-bottom:2%;
+
  
    }
    #txtmovilsomos{
@@ -719,20 +723,19 @@ h1{
     }
  
     #cardscont{
+        height: auto;
         margin:3%;
-        margin-left: 12%;
-        margin-left: 12%;
+        margin-left: 10%;
+        margin-right: 10%;
     }
 
-    #cardcol2{
-        margin-left: 0%;
-    }
  
     #contenedordecards{
         padding: 0% !important;
      width: 100%;
-     height: 210px;
+     height: fit-content;
      margin: 0%;
+     margin-left: 0%;
      margin-bottom: 0%;
     }
  
@@ -741,9 +744,10 @@ h1{
     .card{
         width: 300px;
         height: 200px;
+        position: absolute;
         display: inline-block;
         float: left;
-        margin-left: 0%;
+        margin-left: 2%;
         margin-right: 0%;
         margin-bottom: 1%;
  
@@ -869,6 +873,17 @@ h1{
     #cuerpomovil{
         display: none !important;
         
+    }
+
+    header{
+        margin: 0%;
+        width: 100%;
+    }
+
+   
+    #bordes{
+        width: 100%;
+        margin: 0%;
     }
 
     #cards{

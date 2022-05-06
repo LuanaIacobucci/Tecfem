@@ -241,6 +241,9 @@ ul,ol{
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+    header{
+        margin: 0%;
+    }
     #navdesktop{
         display: block;
        
@@ -262,6 +265,7 @@ ul,ol{
    nav{
        
        margin-left: 5%;
+       margin-right: 0%;
    }
 }
 

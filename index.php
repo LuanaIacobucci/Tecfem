@@ -289,12 +289,12 @@ Históricamente las mujeres han tenido un rol secundario en el ámbito educacion
           </div>
        </div>
   
-      </div>
+      <!--</div>-->
  <br>
 
-    <div class="row">
-        <div id="contenedordecards" class="col-xs-1 col-sm-1">
-          <div id="cardcol2" class="card">
+   <!-- <div class="row">  
+ id="cardcol2"       <div id="contenedordecards" class="col-xs-1 col-sm-1"> -->
+          <div  class="card">
               <div class="card-body">
                <h5 class="card-title">Auspiciadores</h5>
                 <p class="card-text">¿Quieres auspiciar cursos de oficios para mujeres o actividades de nuestra fundación?.</p>
@@ -309,9 +309,10 @@ Históricamente las mujeres han tenido un rol secundario en el ámbito educacion
             <p class="card-text">Capacitamos mujeres en el área STEM e impulsamos a las empresas con programas de género.</p>
       
            </div>
-         </div>
-     </div>
+           </div>
    </div>
+        <!-- </div> -->
+     
 
 </div>
 
@@ -338,10 +339,10 @@ Nos mueve entregar soluciones reales y efectivas a las mujeres en un contexto la
 
 
 <!--Qué es Stem-->
-<div id="queEsStemmovil" class="col col-xs-8 col-sm-12">
+<div id="queEsStemmovil" class="col col-xs-12 col-sm-12">
   <h4>¿Qué es STEM?</h4>
 
-  <div id="queEsStemmovil2" class="col col-xs-8  col-sm-12">
+  <div id="queEsStemmovil2" class="col col-xs-12  col-sm-12">
   <p>Hace referencia a las áreas de Ciencia, Tecnología, Ingeniería y Matemática (CTIM es su sigla en español). </p>
   
   <p>
