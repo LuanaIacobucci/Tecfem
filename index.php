@@ -111,7 +111,7 @@
 
   <div id="divquienessomos" class="row">
 
-    <div id="txtQuieneSomos" class="col col-xs-2 col-sm-10 col-md-5 col-lg-6 col-xl-g">
+    <div id="txtQuieneSomos" class="col col-xs-2 col-sm-10 col-md-5 col-lg-11 col-xl-6">
     <h2>Quienes somos</h2>
     <p>“Somos una organización sin fines de lucro dedicada al ingreso de la mujer a sectores laborales históricamente ejercidos por hombres.
     Sabemos que estas carreras y oficios pueden ser una solución rápida y tangible y es por esto que nos enfocamos en las llamadas carreras STEM (ciencia, tecnología, ingeniería y matemáticas) trabajamos por ese fin, con diferentes herramientas las que son principalmente; nuestro portal web de servicios y trabajo, charlas de género e inclusión, acuerdos con entidades públicas y privadas y capacitación a mujeres de todo Chile a través de nuestra OTEC TECFEM Educa.
@@ -192,7 +192,7 @@ Históricamente las mujeres han tenido un rol secundario en el ámbito educacion
 
 <div id="colaboradoresD">
   <h4>Colaboradores de Técfem</h4>
-  <p>Nuestros colaboradores comaprten nuestra visión y nos ayudan a traer más oportunidades para muejeres de STEM.</p>
+  <p>Nuestros colaboradores comaprten nuestra visión y nos ayudan a traer más oportunidades para mujeres de STEM.</p>
   <br>
 
   <div id="imgcolaboradorD" class="col col-xs-1 col-sm-1 col-md-2 col-lg-2 col-xl-2">
@@ -367,7 +367,7 @@ Históricamente las mujeres han tenido un rol secundario en el ámbito educacion
 
 <div id="colaboradores">
   <h4>Colaboradores de Técfem</h4>
-  <p>Nuestros colaboradores comaprten nuestra visión y nos ayudan a traer más oportunidades para muejeres de STEM.</p>
+  <p>Nuestros colaboradores comaprten nuestra visión y nos ayudan a traer más oportunidades para mujeres de STEM.</p>
   <br>
 
   <div id="imgcolaborador" class="col col-xs-1 col-sm-1 col-md-2 col-lg-2 col-xl-2">
