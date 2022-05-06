@@ -222,10 +222,37 @@ h1{
 
 /**********Seccion Colaborador********/
 
-#img1, #img2, #img3{
+
+#colaboradoresD{
     background-color: white;
-    margin:500px;
+    width: 95%;
+    padding: 4%;
+    margin:2%;
+    border: 5px solid rgb(166, 87, 215,0.4);
 }
+
+#colaboradoresD h4{
+   font-family: 'Bebas Neue';
+   font-size: 40px;
+ color: rgb(125,35,182);
+}
+#colaboradoresD p{
+   font-family: 'Arial';
+   text-align: justify;
+   font-size: 15px;
+ color: rgb(87, 19, 129);
+}
+
+
+#imgcolaboradorD{
+   width: 18%;
+   margin: 2%;
+   position: relative;
+   display:inline-block;
+}
+
+
+
 
 
 /*********************************************
@@ -234,8 +261,16 @@ h1{
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
    #cuerpo{
-       display: none;
+       display: none !important;
        
+   }
+   
+   header{
+       width: 100%;
+   }
+
+   html{
+       width: 100%;
    }
 
    footer{
@@ -245,14 +280,15 @@ h1{
    #cuerpomovil{
        display: block;
        background-color: rgb(243, 236, 245);
-       width: 99%;
+       width: 100%;
        margin: 0%;
        padding: 0%;
    }
 
    #bannermovil{
        width: 98%;
-       margin-left: 0.5%;
+       margin-left: 2%;
+       margin-right: 0%;
        margin-top: 1%;
    }
 
@@ -261,7 +297,7 @@ h1{
        background-color: rgb(0,128,55, 0.5);
        padding: 2%;
        border-radius: 3%;
-       
+       margin-right: 0%;
 
        margin-bottom: 2%;
    }
@@ -275,10 +311,16 @@ h1{
     margin-bottom: 0%;
    }
 
-   #contenedordecards{
-    width: 100%;
-    height: 180px;
+   #cardscont{
+       margin:5%;
+       margin-left: 18%;
+   }
 
+   #contenedordecards{
+       padding: 0% !important;
+    width: 90%;
+    height: 180px;
+    margin: 0%;
     margin-bottom: 1%;
    }
 
@@ -289,10 +331,19 @@ h1{
        height: 180px;
        display: inline-block;
        float: left;
-       margin-right: 5%;
+       margin-left: 0%;
+       margin-right: 3%;
        margin-bottom: 1%;
 
      
+   }
+   .card:active{
+    box-shadow: 10px 10px 5px 5px rgb(0,128,55,0.3);
+   }
+
+   .card-body:active{
+    background-color: rgb(166, 87, 215);
+    
    }
 
    .card-body{
@@ -301,7 +352,7 @@ h1{
    }
 
    #cardcol2{
-    margin-left: 3%;
+    margin-left: 0%;
 }
 
    .card-title{
@@ -327,23 +378,298 @@ h1{
 
    }
 
-  
+  /***Quienes somos**/
+
+  #divquienessomosmovil{
+    background-color: rgb(0,128,55);
+      padding: 5%;
+      margin-bottom:2%;
+
+  }
+  #txtmovilsomos{
+    background-color: rgb(0,128,55);
+    font-size: 15px;
+    color: white;
+    text-align: justify;
+    font-family: 'Arial';
+    
+  }
+
+
+  /***QUE ES STEMM***/
+
+  #queEsStemmovil{
+      background-color: rgb(0,128,55);
+      padding: 5%;
+      color: white;
+      text-align: justify;
+    font-family: 'Arial';
+  }
+
+  #queEsStemmovil h4{
+      font-family: 'Bebas Neue';
+      font-size: 20px;
+      border-bottom: 5px solid white;
+  }
+
+  #txtmovilsomos h4{
+    font-family: 'Bebas Neue';
+    font-size: 20px;
+    border-bottom: 5px solid white;
+}
+
+#listcate li{
+    border-radius: 2%;
+    background-color: rgba(193, 245, 215, 0.81) !important;
+    font-family: 'Arial';
+}
+
+ /***colaboradores**/
+
+ #colaboradores{
+     background-color: white;
+     padding: 4%;
+     margin:2%;
+     border: 5px solid rgb(166, 87, 215,0.4);
+ }
+ 
+ #colaboradores h4{
+    font-family: 'Bebas Neue';
+    font-size: 40px;
+  color: rgb(125,35,182);
+ }
+ #colaboradores p{
+    font-family: 'Arial';
+    text-align: justify;
+    font-size: 15px;
+  color: rgb(87, 19, 129);
+ }
 
  
-
-
+ #imgcolaborador{
+    width: 18%;
+    margin: 2%;
+    position: relative;
+    display:inline-block;
+ }
 
     
 }
 
+
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {}
+@media only screen and (min-width: 600px) {
+    #cuerpo{
+        display: none !important;
+        
+    }
+    
+    header{
+        width: 100%;
+    }
+ 
+    html{
+        width: 100%;
+    }
+ 
+    footer{
+        width: 100%;
+    }
+ 
+    #cuerpomovil{
+        display: block;
+        background-color: rgb(243, 236, 245);
+        width: 100%;
+        margin: 0%;
+        padding: 0%;
+    }
+ 
+    #bannermovil{
+        width: 98%;
+        margin-left: 2%;
+        margin-right: 0%;
+        margin-top: 1%;
+    }
+ 
+    #divfrasemovil{
+        width: 100%;
+        background-color: rgb(0,128,55, 0.5);
+        padding: 2%;
+        border-radius: 3%;
+        margin-right: 0%;
+ 
+        margin-bottom: 2%;
+    }
+ 
+    #divfrasemovil h2{
+     font-family: 'Arial';
+     font-size: 11px;
+     color: white;
+     font-style: italic;
+     text-align: center;
+     margin-bottom: 0%;
+    }
+ 
+    #cardscont{
+        margin:5%;
+        margin-left: 18%;
+    }
+ 
+    #contenedordecards{
+        padding: 0% !important;
+     width: 90%;
+     height: 180px;
+     margin: 0%;
+     margin-bottom: 1%;
+    }
+ 
+ 
+ 
+    .card{
+        width: 150px;
+        height: 180px;
+        display: inline-block;
+        float: left;
+        margin-left: 0%;
+        margin-right: 3%;
+        margin-bottom: 1%;
+ 
+      
+    }
+    .card:active{
+     box-shadow: 10px 10px 5px 5px rgb(0,128,55,0.3);
+    }
+ 
+    .card-body:active{
+     background-color: rgb(166, 87, 215);
+     
+    }
+ 
+    .card-body{
+        padding: 1%;
+     background-color: rgb(125,35,182);
+    }
+ 
+    #cardcol2{
+     margin-left: 0%;
+ }
+ 
+    .card-title{
+        font-family: 'Bebas Neue';
+        color: white;
+        font-weight: bolder;
+        font-size: 100%;
+        
+    }
+ 
+    .card-body a{
+        background-color: rgb(0,128,55);
+        font-size: 11px;
+        height: 20px;
+ 
+    }
+ 
+    .card-text{
+        color: white;
+        margin-bottom: 1%;
+        font-family: 'Arial';
+        font-size: 50%;
+ 
+    }
+ 
+   /***Quienes somos**/
+ 
+   #divquienessomosmovil{
+     background-color: rgb(0,128,55);
+       padding: 5%;
+       margin-bottom:2%;
+ 
+   }
+   #txtmovilsomos{
+     background-color: rgb(0,128,55);
+     font-size: 15px;
+     color: white;
+     text-align: justify;
+     font-family: 'Arial';
+     
+   }
+ 
+ 
+   /***QUE ES STEMM***/
+ 
+   #queEsStemmovil{
+       background-color: rgb(0,128,55);
+       padding: 5%;
+       color: white;
+       text-align: justify;
+     font-family: 'Arial';
+   }
+ 
+   #queEsStemmovil h4{
+       font-family: 'Bebas Neue';
+       font-size: 20px;
+       border-bottom: 5px solid white;
+   }
+ 
+   #txtmovilsomos h4{
+     font-family: 'Bebas Neue';
+     font-size: 20px;
+     border-bottom: 5px solid white;
+ }
+ 
+ #listcate li{
+     border-radius: 2%;
+     background-color: rgba(193, 245, 215, 0.81) !important;
+     font-family: 'Arial';
+ }
+
+/***colaboradores**/
+
+#colaboradores{
+    padding: 4%;
+    margin:2%;
+    border: 5px solid rgb(166, 87, 215,0.4);
+}
+
+#colaboradores h4{
+   font-family: 'Bebas Neue';
+   font-size: 40px;
+ color: rgb(125,35,182);
+}
+#colaboradores p{
+   font-family: 'Arial';
+   text-align: justify;
+   font-size: 15px;
+ color: rgb(87, 19, 129);
+}
+
+
+#imgcolaborador{
+   width: 18%;
+   margin: 2%;
+   position: relative;
+   display:inline-block;
+}
+
+ 
+}
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {}
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+    #cuerpo{
+        display: block !important;
+        
+    }
+
+    #cuerpomovil{
+        display: none !important;
+        
+    }
+
     #frase{
         margin-left: 7%;
         text-align: center;
@@ -366,8 +692,20 @@ h1{
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+
+    #cuerpo{
+        display: block !important;
+        
+    }
+
+    #cuerpomovil{
+        display: none !important;
+        
+    }
     #frase{
         margin-left: 15%;
         text-align: center;
     }
+
+   
 }

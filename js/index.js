@@ -41,3 +41,28 @@ let i=0;
 function interval(){
  setInterval(slideShow(),5000);
 }
+
+
+/***Para movil--> Toggle de cajas de quienes somos y de qué es STEM*/
+
+//JQUERY
+$(document).ready(function(){
+   $('#txtmovilsomos2').hide();
+   $('#queEsStemmovil2').hide();
+
+
+    $('#txtmovilsomos').click(function(){
+
+        $('#txtmovilsomos2').toggle('slow');
+
+    });
+
+
+    $('#queEsStemmovil').click(function(){
+
+        $('#queEsStemmovil2').toggle('slow');
+
+    });
+  
+  
+  });
