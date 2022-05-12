@@ -1,0 +1,8 @@
+<?php
+enum tipo_red
+{
+    case cliente;
+    case proveedora;
+    
+}
+?>
