@@ -56,7 +56,7 @@ class blog{
   }
 
   function set_certificaciones($certificaciones) {
-    $this->certificaciones = $certificaciones;
+    $this->certificaciones = array($certificaciones);
   }
 
 
@@ -65,7 +65,7 @@ class blog{
   }
 
   function set_otrosCursos($otrosCursos) {
-    $this->otrosCursos = $otrosCursos;
+    $this->otrosCursos = array($otrosCursos);
   }
 
 
@@ -75,7 +75,7 @@ class blog{
 
 
   function set_idiomas($idiomas) {
-    $this->idiomas = $idiomas;
+    $this->idiomas = array($idiomas);
   }
 
 
@@ -116,7 +116,7 @@ class blog{
     return $this->galeriaDeFotos;
   }
   function set_formasDePago($formasDePago) {
-    $this->formasDePago = $formasDePago;
+    $this->formasDePago = array($formasDePago);
   }
 
 
@@ -125,7 +125,7 @@ class blog{
   }
 
   function set_redSocial($redSocial) {
-    $this->redSocial = $redSocial;
+    $this->redSocial = array($redSocial);
   }
 
 

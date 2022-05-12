@@ -20,6 +20,7 @@ class cliente {
     $this->nombre = $nombre;
     $this->apellido = $apellido;
     $this->contrasena = $contrasena;
+    $this->email = $email;
     $this->nmrotelefono= $nmrotelefono;
     $this->region = $region;
     $this->comuna = $comuna;
@@ -30,6 +31,7 @@ class cliente {
     $this->nombreCuenta = $nombreCuenta;
     $this->rut = $rut;
     $this->nombre = $nombre;
+    $this->email = $email;
     $this->apellido = $apellido;
     $this->contrasena = $contrasena;
     $this->tipoCuenta = $tipoCuenta;
