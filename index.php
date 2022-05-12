@@ -14,13 +14,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-  
+   
     <title>Tecfem</title>
 </head>
 
 <body onload="interval()">
   <?php
     @include('header.php');
+   
     ?>
     <!--Div del cuerpo-->
   
@@ -65,7 +66,7 @@
                 </div>
               </div>
         </div>
-
+      
         <div  id="card" class="col">
             <div class="flip-card">
                 <div class="flip-card-inner">
@@ -101,6 +102,11 @@
         </div>
     </div>
 
+    
+    <?php
+   
+   //@include('redessociales.php');
+   ?>
 <!--Seccion de Quienes somos-->
 <div class="row">
   <div class="col">

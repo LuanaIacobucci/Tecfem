@@ -1,0 +1,180 @@
+*{
+    font-family: Arial;
+    font-size: medium;
+
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  
+}
+
+footer{
+
+    
+    bottom: 0;
+    
+    font-family: 'Bebas Neue', cursive;
+}
+
+h1{
+    font-family: 'Bebas Neue', cursive;
+    font-size: large;
+    
+}
+
+
+ 
+ #bordes{
+    width: 100%;
+     background-color: rgb(243, 236, 245);
+     margin-bottom: 0%;
+     margin-right: 0%;
+   /*  background-color: rgb(198,177,204);*/
+ }
+
+ #cuerpo{
+     width: 90%;
+    height:100%;
+     margin-left: 5%;
+     background-color: whitesmoke;
+     margin-top: 1%;
+ }
+ 
+ h1{
+     font-family: 'Bebas Neue';
+     color: rgb(79, 3, 126);
+     text-transform: uppercase;
+     font-weight: bold;
+     font-size: 200%;
+ 
+ }
+ h2{
+     font-family: Arial;
+     color: rgb(0,128,55);
+     font-style: italic;
+     
+ }
+
+ 
+/***CSS Específico***/
+
+#acciones{
+    width: 98%;
+   margin-bottom: 2%;
+    margin: 1%;
+}
+
+#acciones h2{
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 1%;
+}
+
+#accion{
+    background-color: rgb(0,128,55);
+    margin-bottom: 0.5%;
+    box-shadow: 0px 10px 5px 0px rgb(0,128,55,0.3);
+}
+
+#accion:hover{
+    background-color: rgb(98, 177, 132);
+}
+
+/***contenido de acciones**/
+#contenidoModi{
+    width: 96%;
+    height: max-content;
+    background-color: rgba(182, 144, 180, 0.2);
+    box-shadow: 0px 10px 10px 0px rgb(79, 3, 126, 0.3);
+    margin-bottom: 10%;
+    margin: 1%;
+    margin-left: 2%;
+ 
+}
+
+
+/***************
+ACCION: CUNETAS DE USUARIA ****/
+#filtrar{
+    background-color: rgb(255,255,255,0.5);
+    padding: 1%;
+    width: 25%;
+    font-size: small;
+    color: rgb(79, 3, 126);
+    font-family: 'Arial';
+}
+
+#cuentasUsr{
+    padding: 2%;
+ 
+}
+
+#cuentasUsr h2{
+    font-weight: bolder;
+}
+
+#buscador{
+    width: 70%;
+margin-top: 2%;
+
+}
+
+#buscador span{
+    background-color: rgb(79, 3, 126,0.5);
+}
+
+#noResult{
+    display: inline;
+    float: inline-start;
+
+    color: rgb(79, 3, 126,0.5);
+}
+
+#noResult h3{
+    width:50%;
+    font-size: large;
+    margin: 0% !important;
+  
+}
+
+/***estadisticas**/
+#estadisticas{
+    width: 96%;
+    margin-bottom: 4%;
+    margin: 1%;
+    margin-left: 2%;
+    background-color: rgb(226, 215, 230);
+    box-shadow: 1px 10px 10px 0px rgb(79, 3, 126,0.4);
+}
+
+#estadisticas >div{
+    border-left: 10px solid rgb(79, 3, 126, 0.5);
+    padding: 2%;
+}
+
+#estadistica:hover{
+    background-color: rgb(0,128,55,0.2);
+}
+
+.colest{
+ 
+    width: 30%;
+    margin: 0% !important;
+    display: inline;
+    float: inline-start;
+}
+
+.colest h2{
+    color: rgb(79, 3, 126);
+    font-size: xx-large;
+    font-weight: bold;
+  }
+
+.colest p{
+  
+    color: rgb(79, 3, 126);
+    font-weight: bold;
+   
+}
