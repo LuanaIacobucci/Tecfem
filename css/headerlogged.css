@@ -1,0 +1,322 @@
+
+#logoHeader{
+    background-color: rgb(255, 255, 255) ;
+    border-radius: 5%;
+    width: 15%;
+    margin-left: 40%;
+    margin-bottom: 0%;
+    box-shadow: 10px 5px 10px 5px  rgb(125,35,182,0.1);
+}
+
+
+header{
+    background-color: whitesmoke;
+    padding: 1%;
+    
+}
+
+nav{
+    height: 1%;
+    
+}
+
+#links{
+    margin-left: 10%;
+    margin-top: 0%;
+}
+
+nav a{
+    font-family: 'Bebas Neue';
+   color:rgb(169, 146, 175);
+    position: relative;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: large;
+    margin-left: 40px;
+}
+
+nav a:hover{
+    color: rgb(125,35,182);
+}
+
+nav a:active{
+    color: rgb(0,128,55);
+}
+
+
+/*********************************************
+********RESPONSIVE***************************/
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    #navdesktop{
+     display: none;
+   
+ }
+
+
+ header{
+     box-shadow: 0px 0px 10px 0px rgb(125,35,182,0.5);
+     height: 30%;
+     padding-bottom: 2%;
+     width: 100%;
+ }
+
+
+ #navmovil{
+     display: block;
+     height: 40px;
+     
+     
+ }
+
+ /***codigo para menu desplegable **/
+ul,ol{
+ list-style: none;
+ font-size: 25px;
+}
+
+#menuicon{
+ width: 210px;
+ height: 210px;
+ fill: rgb(125,35,182);
+ margin-top: 0px;
+ 
+}
+
+.nav li a{
+ background-color: rgb(237, 228, 240);
+ color: rgb(86, 40, 114);
+font-size: small;
+ display: block;
+padding: 10%;
+text-decoration: none;
+width: 150%;
+display: list-item;
+margin-left: -130%;
+
+  
+}
+
+.nav >li {
+ float: right;
+ margin-left: 90%;
+}
+
+.nav li ul{
+ display: none;
+ position: absolute;
+ min-width: 140px;
+}
+
+
+.nav li:hover > ul{
+ display: block;
+}
+
+.nav li:active > ul{
+ display: block;
+}
+
+.nav li:checked > ul{
+ display: block;
+}
+
+.nav li:hover > ul a:hover{
+ background-color: white;
+}
+
+.nav li:hover > ul a:active{
+ color: rgb(0,128,55);
+}
+
+
+.nav2 a:active{
+ background-color: white;
+ color: rgb(0,128,55);
+}
+/***FIN MENU DESPLEGABLE*****/
+
+
+#logoHeader{
+    width: 20%;
+}
+
+
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+ #navdesktop{
+     display: none;
+   
+ }
+ header{
+     box-shadow: 0px 0px 10px rgb(125,35,182,0.5);
+ }
+
+ #navmovil{
+     display: block;
+     height: 60px;
+     
+     
+ }
+
+
+ #menuicon{
+     width: 10%;
+     height: 8%;
+     fill: rgb(125,35,182);
+     
+     
+ }
+ /***codigo para menu desplegable **/
+ul,ol{
+ list-style: none;
+ font-size: 25px;
+}
+
+.nav li a{
+ background-color: rgb(237, 228, 240);
+ color: rgb(86, 40, 114);
+font-size: small;
+ display: block;
+padding: 10%;
+text-decoration: none;
+width: 150%;
+display: list-item;
+margin-left: -130%;
+
+  
+}
+
+.nav >li {
+ float: right;
+ margin-left: 90%;
+}
+
+.nav li ul{
+ display: none;
+ position: absolute;
+ min-width: 140px;
+}
+
+
+.nav li:hover > ul{
+ display: block;
+}
+
+.nav li:active > ul{
+ display: block;
+}
+
+.nav li:checked > ul{
+ display: block;
+}
+
+.nav li:hover > ul a:hover{
+ background-color: white;
+}
+
+.nav li:hover > ul a:active{
+ color: rgb(0,128,55);
+}
+
+
+.nav2 a:active{
+ background-color: white;
+ color: rgb(0,128,55);
+}
+/***FIN MENU DESPLEGABLE*****/
+
+
+
+#logoHeader{
+    width: 20%;
+}
+
+
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 815px) {
+    #navdesktop{
+        display: block;
+    }
+
+    #navmovil{
+        display: none;
+    }
+    /***codigo para menu desplegable **/
+    #links{
+        width: 100%;
+        margin: 0%;
+    }
+       nav{
+           margin-left: 7%;
+       }
+       nav a{
+           margin-left: 2%;
+       }
+       
+    #logoHeader{
+        width: 20%;
+    }
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    #navdesktop{
+        display: block;
+    }
+
+    #navmovil{
+        display: none;
+    }     
+ #links{
+     width: 100%;
+ }
+    nav{
+        margin-left: 10%;
+    }
+    nav a{
+        margin-left: 3%;
+    }
+    
+    #logoHeader{
+        width: 20%;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    #navdesktop{
+        display: block;
+    }
+
+    #navmovil{
+        display: none;
+    }
+    nav{
+        margin-left: 10%;
+    }
+    nav a{
+        margin-left: 3%;
+    }
+
+    #logoHeader{
+        width: 20%;
+    }
+   
+}
+
+@media only screen and (min-width: 2000px) {
+    
+
+   
+}
