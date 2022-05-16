@@ -62,12 +62,13 @@ nav a:active{
      height: 30%;
      padding-bottom: 2%;
      width: 100%;
+     height: 100px;
  }
 
 
  #navmovil{
      display: block;
-     height: 40px;
+     
      
      
  }
@@ -79,8 +80,8 @@ ul,ol{
 }
 
 #menuicon{
- width: 210px;
- height: 210px;
+ width: 30px;
+ height: 30px;
  fill: rgb(125,35,182);
  margin-top: 0px;
  
@@ -154,30 +155,40 @@ margin-left: -130%;
      display: none;
    
  }
+
+ #navmovil{
+    display: block;
+    margin-left: 0%; 
+}
+
+
  header{
+     
      box-shadow: 0px 0px 10px rgb(125,35,182,0.5);
  }
 
- #navmovil{
-     display: block;
-     height: 60px;
-     
-     
+ #logoHeader{
+     width: 150px;
  }
 
 
  #menuicon{
-     width: 10%;
-     height: 8%;
+    width: 40px !important;
+    height: 40px;
      fill: rgb(125,35,182);
      
      
  }
+
+
+   
+  
  /***codigo para menu desplegable **/
 ul,ol{
  list-style: none;
  font-size: 25px;
 }
+
 
 .nav li a{
  background-color: rgb(237, 228, 240);
@@ -257,7 +268,8 @@ margin-left: -130%;
         margin: 0%;
     }
        nav{
-           margin-left: 7%;
+           margin-left: 6%;
+           margin-right: 0%;
        }
        nav a{
            margin-left: 2%;
@@ -282,7 +294,8 @@ margin-left: -130%;
      width: 100%;
  }
     nav{
-        margin-left: 10%;
+        margin-left: 14%;
+        margin-right: 0%;
     }
     nav a{
         margin-left: 3%;
@@ -303,7 +316,7 @@ margin-left: -130%;
         display: none;
     }
     nav{
-        margin-left: 10%;
+        margin-left: 20%;
     }
     nav a{
         margin-left: 3%;

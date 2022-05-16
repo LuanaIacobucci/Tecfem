@@ -10,15 +10,15 @@ class servicio {
   public $fechaPublicacion; //date
 
   //Constructores
-  function __construct($nombre, $categoria,$descripcion,$costoPorHora) {
+  function __construct($idServicio, $nombreCuenta, $nombre, $categoria,$descripcion,$costoPorHora,$fechaPublicacion) {
     //Mas adelante podemos dejarle que suab un archivo
-    $this->idServicio = generarIdServicio(); //Metodo a programar !!!!
-    $this->nombreCuenta = $_SESSION['nombreCuenta']; //toma el nombre de usuario del que ha iniciado sesion.
+    $this->idServicio = $idServicio;
+    $this->nombreCuenta = $nombreCuenta; 
     $this->nombre = $nombre;
     $this->categoria = $categoria;
     $this->descripcion = $descripcion;
     $this->costoPorHora = $costoPorHora;
-    $this->fechaPublicacion = date('m/d/Y'); //metodo que llama a la fecha actual. No se necesita ingresar. 
+    $this->fechaPublicacion = $fechaPublicacion; 
   }
            
   //Destructor
