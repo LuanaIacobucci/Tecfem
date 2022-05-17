@@ -43,13 +43,13 @@
 
     <label  class="col-xs-1 col-sm-3 col-md-12 col-form-label">Nombre de usuario</label>
     <div class="col-xs-4 col-sm-10 col-md-3 col-lg-10 col-xl-12">
-      <input type="text" class="form-control" id="inputEmail3" placeholder="Nombre Usuario">
+      <input type="text" class="form-control" id="inputEmail3" name="nombreUsuario" placeholder="Nombre Usuario">
     </div>
   </div>
   <div  class="row mb-3">
     <label for="inputPassword3" class="col-xs-1 col-sm-3 col-md-12 col-form-label">Contraseña</label>
     <div class="col-xs-4 col-sm-10 col-md-3 col-lg-10 col-xl-12">
-      <input type="password"  placeholder="Contraseña" class="form-control" id="inputPassword3">
+      <input type="password"  placeholder="Contraseña" name="password" class="form-control" id="inputPassword3">
     </div>
   </div>
   
