@@ -22,7 +22,7 @@
   <?php
     @include('header.php');
     ?>
-
+<!---include--->
 
     <!--Div del cuerpo-->
   
