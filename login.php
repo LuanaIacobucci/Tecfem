@@ -88,13 +88,13 @@
 
     <label  class="col-xs-1 col-sm-3 col-form-label">Nombre de usuario</label>
     <div class="col-xs-2 col-sm-5">
-      <input type="text" class="form-control" id="inputEmail3" placeholder="Nombre Usuario">
+      <input type="text" class="form-control" name="nombreUsuario" id="inputEmail3" placeholder="Nombre Usuario">
     </div>
   </div>
   <div  class="row mb-3">
     <label for="inputPassword3" class="col-xs-1 col-sm-3 col-form-label" placeholder="Contraseña">Contraseña</label>
     <div class="col-xs-2 col-sm-5">
-      <input type="password" class="form-control" id="inputPassword3">
+      <input type="password" class="form-control" name="password" id="inputPassword3">
     </div>
   </div>
   
