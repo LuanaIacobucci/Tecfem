@@ -49,7 +49,7 @@
   <div  class="row mb-3">
     <label for="inputPassword3" class="col-xs-1 col-sm-3 col-md-12 col-form-label">Contraseña</label>
     <div class="col-xs-4 col-sm-10 col-md-3 col-lg-10 col-xl-12">
-      <input type="password"  placeholder="Contraseña" name="password" class="form-control" id="inputPassword3">
+      <input type="password"  placeholder="Contraseña" name="contrasena" class="form-control" id="inputPassword3">
     </div>
   </div>
   
@@ -94,7 +94,7 @@
   <div  class="row mb-3">
     <label for="inputPassword3" class="col-xs-1 col-sm-3 col-form-label" placeholder="Contraseña">Contraseña</label>
     <div class="col-xs-2 col-sm-5">
-      <input type="password" class="form-control" name="password" id="inputPassword3">
+      <input type="password" class="form-control" name="contrasena" id="inputPassword3">
     </div>
   </div>
   
