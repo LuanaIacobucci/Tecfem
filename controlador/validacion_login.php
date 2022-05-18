@@ -2,8 +2,8 @@
 
  include('modelo\conectar.php')
 
- $nombreUsuario=$_POST['nombreUsuario'];
- $contrasena=$_POST['contrasena']; 
+ $NOMBREUSUARIO=$_POST['nombreUsuario'];
+ $CONTRASENA=$_POST['contrasena']; 
 
 $consulta = "SELECT * FROM cliente where nombreUsuario = '$nombreUsuario' and contrasena = '$contrasena' ";
 $resultado = mysql_query($conexion, $consulta);
@@ -11,13 +11,13 @@ $resultado = mysql_query($conexion, $consulta);
 $filas=mysqli_num_rows($resultado);
 
 if($filas){
-header("location: index.php");
+header("location:index.php");
 
 }else{
 header("location:login.php");
 ?>
 
-<h3>Error de autentificacion</h3>
+<p>Error de autentificacion</p>
 <?php
 }
 
