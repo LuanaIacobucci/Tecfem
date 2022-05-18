@@ -2,10 +2,10 @@
 
  include('modelo\conectar.php')
 
- $USUARIO=$_POST['nombreUsuario'];
- $PASSWORD=$_POST['password']; 
+ $NOMBREUSUARIO=$_POST['nombreUsuario'];
+ $PASSWORD=$_POST['contrasena']; 
 
-$consulta = "SELECT * FROM cliente where nombreUsuario = '$USUARIO' and password = '$PASSWORD' ";
+$consulta = "SELECT * FROM cliente where nombreUsuario = '$NOMBREUSUARIO' and contrasena = '$PASSWORD' ";
 $resultado = mysql_query($conexion, $consulta);
 
 $filas=mysqli_num_rows($resultado);
