@@ -6,7 +6,7 @@
  $contrasena=$_POST['contrasena']; 
 
 $consulta = "SELECT * FROM cliente where nombreUsuario = '$nombreUsuario' and contrasena = '$contrasena' ";
-$resultado = mysql_query($conectar, $consulta);
+$resultado = mysql_query($conexion, $consulta);
 
 $filas=mysqli_num_rows($resultado);
 
