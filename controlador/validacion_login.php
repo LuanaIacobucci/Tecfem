@@ -1,6 +1,6 @@
 <?php 
 
- include('modelo\conectar.php');
+ include('conectar.php');
 
  $NOMBREUSUARIO=$_POST['nombreUsuario'];
  $PASSWORD=$_POST['contrasena']; 
