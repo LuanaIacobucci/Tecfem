@@ -3,6 +3,8 @@
  include('conectar.php')
 
  $NOMUSUARIO=$_POST['nombreUsuario'];
- $PASSWORD=$_POST['contrasena']; 
+ $CONTRASENA=$_POST['contrasena']; 
+
+$consulta = "SELECT * FROM cliente"
 
 ?>
