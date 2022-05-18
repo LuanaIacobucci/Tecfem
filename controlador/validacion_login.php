@@ -14,7 +14,7 @@ if($filas){
 header("location:index.php");
 
 }else{
-header("location:login.php");
+include("login.php");
 ?>
 
 <p>Error de autentificacion</p>
