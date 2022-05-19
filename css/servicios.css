@@ -81,13 +81,9 @@ input[type=checkbox] {
 input[type=checkbox] + label {  
   height: 50px;
   width: 50px;
-  background:"src:img/heartfavorito.png";
   display: inline-block;
 }
 
-input[type=checkbox]:checked + label {
-  background-image:"src:img/heartfavorito.png";
-}
 
 /******CSS Flip Cards*****/
   .flip-card {

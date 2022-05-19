@@ -136,7 +136,7 @@
 <p class="card-text">Contacto:</p>
 </a>
 <input id="checkbox" type="checkbox"/>
-<label for="checkbox"></label>
+<label for="checkbox"><img src="img/heartfavorito.png"></label>
 </div>
 </div>
  <!--Fin enlace servicio2---->
