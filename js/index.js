@@ -1,16 +1,5 @@
 //Para el slider de empresas colaboradoras
 
-var imgArray=[
-    'auspiciadorAccenture.png',
-    'auspiciadorBancochile.png',
-    'auspiciadorBci.png',
-    'auspiciadorBimbo.jpg',
-    'auspiciadorBolsa.png',
-    'auspiciadorEbco.jpg',
-    'auspiciadorEngine.png',
-    'auspiciadorVerisure.png',
-    'auspiciadorWaltmart.png'
-]
 
 
 var img1=document.getElementById('img1');

@@ -46,6 +46,7 @@ h1{
      text-transform: uppercase;
      font-weight: bold;
      font-size: 200%;
+     text-align: center;
  
  }
  h2{
@@ -177,4 +178,11 @@ margin-top: 2%;
     color: rgb(79, 3, 126);
     font-weight: bold;
    
+}
+.row1{
+
+    text-align:center;
+    margin:10 auto;
+    align-items: center;
+
 }

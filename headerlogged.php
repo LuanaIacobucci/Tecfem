@@ -28,8 +28,8 @@
              <img  id="logoHeader" src="img/logopng.png" alt="Logo tefem">
       
             </div>
-                <div id="links" class="col col-md-8 col-lg-9 float-right mt-3 ">
-                <nav  class="float-right">
+                <div id="links" class="col col-md-8 col-lg-9  mt-3 ">
+                <nav  class="navbar">
                     <a href="#">Bolsa de Trabajo</a>
                     <a href="#">Prestación de Servicios</a>
                     <a href="#">Capacitaciones</a>
