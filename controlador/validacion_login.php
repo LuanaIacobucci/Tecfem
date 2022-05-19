@@ -1,23 +1,27 @@
-<?php 
+<?php
+include "conectar.php";
 
-session_start();
+if(isset($_POST['btngrande'])){
 
-require "conectar.php";
+    $user = mysqli_real_escape_string($con,$_POST['nombreUsuario']);
+    $password = mysqli_real_escape_string($con,$_POST['contrasena']);
 
-$conectar = conectar();
+    if ($user != "" && $password != ""){
 
-$nombreUsuario = $_POST["nombreUsuario"]; 
-$contrasena = $_POST["contrasena"]; 
+        $sql_query = "select count(*) from cliente where nombreUsuario='".$user."' and contrasena='".$password."'";
+        $result = mysqli_query($con,$sql_query);
+        $row = mysqli_fetch_array($result);
 
-$sql = "SELECT * FROM cliente WHERE nombreUsuario = '$nombreUsuario' AND contrasena = $contrasena ";
-$result = mysqli_query($conectar,$sql);
+        $count = $row['cntUser'];
 
-if(mysqli_num_rows($result)>0){
-header("Location:index.php");
-}else{
-header("Location:login.php");
-echo 'Error al ingresar datos';
+        if($count > 0){
+            $_SESSION['nombreUsuario'] = $ser;
+            header('Location: index.php');
+        }else{
+            echo "Invalid username and password";
+        }
+
+    }
 
 }
-
 ?>
