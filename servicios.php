@@ -130,7 +130,7 @@
 <div class="card" style="width: 18rem;">
 <a id="tarjetaservicio" href="detalleservicio.php">
 <img src="..." class="card-img-top" alt="FotoPerfil">
-<div class="card-body">
+<div class="card-body"> <!------Tarjeta cuerpo--->
 <p class="card-text">Proveedora:</p>
 <p class="card-text">Servicio:</p>
 <p class="card-text">Contacto:</p>
