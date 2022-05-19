@@ -8,7 +8,7 @@ $conn= mysqli_connect("localhost", "root", "root", "tecfem");
 
 $consulta = mysqli_query("SELECT * FROM cliente where nombreUsuario = '$NOMBREUSUARIO' and contrasena = '$PASSWORD' ");
 
-$resultado = mysql_query($conexion, $consulta);
+$resultado = mysql_query($conn, $consulta);
 
 $filas=mysqli_num_rows($resultado);
 
