@@ -135,9 +135,8 @@
 <p class="card-text">Servicio:</p>
 <p class="card-text">Contacto:</p>
 </a>
-<label class="checkeable">
-  <input type="checkbox" name="favorito"/>
-</label>
+<input id="checkbox" type="checkbox"/>
+<label for="checkbox"></label>
 </div>
 </div>
  <!--Fin enlace servicio2---->
