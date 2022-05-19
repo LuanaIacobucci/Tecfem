@@ -121,6 +121,10 @@
 <p class="card-text">Servicio:</p>
 <p class="card-text">Contacto:</p>
 </a> 
+<label>
+  <input type="radio" name="test" value="small" checked>
+  <img src="img/heartfavorito.png" alt="favorito">
+</label>
 </div>
 </div>
 <!--Fin enlace servicio1---->
