@@ -1,6 +1,8 @@
 <?php
 require ("modelo\conectar.php");
 
+session_start();
+
 if(isset($_POST['btngrande'])){
 
     $user = mysqli_real_escape_string($conn,$_POST['nombreUsuario']);
