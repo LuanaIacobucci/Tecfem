@@ -1,29 +1,45 @@
-<?php 
-session_start();
+<?
+require "controlador/conectar.php";
+    
+    session_start();
+    
+    if($_POST){
+        
+        $usuario = $_POST['nombreUsuario'];
+        $password = $_POST['contrasena'];
+        
+        $sql = "SELECT nombreUsuario, contrasena FROM cliente WHERE nombreUsuario='$usuario' AND contrasena='$password'";
+        //echo $sql;
+        $resultado = $mysqli->query($sql);
+        $num = $resultado->num_rows;
+        
+        if($num>0){
+            $row = $resultado->fetch_assoc();
+            $password_bd = $row['contrasena'];
+            
+            $pass_c = $password;
+            
+            if($password_bd == $pass_c){
+                
+                $_SESSION['nombreUsuario'] = $row['nombreUsuario'];
+                
+                echo "Conexion Exitosa";
+                header("Location: index.php");
+                
+            } else {
+            
+            echo "La contraseña no coincide";
+            header("Location: login.php");
+            
+            }
+            
+            
+            } else {
+            echo "Usuaria no existente";
+        }
+        
+        
+        
+    }
 
-$conn= mysqli_connect("localhost", "root", "root", "tecfem");
-
- $NOMBREUSUARIO=$_POST['nombreUsuario'];
- $PASSWORD=$_POST['contrasena']; 
-
-$consulta = "SELECT * FROM cliente where nombreUsuario = '$NOMBREUSUARIO' and contrasena = '$PASSWORD' ";
-
-$resultado = mysql_query($conn, $consulta);
-
-$filas=mysqli_num_rows($resultado);
-
-if($filas){
-header("location:index.php");
-
-}else{
-include("login.php");
-?>
-
-<p>Error de autentificacion</p>
-<?php
-}
-
-mysqli_free_result($resultado);
-mysqli_close($conexion);
-
-?>
+    ?>
