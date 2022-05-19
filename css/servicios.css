@@ -74,6 +74,9 @@ a:visited {
   justify-content: center;
 }
 
+input[type=checkbox]{
+  margin-left:20px;
+}
 
 input[type=checkbox] + label {  
   height: 50px;
