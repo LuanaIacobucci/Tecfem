@@ -1,5 +1,5 @@
 <?php
-include "conectar.php";
+include "modelo\conectar.php";
 
 if(isset($_POST['btngrande'])){
 
