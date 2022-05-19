@@ -74,6 +74,21 @@ a:visited {
   justify-content: center;
 }
 
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox] + label {  
+  height: 50px;
+  width: 50px;
+  background:;
+  display: inline-block;
+}
+
+input[type=checkbox]:checked + label {
+  background-image: ;
+}
+
 /******CSS Flip Cards*****/
   .flip-card {
     background-color: transparent;
