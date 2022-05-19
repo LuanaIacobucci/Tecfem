@@ -75,7 +75,8 @@ a:visited {
 }
 
 input[type=checkbox]{
-  margin-left:20px;
+  margin-left:185px;
+  margin-right:none;
 }
 
 input[type=checkbox] + label {  
