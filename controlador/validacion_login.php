@@ -2,7 +2,7 @@
 
 session_start();
 
-require "modelo\conectar.php";
+require "conectar.php";
 
 $conectar = conectar();
 
