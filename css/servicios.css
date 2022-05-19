@@ -79,6 +79,10 @@ input[type=checkbox]{
   margin-right:none;
 }
 
+input[type=checkbox]:hover{
+  color:rgb(0,128,55);
+}
+
 input[type=checkbox] + label {  
   height: 50px;
   width: 50px;
