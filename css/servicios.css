@@ -74,9 +74,6 @@ a:visited {
   justify-content: center;
 }
 
-input[type=checkbox] {
-  display: none;
-}
 
 input[type=checkbox] + label {  
   height: 50px;
