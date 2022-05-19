@@ -97,6 +97,7 @@
     <br>
 <form name="form1" method="post" action="">
   <div class="row"> <!---Contenedor fila1---->
+  <p>Ingrese sus datos personales:</p>
     <div class="col">
         <label>RUT:</label>
       <input type="text" name="rut" class="form-control" placeholder="Ingrese su rut">
