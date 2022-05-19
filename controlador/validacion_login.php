@@ -1,5 +1,5 @@
 <?php
-require ("modelo\conectar.php");
+require ("conectar.php");
 
 session_start();
 
