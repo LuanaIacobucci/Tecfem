@@ -36,7 +36,7 @@
     
     <div id="contenido1" class="col col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-2">
    
-    <form>
+    <form action="controlador\validacion_login.php" method="post">
 
     <h1>Iniciar Sesión</h1>
   <div  class="row mb-3">
@@ -81,7 +81,7 @@
     
     <div id="contenido1" class="col col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
    
-    <form>
+    <form action="controlador\validacion_login.php" method="post">
 
     <h1>Iniciar Sesión</h1>
   <div  class="row mb-3">
