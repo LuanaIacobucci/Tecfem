@@ -16,7 +16,7 @@ if(mysqli_num_rows($result)>0){
 header("Location:index.php");
 }else{
 header("Location:login.php");
-echo:"Error al ingresar datos";
+echo 'Error al ingresar datos';
 
 }
 
