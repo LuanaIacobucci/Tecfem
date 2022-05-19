@@ -1,5 +1,5 @@
 <?php
-require ("conectar.php");
+include("../conectar.php");
 
 session_start();
 
