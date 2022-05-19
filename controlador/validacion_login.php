@@ -1,5 +1,5 @@
 <?
-require "controlador/conectar.php";
+require ("controlador/conectar.php");
     
     session_start();
     
