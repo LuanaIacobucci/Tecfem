@@ -25,7 +25,8 @@ if(!$consulta){
     
     if($nombre = mysqli_fetch_assoc($consulta)) {
     
-    header ("Location:index.php");
+    echo "Has iniciado sesión";
+    //header ("Location:index.php");
     
     } else {
     
