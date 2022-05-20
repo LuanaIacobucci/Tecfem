@@ -6,7 +6,7 @@ session_start();
 $nombreUsuario = $_POST["nombreUsuario"]; 
 $contrasena = $_POST["contrasena"]; 
 
-$con = msqli_connect("localhost","root","root","tecfem");
+$con = mysqli_connect("localhost","root","root","tecfem");
 
 $sql = "SELECT*FROM cliente WHERE nombreUsuario = '$nombreUsuario' AND contrasena = $contrasena ";
 $resultado = mysqli_query($con, $sql);  
