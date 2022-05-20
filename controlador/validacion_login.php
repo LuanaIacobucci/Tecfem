@@ -4,7 +4,7 @@ $nombre = $_POST['nombreUsuario'];
 $password = $_POST['contrasena'];
 
 if(empty($nombre) || empty($password)){
-header("Location: index.html");
+header("Location: index.php");
 exit();
 }
 
