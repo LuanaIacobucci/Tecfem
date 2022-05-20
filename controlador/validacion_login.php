@@ -1,20 +1,28 @@
 <?php
 @include('modelo\conectar.php');
 
-$nombreUsuario = $_POST['nombreUsuario'];
-$password = $_POST['contrasena'];
+session_start();
 
-$sql = "SELECT*FROM cliente WHERE nombreUsuario = '$nombreUsuario' AND contrasena = $password ";
-$resultado = $conn->query($sql);
+$nombreUsuario = $_POST["nombreUsuario"]; (formulario name="nombreUsuario")
+$contrasena = $_POST["contrasena"]; (formulario name="password")
+
+$sql = "SELECT*FROM cliente WHERE nombreUsuario = '$nombreUsuario' AND contrasena = $contrasena ";
+$resultado = $conectar->query($sql);
 
 $row = $resultado->fetch_assoc();
 
-if($row['nombreUsuario'] == $nombre && $row['contrasena'] == $password){
+if($row['nombreUsuario'] == $nombre && $row['contrasena'] == $contrasena){
 $_SESSION['nombreUsuario'] = $nombreUsuario;
-header("Location:servicios.php"); 
+header("Location:index.php"); 
 }else{
 header("Location: login.php");
 }
+
+if($resultado->num_rows > 0){
+echo 'Usuaria ha ingresado correctamente';
+}else{
+echo 'Usuaria no existente';
+} 
 
 
 ?>
