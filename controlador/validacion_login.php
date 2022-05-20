@@ -16,7 +16,6 @@ $filas = $resultado;
 if($filas){
 header("location:..\index.php"); 
 }else{
-    header("location:login.php");
     echo 'Error en la autentificación de los datos'
     ?>
     
