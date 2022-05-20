@@ -13,11 +13,10 @@ $resultado = mysqli_query($con, $sql);
 
 $filas = mysqli_num_rows($resultado);
 
-if($filas['nombreUsuario'] == $nombre && $filas['contrasena'] == $contrasena){
-$_SESSION['nombreUsuario'] = $nombreUsuario;
-header("Location:index.php"); 
+if($filas['nombreUsuario'] == $nombreUsuario && $filas['contrasena'] == $contrasena){
+header("location:index.php"); 
 }else{
-header("Location: login.php");
+header("location:login.php");
 }
 
 if($resultado->filas > 0){
