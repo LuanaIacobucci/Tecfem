@@ -4,7 +4,7 @@ session_start();
 $nombre = $_POST['nombreUsuario'];
 $password = $_POST['contrasena'];
 
-require 'modelo\conectar.php';
+(include './conectar.php');
 
 $conn= mysqli_connect("localhost", "root", "root", "tecfem");
 
