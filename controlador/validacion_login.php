@@ -5,7 +5,7 @@ $nombreUsuario = $_POST['nombreUsuario'];
 $password = $_POST['contrasena'];
 
 if(empty($nombreUsuario) || empty($password)){
-header('Location:index.php/controlador');
+header('Location:login.php');
 exit();
 }
 
