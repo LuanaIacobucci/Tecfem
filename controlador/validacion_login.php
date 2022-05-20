@@ -18,7 +18,7 @@ header("location:..\index.php");
 }else{
     ?>
     <?php
-include("login.php");
+header("location:login.php");
 ?>
 <p>Error en la autentificación de los datos</p>
 <?php
