@@ -1,23 +1,34 @@
 <?php 
 
-include('Tecfem\modelo\conectar.php');
+include('modelo\conectar.php');
 
-session_start();
+$usuario = $_POST['nombreUsuario'];
+$pass = $_POST['contrasena'];
 
-$nombreUsuario = $_POST["nombreUsuario"]; 
-$contrasena = $_POST["contrasena"]; 
-
-$sql = "SELECT*FROM cliente WHERE nombreUsuario = '$nombreUsuario' AND contrasena = $contrasena ";
-$resultado = $conectar->query($sql);
-
-$row = $resultado->fetch_assoc();
-
-if($row['nombreUsuario'] == $nombre && $row['contrasena'] == $contrasena){
-$_SESSION['nombreUsuario'] = $nombreUsuario;
-header("Location:index.php"); 
-}else{
-echo "Error, los datos ingresados son incorrectos";
+if(empty($usuario) || empty($pass)){
+header("Location: index.html");
+exit();
 }
+
+mysql_connect('localhost','root','root') or die("Error al conectar " . mysql_error());
+mysql_select_db('login') or die ("Error al seleccionar la Base de datos: " . mysql_error());
+
+$sql = mysql_query("SELECT * FROM cliente WHERE $usuario='nombreUsuario' AND $pass='contrasena'");
+
+if($row = mysql_fetch_array($sql)){
+if($row['nombreUsuario'] && $row['contrasena'] == $pass){
+session_start();
+$_SESSION['usuario'] = $usuario;
+header("Location: contenido.php");
+}else{
+header("Location: index.php");
+exit();
+}
+}else{
+header("Location: index.php");
+exit();
+}
+
 
 
 ?>
