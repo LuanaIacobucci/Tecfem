@@ -1,36 +1,25 @@
 <?php
-session_start();
 
 $nombre = $_POST['nombreUsuario'];
 $password = $_POST['contrasena'];
 
-(include 'modelo/conectar.php');
+if(empty($nombre) || empty($password)){
+header("Location: index.html");
+exit();
+}
 
-$conn= mysqli_connect("localhost", "root", "root", "tecfem");
+mysql_connect('localhost','root','root') or die("Error al conectar " . mysql_error());
 
-$consulta = mysqli_query ($conn, "SELECT * FROM cliente WHERE nombreUsuario = '$nombre' AND contrasena = '$password'");
+$result = mysql_query("SELECT * FROM cliente WHERE nombreUsuario = '$nombre' AND contrasena = '$password'");
 
-if(!$consulta){
-
-    echo "Usuaria no existe: " . $nombre . " " . $password. " contraseña incorrecta" .
-    
-    //echo mysqli_error($mysqli);
-    
-    exit;
-    
-    }else{
-    
-    }
-    
-    
-    if($nombre = mysqli_fetch_assoc($consulta)) {
-    
-    header ("Location:index.php");
-    
-    } else {
-    
-    echo "Usuaria incorrecta o inexistente";
-    
-    }
+if($row = mysql_fetch_array($result)){
+if($row['nombreUsuario'] == $nombre && $row['contrasena'] == $password){
+session_start();
+$_SESSION['nombreUsuario'] = $nombre;
+header("Location: index.php");
+}else{
+header("Location: login.php");
+exit();
+}
 
 ?>
