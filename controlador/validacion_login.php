@@ -1,7 +1,7 @@
 <?php
 @include('conectar.php');
 
-$nombre = $_POST['nombreUsuario'];
+$nombreUsuario = $_POST['nombreUsuario'];
 $password = $_POST['contrasena'];
 
 if(empty($nombre) || empty($password)){
@@ -9,19 +9,17 @@ header("Location: index.php");
 exit();
 }
 
-$conn = mysql_connect('localhost','root','root') or die("Error al conectar " . mysql_error());
+$sql = "SELECT*FROM cliente WHERE nombreUsuario = '$nombreUsuario' AND contrasena = $password ";
+$resultado = $conectar->query($sql);
 
-$result = mysql_query("SELECT * FROM cliente WHERE nombreUsuario = '$nombre' AND contrasena = '$password'");
+$row = $resultado->fetch_assoc();
 
-if($row = mysql_fetch_array($result)){
 if($row['nombreUsuario'] == $nombre && $row['contrasena'] == $password){
-session_start();
-$_SESSION['nombreUsuario'] = $nombre;
-header("Location: index.php");
+$_SESSION['nombreUsuario'] = $nombreUsuario;
+header("Location:index.php"); 
 }else{
 header("Location: login.php");
-exit();
 }
-}
+
 
 ?>
