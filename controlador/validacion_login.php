@@ -11,7 +11,7 @@ $con = mysqli_connect("localhost","root","root","tecfem");
 $sql = "SELECT*FROM cliente WHERE nombreUsuario = '$nombreUsuario' AND contrasena = $contrasena ";
 $resultado = mysqli_query($con, $sql);  
 
-$filas = $resultado->fetch_assoc();
+$filas = $resultado;
 
 if($filas){
 header("location:index.php"); 
