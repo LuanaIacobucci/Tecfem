@@ -29,7 +29,7 @@ if(!$consulta){
     
     } else {
     
-    echo "Usuaria incorrecta o inexistente"
+    echo "Usuaria incorrecta o inexistente";
     
     }
 
