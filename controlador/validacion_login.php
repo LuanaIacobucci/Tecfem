@@ -3,8 +3,8 @@
 
 session_start();
 
-$nombreUsuario = $_POST["nombreUsuario"]; (formulario name="nombreUsuario")
-$contrasena = $_POST["contrasena"]; (formulario name="password")
+$nombreUsuario = $_POST["nombreUsuario"]; 
+$contrasena = $_POST["contrasena"]; 
 
 $sql = "SELECT*FROM cliente WHERE nombreUsuario = '$nombreUsuario' AND contrasena = $contrasena ";
 $resultado = $conectar->query($sql);
