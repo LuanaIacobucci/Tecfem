@@ -4,7 +4,7 @@
 $nombreUsuario = $_POST['nombreUsuario'];
 $password = $_POST['contrasena'];
 
-if(empty($nombre) || empty($password)){
+if(empty($nombreUsuario) || empty($password)){
 echo 'Debe ingresar los datos';
 exit();
 }
