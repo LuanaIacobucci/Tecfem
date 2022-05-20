@@ -25,7 +25,7 @@ if(!$consulta){
     
     if($user = mysqli_fetch_assoc($consulta)) {
     
-    header ("Location:index.php");
+    header ("Location:Tecfem\index.php");
     
     } else {
     
