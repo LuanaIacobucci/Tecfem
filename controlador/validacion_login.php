@@ -6,7 +6,7 @@ $usuario = $_POST['nombreUsuario'];
 $pass = $_POST['contrasena'];
 
 if(empty($usuario) || empty($pass)){
-header("Location:index.php");
+header("Location:Tecfem\index.php");
 exit();
 }
 
