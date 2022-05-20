@@ -6,10 +6,12 @@ session_start();
 $nombreUsuario = $_POST["nombreUsuario"]; 
 $contrasena = $_POST["contrasena"]; 
 
+$con = msqli_connect("localhost","root","root","tecfem");
+
 $sql = "SELECT*FROM cliente WHERE nombreUsuario = '$nombreUsuario' AND contrasena = $contrasena ";
 $resultado = mysqli_query($con, $sql);  
 
-$row = $resultado->fetch_assoc();
+$row = mysqli_num_rows($resultado);
 
 if($row['nombreUsuario'] == $nombre && $row['contrasena'] == $contrasena){
 $_SESSION['nombreUsuario'] = $nombreUsuario;
