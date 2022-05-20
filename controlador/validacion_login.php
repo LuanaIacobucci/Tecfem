@@ -1,10 +1,10 @@
 <?php
 @include('modelo\conectar.php');
 
-session_start();
-
 $nombreUsuario = $_POST["nombreUsuario"]; 
 $contrasena = $_POST["contrasena"]; 
+
+session_start();
 
 $con = mysqli_connect("localhost","root","root","tecfem");
 
