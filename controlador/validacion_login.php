@@ -16,11 +16,10 @@ $filas = $resultado;
 if($filas){
 header("location:..\index.php"); 
 }else{
+    header("location:login.php");
+    echo 'Error en la autentificación de los datos'
     ?>
-    <?php
-header("location:login.php");
-?>
-<p>Error en la autentificación de los datos</p>
+    
 <?php
 }
 mysqli_free_result($resultado);
