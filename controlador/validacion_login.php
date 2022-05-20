@@ -13,17 +13,18 @@ $resultado = mysqli_query($con, $sql);
 
 $filas = mysqli_num_rows($resultado);
 
-if($filas['nombreUsuario'] == $nombreUsuario && $filas['contrasena'] == $contrasena){
+if($filas){
 header("location:index.php"); 
 }else{
-header("location:login.php");
-}
-
-if($resultado->filas > 0){
-echo 'Usuaria ha ingresado correctamente';
-}else{
-echo 'Usuaria no existente';
-} 
-
-
+    ?>
+    <?php
+include("login.php");
 ?>
+<p>Error en la autentificación de los datos</p>
+<?php
+}
+mysqli_free_result($resultado);
+mysqli_close($con);
+?>
+
+
