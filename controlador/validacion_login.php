@@ -3,7 +3,7 @@ session_start();
 if(isset($_POST['enviar']))
 {
     extract($_POST);
-    include 'conectar.php';
+    include 'modelo\conectar.php';
     $sql=mysqli_query($conn,"SELECT * FROM cliente where nombreUsuario='$nombreUsuario' and contrasena='$contrasena'");
     $row  = mysqli_fetch_array($sql);
     if(is_array($row))
