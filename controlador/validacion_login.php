@@ -10,7 +10,7 @@ exit();
 }
 
 $sql = "SELECT*FROM cliente WHERE nombreUsuario = '$nombreUsuario' AND contrasena = $password ";
-$resultado = $conectar->query($sql);
+$resultado = $conn->query($sql);
 
 $row = $resultado->fetch_assoc();
 
