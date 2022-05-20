@@ -27,7 +27,7 @@ if(!$consulta){
     
     
     echo "Nombre de Usuaria y contraseña son correctas"
-    header("Location:index.php");
+    header('Location:index.php');
     
     } else {
     
