@@ -1,31 +1,20 @@
-<?php 
-
-include "modelo\conectar.php";
-
-$usuario = $_POST['nombreUsuario'];
-$pass = $_POST['contrasena'];
-
-if(empty($usuario) || empty($pass)){
-header('Location:index.php');
-exit();
-}
-
-$sql = mysql_query("SELECT * FROM cliente WHERE $usuario='nombreUsuario' AND $pass='contrasena'");
-
-if($row = mysql_fetch_array($sql)){
-if($row['nombreUsuario'] && $row['contrasena'] == $pass){
+<?php
 session_start();
-$_SESSION['usuario'] = $usuario;
-header("Location: contenido.php");
-}else{
-header("Location: index.php");
-exit();
+if(isset($_POST['enviar']))
+{
+    extract($_POST);
+    include 'conectar.php';
+    $sql=mysqli_query($conn,"SELECT * FROM cliente where nombreUsuario='$nombreUsuario' and contrasena='$contrasena'");
+    $row  = mysqli_fetch_array($sql);
+    if(is_array($row))
+    {
+        $_SESSION["nombreUsuario"] = $row['nombreUsuario'];
+        $_SESSION["contrasena"]=$row['contrasena'];
+        header("Location: index.php"); 
+    }
+    else
+    {
+        echo "NombreUsuario / Contraseña incorrecta";
+    }
 }
-}else{
-header("Location: index.php");
-exit();
-}
-
-
-
 ?>
