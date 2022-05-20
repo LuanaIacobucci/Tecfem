@@ -5,7 +5,7 @@ $nombreUsuario = $_POST['nombreUsuario'];
 $password = $_POST['contrasena'];
 
 if(empty($nombreUsuario) || empty($password)){
-echo 'Debe ingresar los datos';
+header('Location:index.php');
 exit();
 }
 
