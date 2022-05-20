@@ -8,7 +8,7 @@ header("Location: index.php");
 exit();
 }
 
-mysql_connect('localhost','root','root') or die("Error al conectar " . mysql_error());
+$conn = mysql_connect('localhost','root','root') or die("Error al conectar " . mysql_error());
 
 $result = mysql_query("SELECT * FROM cliente WHERE nombreUsuario = '$nombre' AND contrasena = '$password'");
 
