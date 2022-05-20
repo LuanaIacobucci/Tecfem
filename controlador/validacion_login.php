@@ -14,7 +14,7 @@ $resultado = mysqli_query($con, $sql);
 $filas = $resultado;
 
 if($filas){
-header("location:index.php"); 
+header("location:..\index.php"); 
 }else{
     ?>
     <?php
