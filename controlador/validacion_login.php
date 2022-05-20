@@ -14,7 +14,7 @@ if(!$consulta){
 
     echo "Usuaria no existe: " . $nombre . " " . $password. " contraseña incorrecta" .
     
-    echo mysqli_error($mysqli);
+    //echo mysqli_error($mysqli);
     
     exit;
     
