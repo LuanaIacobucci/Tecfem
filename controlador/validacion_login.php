@@ -23,7 +23,7 @@ if(!$consulta){
     }
     
     
-    if($user = mysqli_fetch_assoc($consulta)) {
+    if($nombre = mysqli_fetch_assoc($consulta)) {
     
     header ("Location:index.php");
     
