@@ -7,7 +7,7 @@ $nombreUsuario = $_POST["nombreUsuario"];
 $contrasena = $_POST["contrasena"]; 
 
 $sql = "SELECT*FROM cliente WHERE nombreUsuario = '$nombreUsuario' AND contrasena = $contrasena ";
-$resultado = $conectar->query($sql);
+$resultado = $conn->query($sql);
 
 $row = $resultado->fetch_assoc();
 
