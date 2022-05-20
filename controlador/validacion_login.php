@@ -16,7 +16,7 @@ $row = $resultado->fetch_assoc();
 
 if($row['nombreUsuario'] == $nombre && $row['contrasena'] == $password){
 $_SESSION['nombreUsuario'] = $nombreUsuario;
-header("Location:index.php"); 
+header("Location:servicios.php"); 
 }else{
 header("Location: login.php");
 }
