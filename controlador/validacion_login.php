@@ -14,15 +14,12 @@ $resultado = mysqli_query($con, $sql);
 $filas = $resultado;
 
 if($filas){
-header("location:..\index.php"); 
+header("location:..\servicio.php"); 
 }else{
     echo 'Error en la autentificación de los datos'
-    ?>
-    
-<?php
-}
-mysqli_free_result($resultado);
-mysqli_close($con);
+}    
 ?>
+    
+
 
 
