@@ -6,10 +6,10 @@ $contrasena = $_POST["contrasena"];
 
 session_start();
 
-$con = mysqli_connect("localhost","root","root","tecfem");
+$conn = mysqli_connect("localhost","root","root","tecfem");
 
 $sql = "SELECT*FROM cliente WHERE nombreUsuario = '$nombreUsuario' AND contrasena = $contrasena ";
-$resultado = mysqli_query($con, $sql);  
+$resultado = mysqli_query($conn, $sql);  
 
 $filas = mysqli_num_rows($resultado);
 
