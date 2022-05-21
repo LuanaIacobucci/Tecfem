@@ -192,7 +192,7 @@
     <input type="checkbox" name="tecnologia" id="cboxtec" value="tecnologia">
     </div>
     <div class="col">
-        <label>Ingeniería</label>
+        <label>Ingeniería y Servicios técnicos</label>
       <input type="checkbox" name="ingenieria" class="cboxing" value="ingenieria">
     </div>
     <div class="col"> 
