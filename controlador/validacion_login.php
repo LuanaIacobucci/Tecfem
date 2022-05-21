@@ -16,7 +16,7 @@ $filas = mysqli_num_rows($resultado);
 if($filas){
     header("Location:..\servicios.php");
 }else{
-    include("..\index.php"); 
+    echo 'Los datos ingresados son incorrectos'; 
 }    
 
 mysqli_free_result($resultado);
