@@ -11,12 +11,10 @@ $con = mysqli_connect("localhost","root","root","tecfem");
 $sql = "SELECT*FROM cliente WHERE nombreUsuario = '$nombreUsuario' AND contrasena = $contrasena ";
 $resultado = mysqli_query($con, $sql);  
 
-$filas = $resultado;
-
-if($filas){
+if($filas = $resultado){
 header("location:..\servicio.php"); 
 }else{
-    echo 'Error en la autentificación de los datos'
+    echo 'Error en la autentificación de los datos';
 }    
 ?>
     
