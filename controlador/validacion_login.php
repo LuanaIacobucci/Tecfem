@@ -8,7 +8,7 @@ session_start();
 
 $conn = mysqli_connect("localhost","root","root","tecfem");
 
-$sql = "SELECT*FROM cliente WHERE nombreUsuario = '$nombreUsuario' AND contrasena = $contrasena ";
+$sql = "SELECT*FROM cliente WHERE nombreUsuario = '$nombreUsuario' AND contrasena = '$contrasena' ";
 $resultado = mysqli_query($conn, $sql);  
 
 $filas = mysqli_num_rows($resultado);
