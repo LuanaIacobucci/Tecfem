@@ -55,7 +55,7 @@
   
   <a id="noregistrado" href="#">No tengo una cuenta aun.</a>
   <br>
-  <button id="btngrande" type="submit" class="btn btn-primary">Iniciar</button>
+  <button id="btngrande" type="submit" name="enviar" class="btn btn-primary">Iniciar</button>
 </form>
 
     </div>
@@ -100,7 +100,7 @@
   
   <a id="noregistrado" href="#">No tengo una cuenta aun.</a>
   <br>
-  <button id="btninit" type="submit" class="btn btn-primary">Iniciar</button>
+  <button id="btninit" type="submit" name="enviar" class="btn btn-primary">Iniciar</button>
 </form>
 
     </div>

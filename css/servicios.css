@@ -74,6 +74,22 @@ a:visited {
   justify-content: center;
 }
 
+input[type=checkbox]{
+  margin-left:185px;
+  margin-right:none;
+}
+
+input[type=checkbox]:hover{
+  color:rgb(0,128,55);
+}
+
+input[type=checkbox] + label {  
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+}
+
+
 /******CSS Flip Cards*****/
   .flip-card {
     background-color: transparent;
@@ -139,7 +155,7 @@ font-family:Arial, Helvetica, sans-serif;
 font-size: 18px;
 background:rgb(198,177,204);
 padding:8px;
-margin-left: 585px;
+margin-left: 510px;
 }
 
 .boton_otroservicio:hover{
