@@ -174,7 +174,7 @@
   <div class="row"> <!--Contenedor fila6 "row"-->
   <div class="col"> 
     <label>Contraseña:</label>
-    <input type="password" name="password" class="form-control" placeholder="Ingrese su contraseña">
+    <input type="password" name="contrasena" class="form-control" placeholder="Ingrese su contraseña">
     </div>
     <div class="col">
     <label class="form-label" for="customFile">Ingrese una imagen para su foto de perfil</label>
