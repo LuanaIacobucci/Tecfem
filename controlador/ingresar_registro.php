@@ -32,7 +32,7 @@
     $comuna = $_REQUEST["comuna"];
     $nombreUsuario = $_REQUEST["nombreUsuario"];
     $contrasena = $_REQUEST["contrasena"];
-    
+    $imgperfil = $_REQUEST["imgperfil"];
 
     $consulta = "INSERT INTO clientes(rut_cliente,nombre,apellido,telefono,email)VALUE('$rut_cliente','$nombre','$apellido','$telefono','$email')";
     //creo variable de resultado
