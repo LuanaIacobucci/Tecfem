@@ -29,8 +29,8 @@
     $telefono = $_REQUEST["telefono"];
     $direccion = $_REQUEST["direccion"];
     $comuna = $_REQUEST["comuna"];
-    $nombreusuario = $_REQUEST["nombreusuario"];
-    $password = $_REQUEST["password"];
+    $nombreUsuario = $_REQUEST["nombreUsuario"];
+    $contrasena = $_REQUEST["contrasena"];
     //$region
 
 

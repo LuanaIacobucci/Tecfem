@@ -167,7 +167,7 @@
     </div>
     <div class="col"> 
     <label>Nombre de Usuario:</label>
-    <input type="text" name="nombreusuario" class="form-control" placeholder="Ingrese un nombre de usuario">
+    <input type="text" name="nombreUsuario" class="form-control" placeholder="Ingrese un nombre de usuario">
     </div>
   </div> <!--Fin contenedor fila5 "row"-->
   <br>
