@@ -50,7 +50,7 @@
     <br>
     
     <div id="tipocuenta">
-    <form name="tipocuenta" method="post" action="#">  
+    <form name="form1" method="post" action="#">  
     <p>Seleccione el tipo de cuenta con el que se desea registrar:</p>
     <div class="row">
         <div class="col"> <!---Columna Checkbox Cliente--->
@@ -71,7 +71,7 @@
               <p>Proveedor de Servicio</p>
                 </div>
   </div> <!----Fin fila----->
-</form>
+
 </div> <!------Fin id tipo cuenta---->
 </div> <!---Fin contenedor tipo cuenta----->
 
@@ -97,7 +97,7 @@
 <br>    
 <div id="datospersonales"> <!---ID Datos personales--->
     <br>
-<form name="form1" method="post" action="">
+
   <div class="row"> <!---Contenedor fila1---->
   <p>Ingrese sus datos personales:</p>
     <div class="col">
@@ -210,7 +210,7 @@
     </div>
   </div> <!--Fin contenedor fila7 "row"-->
   <br>
-</form> <!---Fin formulario-->
+
 </div><!--Fin datos personales--->
 </div> <!---Fin Contendor DatosPersonales--->    
 <br>
@@ -233,7 +233,7 @@
 <br>
 <br>
 <div id="servicios"> <!--ID servicios--->
-<form name="formservicios" method="post" action="">
+
   <div class="row"> <!---Contenedor fila1 servicio y profesión---->
     <div class="col">
         <label>Nombre del Servicio:</label>
