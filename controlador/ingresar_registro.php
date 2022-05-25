@@ -25,7 +25,7 @@
     $nombre = $_REQUEST["nombre"];
     $apellido = $_REQUEST["apellido"];
     $edad = $_REQUEST["edad"];
-    $correo = $_REQUEST["correo"];
+    $email = $_REQUEST["email"];
     $telefono = $_REQUEST["telefono"];
     $direccion = $_REQUEST["direccion"];
     $comuna = $_REQUEST["comuna"];

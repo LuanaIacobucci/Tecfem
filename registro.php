@@ -123,7 +123,7 @@
   <div class="row"> <!--Contenedor fila3 "row"-->
     <div class="col">
         <label>Correo Electrónico:</label>
-      <input type="text" name="correo" class="form-control" placeholder="Ingrese su correo">
+      <input type="text" name="email" class="form-control" placeholder="Ingrese su correo">
     </div>
     <div class="col"> 
     <label>Número de telefono:</label>
