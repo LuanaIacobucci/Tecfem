@@ -28,11 +28,11 @@
     $email = $_REQUEST["email"];
     $telefono = $_REQUEST["telefono"];
     $direccion = $_REQUEST["direccion"];
+    //$region
     $comuna = $_REQUEST["comuna"];
     $nombreUsuario = $_REQUEST["nombreUsuario"];
     $contrasena = $_REQUEST["contrasena"];
-    //$region
-
+    
 
     $consulta = "INSERT INTO clientes(rut_cliente,nombre,apellido,telefono,email)VALUE('$rut_cliente','$nombre','$apellido','$telefono','$email')";
     //creo variable de resultado
