@@ -127,7 +127,7 @@
     </div>
     <div class="col"> 
     <label>Número de telefono:</label>
-    <input type="text" name="direccion" class="form-control" placeholder="Ingrese dirección">
+    <input type="text" name="telefono" class="form-control" placeholder="Ingrese nro de telefono">
     </div>
   </div> <!--Fin contenedor fila3 "row"-->
   <br>
@@ -167,7 +167,7 @@
     </div>
     <div class="col"> 
     <label>Nombre de Usuario:</label>
-    <input type="text" name="nomusuario" class="form-control" placeholder="Ingrese un nombre de usuario">
+    <input type="text" name="nombreusuario" class="form-control" placeholder="Ingrese un nombre de usuario">
     </div>
   </div> <!--Fin contenedor fila5 "row"-->
   <br>
