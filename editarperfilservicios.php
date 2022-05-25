@@ -263,8 +263,19 @@
              </div> </div>
 
              <div id="miservicios">
+                 <div class="row">
+            <div class="col">  
              <h3>Mis Servicios</h3>
+             </div>
 
+             <div  class="col">
+                 <button  id="agregarserviciobtn" data-toggle="modal" data-target="#addServiceModal" style="float:right;" class="btn  btn-lg"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="36" fill="rgb(0,128,55)" class="bi bi-plus-circle" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+            </svg></button>
+             </div>
+
+             </div>
              <!--Inicio tarjeta modelo-->
                 <div class="container">
                         <div class="row">
@@ -309,7 +320,7 @@
 
           
 											<!-- Editar servicio Modal HTML -->
-											<div id="editEmployeeModal" class="modal fade">
+											<div id="editServiceModal" class="modal">
 												<div class="modal-dialog">
 													<div class="modal-content">
 														<form>
@@ -354,6 +365,57 @@
 													</div>
 												</div>
 											</div>
+
+
+                                            <!--modal agregar servicio-->
+                                            	<!-- Editar servicio Modal HTML -->
+											<div id="addServiceModal" class="modal fade" role="dialog">
+												<div class="modal-dialog">
+													<div class="modal-content">
+														<form>
+															<div class="modal-header">						
+																<h4 class="modal-title">Agregar Servicio</h4>
+																<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+															</div>
+															<div class="modal-body">					
+																<div class="form-group">
+																	<label>Nombre</label>
+																	<input id="nombreadd" type="text" class="form-control" required>
+																</div>
+																<div class="form-group">
+																	<label>Descripción</label>
+																	<textarea id="descripcionadd" class="form-control" required></textarea>
+																</div>
+																<div class="form-group">
+																	<label>Costo</label>
+                                                                    <input id="costoadd" type="number" class="form-control" required>
+																	
+																</div>
+																<div class="form-group">
+																	<label>Categoría</label>
+																	<select id="categoriaadd" name="cateservicio">
+                                                                    <option value="ciencia">Ciencia</option>
+                                                                    <option value="tecnologia" >Tecnología</option>
+                                                                    <option value="ingenieria">Ingeniería</option>
+                                                                    <option value="matematicas">Matemáticas</option>
+                                                                    <option value="otra">Otra</option>
+                                                                    </select>
+																</div>					
+															</div>
+                                                            <div class="modal-footer">
+                                                           
+															
+																<input id="cancel" type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+																<input id="guardar" type="submit" class="btn btn-info" value="Guardar"> 
+
+
+															</div>
+														</form>
+													</div>
+												</div>
+											</div>
+
+                                            <!-- -->
              </div>
                 
            

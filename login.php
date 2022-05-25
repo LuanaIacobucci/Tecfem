@@ -53,7 +53,7 @@
     </div>
   </div>
   
-  <a id="noregistrado" href="#">No tengo una cuenta aun.</a>
+  <a id="noregistrado" href="registro.php">No tengo una cuenta aun.</a>
   <br>
   <button id="btngrande" type="submit" name="enviar" class="btn btn-primary">Iniciar</button>
 </form>

@@ -2,8 +2,8 @@
 //Clase para generar una conexion a la BD MySQL de Tecfem
 class conectar extends mysqli{
 $servername = "localhost";
-$username = "username";
-$password = "password";
+$username = "root";
+$password = "root";
 
 
 

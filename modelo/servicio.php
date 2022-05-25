@@ -10,15 +10,15 @@ class servicio {
   public $fechaPublicacion; //date
 
   //Constructores
-  function __construct($idServicio, $nombreCuenta, $nombre, $categoria,$descripcion,$costoPorHora,$fechaPublicacion) {
+  function __construct($nombreCuenta, $nombre, $categoria,$descripcion,$costoPorHora) {
     //Mas adelante podemos dejarle que suab un archivo
-    $this->idServicio = $idServicio;
+    $this->idServicio = generarIdServicio();
     $this->nombreCuenta = $nombreCuenta; 
     $this->nombre = $nombre;
     $this->categoria = $categoria;
     $this->descripcion = $descripcion;
     $this->costoPorHora = $costoPorHora;
-    $this->fechaPublicacion = $fechaPublicacion; 
+    $this->fechaPublicacion = date("d/m/Y"); 
   }
            
   //Destructor
@@ -107,9 +107,27 @@ class servicio {
   //Para generar un id unico para el servicio
   function generarIdServicio(){
       $id;
-      //Crear un bucle que genere un id de 10 digitos aleatorios. Al terminar chequee que no existe en la base de datos. 
+      $validacion==false;
+      do{
+      $id=rand(1000000000,9999999999);
+      //Validamos que este ID no exista
+
+      //Crear conexion bd
+      $conn = mysqli_connect("localhost","root","root","tecfem"); //Iniciar conexión BD
+      $sql = "Select idServicio from servicio where idServicio=$id"; //Crear sentencia sql
+      $resultado = mysqli_query($conn, $sql); //Ejecutar query
+
+      if($resultado->num_rows =0){
+        //SI devuelve cero filas es un id unico
+        $validacion==true;
+        break;
+      }
+
+      }while($validacion==false)
       return id;
   }
+
+
 
 }
 ?>
