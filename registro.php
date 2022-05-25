@@ -178,7 +178,7 @@
     </div>
     <div class="col">
     <label class="form-label" for="customFile">Ingrese una imagen para su foto de perfil</label>
-<input type="file" class="form-control" id="imgperf" name="imgperfil" />
+<input type="file" class="form-control" id="imgperfil" name="imgperfil" />
     </div>
   </div> <!--Fin contenedor fila6 "row"-->
   <br>
