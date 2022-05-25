@@ -50,7 +50,6 @@
     <br>
     
     <div id="tipocuenta">
-    <form name="form1" method="post" action="#">  
     <p>Seleccione el tipo de cuenta con el que se desea registrar:</p>
     <div class="row">
         <div class="col"> <!---Columna Checkbox Cliente--->
@@ -336,7 +335,6 @@
 </div><!--Fin columna 1 fila6-->
 </div> <!----Fin fila 6----->
 <br>
-</form> <!--Fin formulario--->
 </div> <!---Fin ID servicios--->
 </div>    
 <!---Fin Prestación de servicios---->
