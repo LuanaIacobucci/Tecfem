@@ -5,6 +5,10 @@ $(document).ready(function(){
     $('#registroservicios').hide();
     $('#miservicios').hide();
 
+     
+    $('#proveedorasfavoritas').hide();
+    $('#registroservicios').hide();
+    $('#miservicios').hide();
     
 $('#provfav').click(function(){
 
@@ -48,14 +52,14 @@ $('#misserv').click(function(){
         $.ajax({
             url:'controlador_proveedor.php',
             type: 'POST',
-            data: {nombre,descripcion,costo,categoria},
+            data: {funcion:'agregar', nom: nombre, desc: descripcion, cost: costo,cate: categoria},
             //listar de nuevo servicios 
             success: function(response){
                 //Ver si se agregó o no
                 if(response){
-                    alert("Se agregó a la bd");
+                    alert("true");
                 }else{
-                    alert("No se agregó a la bd");
+                    alert("auxilio: "+response);
                 }
              }
             
@@ -67,12 +71,19 @@ $('#misserv').click(function(){
     //Vamos a mandar una peticion ajax al controlador para que muestre mis servicios
 
     $.ajax({
-        url:'controlador_proveedor.php',
-        type:'GET'
-       // success: 
         
-    })
+        url:'controlador_proveedor.php',
+        type:'GET',
+        success: function(response){
+           // foreach( ){
+                //tarjetaservicio
+            }
 
-});
+        });
+       
+        
+    });
+
+       
    
 });

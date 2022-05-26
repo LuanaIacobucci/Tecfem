@@ -10,7 +10,7 @@ class servicio {
   public $fechaPublicacion; //date
 
   //Constructores
-  function __construct($nombreCuenta, $nombre, $categoria,$descripcion,$costoPorHora) {
+  function __construct($nombreCuenta, $nombre, $categoria,$descripcion,$costoPorHora,  $fechaPublicacion) {
     //Mas adelante podemos dejarle que suab un archivo
     $this->idServicio = generarIdServicio();
     $this->nombreCuenta = $nombreCuenta; 
@@ -18,7 +18,7 @@ class servicio {
     $this->categoria = $categoria;
     $this->descripcion = $descripcion;
     $this->costoPorHora = $costoPorHora;
-    $this->fechaPublicacion = date("d/m/Y"); 
+    $this->fechaPublicacion =  $fechaPublicacion; 
   }
            
   //Destructor
@@ -29,6 +29,9 @@ class servicio {
   //Getter y setter
 
  //no necesita setter pq es autogenerado al instanciar (ver constructor).
+ function set_nombreCuenta($nombreCuenta) {
+  $this->nombreCuenta = $nombreCuenta;
+}
   function get_idServicio() {
     return $this->idServicio;
   }
@@ -82,8 +85,8 @@ class servicio {
     $calificaciones=array($calificacion); //Agregamos
    
     foreach($calificaciones as $valor){ 
-        if ($valor.idCalificacion = $calificaciones.idCalificacion){ //Si existe??
-         resp=true;
+        if ($valor->get_idCalificacion() == $calificaciones->get_idCalificacion()){ //Si existe??
+         $resp=true;
          break;
         }
      }
@@ -97,7 +100,10 @@ class servicio {
     return $this->calificaciones;
   }
 
- //No necesita setter pq es autogenerado (ver constructor)
+ 
+ function set_fechaPublicacion($fechaPublicacion) {
+  $this->fechaPublicacion = $fechaPublicacion;
+}
   function get_fechaPublicacion() {
     return $this->fechaPublicacion;
   }
@@ -123,8 +129,8 @@ class servicio {
         break;
       }
 
-      }while($validacion==false)
-      return id;
+      }while($validacion==false);
+      return $id;
   }
 
 
