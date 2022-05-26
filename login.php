@@ -1,6 +1,6 @@
 <?php
   @include('modelo\conectar.php');
-	require_once("modelo\cliente.php");
+	require_once('modelo\cliente.php');
 
 // Iniciar la sesión
 	session_start();
