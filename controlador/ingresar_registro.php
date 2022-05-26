@@ -54,8 +54,12 @@ if(!eregi("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$
     $msg = 'El correo ingresado es inválido, intente nuevamente.';
 }else{
     // Retorno exitoso 
-    $msg = 'Su cuenta ha sido creada, proceder a verificar el correo de verificación';
+    $msg = 'Su cuenta ha sido creada, <br /> verificar a través del link de activación enviado a su correo.';
 }
+
+if(isset($msg)){  // Check if $msg is not empty
+    echo '<div class="statusmsg">'.$msg.'</div>'; // Display our message and wrap it with a div with the class "statusmsg".
+} 
 
  //Consultas a la base de datos para ingresar la información de registro de clienta
  //Realizar JOINS
