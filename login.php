@@ -25,8 +25,8 @@
       $nombre = _$POST['nombre'];
       $apellido = _$POST['apellido'];
       $email = _$POST['email'];
-      $contrasena = $POST['contrasena'];
-      $tipocuenta = $POST['tipoDeCuenta'];
+      $contrasena = _$POST['contrasena'];
+      $tipocuenta = _$POST['tipoDeCuenta'];
     
 $conn = mysqli_connect("localhost","root","root","tecfem");
 
