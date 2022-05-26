@@ -36,13 +36,13 @@
     $imgperfil = $_REQUEST["imgperfil"]; 
     //area STEM
 
-    //Variables prestación de servicios
+    //Captura de datos de prestación de servicios
 $servicios = $_REQUEST["servicios"];
 $profesion = $_REQUEST["profesion"];
 $descripcion = $_REQUEST["descripcion"];
 $certificacion = $_REQUEST["certificacion"];
 $gradoacademico = $_REQUEST["gradoacademico"];
- //Consultas a la base de datos para ingresar datos
+ //Consultas a la base de datos para ingresar la información de registro de clienta
  //Realizar JOINS
     $consulta1 = "INSERT INTO cliente (nombreUsuario,nombre,apellido,contrasena) VALUES ($nombreUsuario,$nombre,$apellido,$contrasena)";
     $consulta2 = "INSERT INTO clienterut (nombreUsuario,rut) VALUES ($nombreUsuario,$rut)";
