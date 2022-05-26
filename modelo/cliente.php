@@ -27,7 +27,7 @@ class cliente {
     $this->tipoCuenta = $tipoCuenta;
   }
             //contructor con datos mínimos para crearse una cuenta 
-  function __construct($nombreCuenta, $rut, $nombre, $apellido, $email, $contrasena,$tipoCuenta) {
+  function __constructMin($nombreCuenta, $rut, $nombre, $apellido, $email, $contrasena,$tipoCuenta) {
     $this->nombreCuenta = $nombreCuenta;
     $this->rut = $rut;
     $this->nombre = $nombre;
@@ -145,8 +145,8 @@ class cliente {
     $listacalificaciones=array($calificacion); //Agregamos
    
     foreach($listacalificaciones as $valor){ 
-        if ($valor.idCalificacion = $listacalificaciones.idCalificacion){ //Si existe??
-         resp=true;
+        if ($valor->get_idCalificacion() == $listacalificaciones->get_idCalificacion()){ //Si existe??
+         $resp=true;
          break;
         }
      }
@@ -169,13 +169,13 @@ class cliente {
     $proveedoresfavoritos=array($proveedora); //Agregamos
    
     foreach($proveedoresfavoritos as $valor){ 
-        if ($valor.nombreCuenta = $proveedoresfavoritos.nombreCuenta){ //Si existe??
-         resp=true;
+        if ($valor->get_nombreCuenta() == $proveedoresfavoritos->get_nombreCuenta()){ //Si existe??
+         $resp=true;
          break;
         }
      }
         
-     return resp;
+     return $resp;
 }
 
 

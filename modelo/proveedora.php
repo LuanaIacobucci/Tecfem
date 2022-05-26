@@ -1,4 +1,5 @@
 <?php
+include('modelo\cliente.php');
 class proveedora extends cliente{
   public $listaServicios=[];
   public  $categoriaStem; //ENUM categoria_stem
@@ -21,13 +22,13 @@ class proveedora extends cliente{
    $listaServicios=array($servicio); //Agregamos
 
    foreach($listaServicios as $valor){ 
-       if ($valor.idServicio = $listaServicios.idServicio){ //Si existe??
-        resp=true;
+       if ($valor->get_idServicio() == $servicio->get_idServicio()){ //Si existe??
+        $resp=true;
         break;
        }
     }
        
-    return resp;
+    return $resp;
   }
 
 
