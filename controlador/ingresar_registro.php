@@ -48,7 +48,14 @@ $gradoacademico = $_REQUEST["gradoacademico"];
 $costo = $_REQUEST["costo"];
 
 //Verificar si correo electrónico esta bien escrito
-
+$email = mysql_escape_string($_POST['email']);            
+if(!eregi("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$", $email)){
+    // Devuelve error
+    $msg = 'El correo ingresado es inválido, intente nuevamente.';
+}else{
+    // Retorno exitoso 
+    $msg = 'Su cuenta ha sido creada, proceder a verificar el correo de verificación';
+}
 
  //Consultas a la base de datos para ingresar la información de registro de clienta
  //Realizar JOINS
