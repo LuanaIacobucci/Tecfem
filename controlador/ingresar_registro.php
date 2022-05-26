@@ -33,7 +33,7 @@
     $nombreUsuario = $_REQUEST["nombreUsuario"];
     $contrasena = $_REQUEST["contrasena"];
     $imgperfil = $_REQUEST["imgperfil"]; 
-
+ //Consulta a la base de datos para ingresar datos
     $consulta = "INSERT INTO";
     //creo variable de resultado
     $resultado1 = $mysqli->query($consulta);
