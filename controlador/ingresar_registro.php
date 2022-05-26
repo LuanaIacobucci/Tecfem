@@ -21,6 +21,7 @@
     <h1>Captura de Datos</h1>
 
     <?php  
+    //Variables tipo de cuenta y Datos Personales
     $rut = $_REQUEST["rut"];
     $nombre = $_REQUEST["nombre"];
     $apellido = $_REQUEST["apellido"];
@@ -33,10 +34,25 @@
     $nombreUsuario = $_REQUEST["nombreUsuario"];
     $contrasena = $_REQUEST["contrasena"];
     $imgperfil = $_REQUEST["imgperfil"]; 
- //Consulta a la base de datos para ingresar datos
-    $consulta = "INSERT INTO";
+    //area STEM
+
+    //Variables prestación de servicios
+$servicios = $_REQUEST["servicios"];
+$profesion = $_REQUEST["profesion"];
+$descripcion = $_REQUEST["descripcion"];
+$certificacion = $_REQUEST["certificacion"];
+$gradoacademico = $_REQUEST["gradoacademico"];
+ //Consultas a la base de datos para ingresar datos
+ //Realizar JOINS
+    $consulta1 = "INSERT INTO cliente (nombreUsuario,nombre,apellido,contrasena) VALUES ($nombreUsuario,$nombre,$apellido,$contrasena)";
+    $consulta2 = "INSERT INTO clienterut (nombreUsuario,rut) VALUES ($nombreUsuario,$rut)";
+    $consulta3 = "INSERT INTO clienteemail (nombreUsuario,email) VALUES ($nombreUsuario,$email)";
+    $consulta4 = "INSERT INTO clientetelefono (nombreUsuario,telefono) VALUES ($nombreUsuario,$telefono)";
+    //Consulta5 Direccion
+    //Consulta6 comuna
+    $consulta6 = "INSERT INTO imagen (imgperfil) VALUES ($imgperfil)";
     //creo variable de resultado
-    $resultado1 = $mysqli->query($consulta);
+    //$resultado1 = $mysqli->query($consulta);
     //redirecciona hacia la tabla de listar usuarios
     //dispatcher
     header('Location:listarClientes.php');

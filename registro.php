@@ -258,7 +258,7 @@
 <div class="row"> <!--Contenedor fila3 "row" grado académico y expertiz excel-->
     <div class="col">
         <label>Descripción del grado académico:</label>
-      <input type="textarea" name="descripgradoacadem" class="form-control" placeholder="Descripcion Grado Académico">
+      <input type="textarea" name="gradoacademico" class="form-control" placeholder="Descripcion Grado Académico">
     </div>
     <div class="col">
       <label>Nivel de expertiz en Excel:</label>
