@@ -54,6 +54,7 @@ $gradoacademico = $_REQUEST["gradoacademico"];
     //creo variable de resultado
     //$resultado1 = $mysqli->query($consulta);
     //redirecciona hacia la tabla de listar usuarios
+    
     //dispatcher
     header('Location:listarClientes.php');
 
