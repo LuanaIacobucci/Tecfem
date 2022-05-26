@@ -20,13 +20,13 @@
 	$_SESSION['usuario'] = $objcliente;
 
 //Consulta a la base de datos
-      $nombreUsuario = _$POST['nombreUsuario'];
-      $rut = _$POST['rut'];
-      $nombre = _$POST['nombre'];
-      $apellido = _$POST['apellido'];
-      $email = _$POST['email'];
-      $contrasena = _$POST['contrasena'];
-      $tipocuenta = _$POST['tipoDeCuenta'];
+      $nombreUsuario = $_POST['nombreUsuario'];
+      $rut = $_POST['rut'];
+      $nombre = $_POST['nombre'];
+      $apellido = $_POST['apellido'];
+      $email = $_POST['email'];
+      $contrasena = $_POST['contrasena'];
+      $tipocuenta = $_POST['tipoDeCuenta'];
     
 $conn = mysqli_connect("localhost","root","root","tecfem");
 
