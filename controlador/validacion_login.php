@@ -1,11 +1,12 @@
 <?php
 @include('modelo\conectar.php');
-require_once('modelo\cliente.php');
 
 $nombreUsuario = $_POST["nombreUsuario"]; 
 $contrasena = $_POST["contrasena"]; 
 
 session_start();
+
+$conn = mysqli_connect("localhost","root","root","tecfem");
 
 $sql = "SELECT*FROM cliente WHERE nombreUsuario = '$nombreUsuario' AND contrasena = '$contrasena' ";
 $resultado = mysqli_query($conn, $sql);  
