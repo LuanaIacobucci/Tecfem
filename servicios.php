@@ -201,7 +201,7 @@
  <!--Box transformado en link--->
 <div class="card" style="width: 18rem;">
 <a id="tarjetaservicio"  href="detalleservicio.php">
-<img src="..." class="card-img-top" alt="FotoPerfil">
+<img src="..." class="card-img-top" alt="FotoPerfil"> <!---Servicio proveedora--->
 <div class="card-body">
 <p class="card-text">Proveedora:</p>
 <p class="card-text">Servicio:</p>
