@@ -46,6 +46,10 @@ $gradoacademico = $_REQUEST["gradoacademico"];
 //Nivel expertiz en excel 
 //Nivel de uso de herramientas Ofimáticas
 $costo = $_REQUEST["costo"];
+
+//Verificar si correo electrónico esta bien escrito
+
+
  //Consultas a la base de datos para ingresar la información de registro de clienta
  //Realizar JOINS
     $consulta1 = "INSERT INTO cliente (nombreUsuario,nombre,apellido,contrasena) VALUES ($nombreUsuario,$nombre,$apellido,$contrasena)";
