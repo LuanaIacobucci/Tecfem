@@ -18,9 +18,10 @@
 <body>
 <div class="row">
     <div class="col">
-    <h1>Captura de Datos</h1>
+    <h1>Captura de Datos Registro</h1>
 
     <?php  
+    //Captura de datos
     //Variables tipo de cuenta y Datos Personales
     $rut = $_REQUEST["rut"];
     $nombre = $_REQUEST["nombre"];
@@ -42,6 +43,9 @@ $profesion = $_REQUEST["profesion"];
 $descripcion = $_REQUEST["descripcion"];
 $certificacion = $_REQUEST["certificacion"];
 $gradoacademico = $_REQUEST["gradoacademico"];
+//Nivel expertiz en excel 
+//Nivel de uso de herramientas Ofimáticas
+$costo = $_REQUEST["costo"];
  //Consultas a la base de datos para ingresar la información de registro de clienta
  //Realizar JOINS
     $consulta1 = "INSERT INTO cliente (nombreUsuario,nombre,apellido,contrasena) VALUES ($nombreUsuario,$nombre,$apellido,$contrasena)";
