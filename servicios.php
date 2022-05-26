@@ -121,6 +121,8 @@
 <p class="card-text">Servicio:</p>
 <p class="card-text">Contacto:</p>
 </a> 
+<input id="checkbox" type="checkbox"/>
+<label for="checkbox"><img src="img/heartfavorito.png"></label>
 </div>
 </div>
 <!--Fin enlace servicio1---->
@@ -130,11 +132,13 @@
 <div class="card" style="width: 18rem;">
 <a id="tarjetaservicio" href="detalleservicio.php">
 <img src="..." class="card-img-top" alt="FotoPerfil">
-<div class="card-body">
+<div class="card-body"> <!------Tarjeta cuerpo--->
 <p class="card-text">Proveedora:</p>
 <p class="card-text">Servicio:</p>
 <p class="card-text">Contacto:</p>
 </a>
+<input id="checkbox" type="checkbox"/>
+<label for="checkbox"><img src="img/heartfavorito.png"></label>
 </div>
 </div>
  <!--Fin enlace servicio2---->
@@ -152,6 +156,8 @@
 <p class="card-text">Servicio:</p>
 <p class="card-text">Contacto:</p>
 </a> 
+<input id="checkbox" type="checkbox"/>
+<label for="checkbox"><img src="img/heartfavorito.png"></label>
 </div>
 </div>
 <!--Fin enlace servicio3---->
@@ -166,6 +172,8 @@
 <p class="card-text">Servicio:</p>
 <p class="card-text">Contacto:</p>
 </a>
+<input id="checkbox" type="checkbox"/>
+<label for="checkbox"><img src="img/heartfavorito.png"></label>
 </div>
 </div>
  <!--Fin enlace servicio4---->
@@ -183,6 +191,8 @@
 <p class="card-text">Servicio:</p>
 <p class="card-text">Contacto:</p>
 </a>
+<input id="checkbox" type="checkbox"/>
+<label for="checkbox"><img src="img/heartfavorito.png"></label>
 </div>
 </div>
  <!--Fin enlace servicio5---->
@@ -197,6 +207,8 @@
 <p class="card-text">Servicio:</p>
 <p class="card-text">Contacto:</p>
 </a>
+<input id="checkbox" type="checkbox"/>
+<label for="checkbox"><img src="img/heartfavorito.png"></label>
 </div>
 </div>
  <!--Fin enlace servicio6---->

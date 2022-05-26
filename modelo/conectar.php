@@ -1,12 +1,12 @@
 <?php
 //Clase para generar una conexion a la BD MySQL de Tecfem
 class conectar extends mysqli{
-$servername = "localhost";
-$username = "username";
-$password = "password";
+var $servername = "localhost";
+var $username = "root";
+var $password = "root";
 
 
-
+function crearCon(){
 try {
     // Create connection
          $conn = new PDO("mysql:host=$servername;dbname=tecfem", $username, $password);
@@ -23,6 +23,8 @@ try {
         echo "Connection failed: " . $e->getMessage();
      }
 
+    
+    }
 
   function cerrarConexion(){
       try{
@@ -31,7 +33,7 @@ try {
         echo "Connection failed to close: " . $e->getMessage();
       }
 
-      echo "Se desconectó la DB."
+      echo "Se desconectó la DB.";
   }
 
 }

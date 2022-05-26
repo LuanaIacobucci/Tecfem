@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
-    <title>Tecfem- Registro</title>
+    <title>Tecfem</title>
 </head>
 <body>
 <?php
@@ -48,7 +48,9 @@
 <br>
 <br>
     <br>
+    
     <div id="tipocuenta">
+      <form name="form1" method="post">
     <p>Seleccione el tipo de cuenta con el que se desea registrar:</p>
     <div class="row">
         <div class="col"> <!---Columna Checkbox Cliente--->
@@ -56,20 +58,17 @@
               <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
               <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
             </svg>
-           <label><input type="checkbox" id="cboxcliente" value="checkbox1"></label><br>
-             <p>Cliente</p>
+           <label><input type="radio" id="cliente" value="cliente" name="tipocuenta">Cliente</label><br> 
         </div> <!----Fin Columna Cliente---->
         <div class="col"> <!---Columna Checkbox Proveedor de servicio--->
               <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="rgb(125,35,182)" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
             <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
             <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
           </svg>
-          <label><input type="checkbox" id="cboxproveedor" value="checkbox2"></label><br>
-
-              <p>Proveedor de Servicio</p>
+          <label><input type="radio" id="proveedor" value="proveedor" name="tipocuenta">Proveedor de Servicio</label><br>
                 </div>
   </div> <!----Fin fila----->
-
+</form>
 </div> <!------Fin id tipo cuenta---->
 </div> <!---Fin contenedor tipo cuenta----->
 
@@ -95,8 +94,11 @@
 <br>    
 <div id="datospersonales"> <!---ID Datos personales--->
     <br>
-<form name="form1" method="post" action="">
-  <div class="row"> <!---Contenedor fila1---->
+
+    <form name="form2" method="post">
+
+    <div class="row"> <!---Contenedor fila1----> 
+  <p>Ingrese sus datos personales:</p>
     <div class="col">
         <label>RUT:</label>
       <input type="text" name="rut" class="form-control" placeholder="Ingrese su rut">
@@ -121,11 +123,11 @@
   <div class="row"> <!--Contenedor fila3 "row"-->
     <div class="col">
         <label>Correo Electrónico:</label>
-      <input type="text" name="correo" class="form-control" placeholder="Ingrese su correo">
+      <input type="text" name="email" class="form-control" placeholder="Ingrese su correo">
     </div>
     <div class="col"> 
     <label>Número de telefono:</label>
-    <input type="text" name="direccion" class="form-control" placeholder="Ingrese dirección">
+    <input type="text" name="telefono" class="form-control" placeholder="Ingrese nro de telefono">
     </div>
   </div> <!--Fin contenedor fila3 "row"-->
   <br>
@@ -165,18 +167,18 @@
     </div>
     <div class="col"> 
     <label>Nombre de Usuario:</label>
-    <input type="text" name="nomusuario" class="form-control" placeholder="Ingrese un nombre de usuario">
+    <input type="text" name="nombreUsuario" class="form-control" placeholder="Ingrese un nombre de usuario">
     </div>
   </div> <!--Fin contenedor fila5 "row"-->
   <br>
   <div class="row"> <!--Contenedor fila6 "row"-->
   <div class="col"> 
     <label>Contraseña:</label>
-    <input type="password" name="password" class="form-control" placeholder="Ingrese su contraseña">
+    <input type="password" name="contrasena" class="form-control" placeholder="Ingrese su contraseña">
     </div>
     <div class="col">
     <label class="form-label" for="customFile">Ingrese una imagen para su foto de perfil</label>
-<input type="file" class="form-control" id="imgperf" name="imgperfil" />
+<input type="file" class="form-control" id="imgperfil" name="imgperfil" />
     </div>
   </div> <!--Fin contenedor fila6 "row"-->
   <br>
@@ -191,7 +193,7 @@
     <input type="checkbox" name="tecnologia" id="cboxtec" value="tecnologia">
     </div>
     <div class="col">
-        <label>Ingeniería</label>
+        <label>Ingeniería y Servicios técnicos</label>
       <input type="checkbox" name="ingenieria" class="cboxing" value="ingenieria">
     </div>
     <div class="col"> 
@@ -207,7 +209,7 @@
     </div>
   </div> <!--Fin contenedor fila7 "row"-->
   <br>
-</form> <!---Fin formulario-->
+</form>
 </div><!--Fin datos personales--->
 </div> <!---Fin Contendor DatosPersonales--->    
 <br>
@@ -230,7 +232,7 @@
 <br>
 <br>
 <div id="servicios"> <!--ID servicios--->
-<form name="formservicios" method="post" action="">
+<form name="form3" method="post">
   <div class="row"> <!---Contenedor fila1 servicio y profesión---->
     <div class="col">
         <label>Nombre del Servicio:</label>
@@ -256,7 +258,7 @@
 <div class="row"> <!--Contenedor fila3 "row" grado académico y expertiz excel-->
     <div class="col">
         <label>Descripción del grado académico:</label>
-      <input type="textarea" name="descripgradoacadem" class="form-control" placeholder="Descripcion Grado Académico">
+      <input type="textarea" name="gradoacademico" class="form-control" placeholder="Descripcion Grado Académico">
     </div>
     <div class="col">
       <label>Nivel de expertiz en Excel:</label>
@@ -273,7 +275,7 @@
   </div> <!--Fin contenedor fila3 "row"-->
   <br>
   <div class="row"> <!--Contenedor fila4 "row" grado académico y expertiz excel-->
-    <div class="col-6"> <!--Columna 1---->
+    <div class="col"> <!--Columna 1---->
       <label>Nivel en uso de herramientas Ofimáticas:</label> <a href="#" data-toggle="popover" title="Ofimáticas: Herramientas Office(Word, PowerPoint, otros)">?</a>
 </span>
       <br>
@@ -285,7 +287,12 @@
   <option value="sinexperiencia">Sin experiencia</option>
 </select>
 </div>
-  <br>
+  
+  <div class="col">
+        <label>Costo del servicio:</label>
+      <input type="text" name="costo" class="form-control" placeholder="Ingrese el costo apróximado a cobrar por servicio">
+    </div>
+    <br>
   </div> <!--Fin contenedor fila4 "row"-->
   <br>
   <p>Seleccione los idiomas:</p>
@@ -334,7 +341,7 @@
 </div><!--Fin columna 1 fila6-->
 </div> <!----Fin fila 6----->
 <br>
-</form> <!--Fin formulario--->
+</form>
 </div> <!---Fin ID servicios--->
 </div>    
 <!---Fin Prestación de servicios---->

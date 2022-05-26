@@ -5,6 +5,6 @@ enum categoria_stem
     case Tecnologia;
     case Ingenieria;
     case Matematica;
-    case otros;
+    case Otros;
 }
 ?>

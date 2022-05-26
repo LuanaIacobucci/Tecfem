@@ -1,29 +1,30 @@
 <?php
-require ("conectar.php");
+@include('modelo\conectar.php');
+
+$nombreUsuario = $_POST["nombreUsuario"]; 
+$contrasena = $_POST["contrasena"]; 
 
 session_start();
 
-if(isset($_POST['btngrande'])){
+$conn = mysqli_connect("localhost","root","root","tecfem");
 
-    $user = mysqli_real_escape_string($conn,$_POST['nombreUsuario']);
-    $password = mysqli_real_escape_string($conn,$_POST['contrasena']);
+$sql = "SELECT*FROM cliente WHERE nombreUsuario = '$nombreUsuario' AND contrasena = '$contrasena' ";
+$resultado = mysqli_query($conn, $sql);  
 
-    if ($user != "" && $password != ""){
+$filas = mysqli_num_rows($resultado);
 
-        $sql_query = "select count(*) from cliente where nombreUsuario='".$user."' and contrasena='".$password."'";
-        $result = mysqli_query($conn,$sql_query);
-        $row = mysqli_fetch_array($result);
+if($filas){
+    header("Location:..\servicios.php");
+    
+}else{
+    header("Location:..\login.php");
+    echo 'Los datos ingresados son incorrectos'; 
+}    
 
-        $count = $row['cntUser'];
-
-        if($count > 0){
-            $_SESSION['nombreUsuario'] = $ser;
-            header('Location: index.php');
-        }else{
-            echo "Invalid username and password";
-        }
-
-    }
-
-}
+mysqli_free_result($resultado);
+mysqli_close($con);
 ?>
+    
+
+
+

@@ -1,3 +1,52 @@
+<?php
+//@include('modelo\conectar.php');
+//require_once("cliente.php");
+// Iniciar la sesión
+//session_start();
+
+	// Crear una instancia del objeto:
+	//$objcliente = new Cliente();
+  //$objcliente->SetNombreUsuario(""); 
+  //$objcliente->setRut(""); 
+	//$objcliente->setNombre(""); 
+	//$objcliente->setApellido("");              
+      //$objemail->setEmail(""); 
+      //$objcontrasena->setContrasena("");     
+      //$objtipoCuenta->setTipocuenta("");      
+                                                  
+	// Variables de sesión:
+	//$_SESSION['usuario'] = $objcliente;
+
+//Consulta a la base de datos
+      //$nombreUsuario = _$POST['nombreUsuario'];
+      //$rut = _$POST['rut'];
+      //$nombre = _$POST['nombre'];
+      //$apellido = _$POST['apellido'];
+      //$email = $_POST['email'];
+      //$contrasena = $_POST['contrasena'];
+      //$tipocuenta = $_POST['tipoDeCuenta'];
+    
+//$conn = mysqli_connect("localhost","root","root","tecfem");
+
+//$sql = "SELECT cliente.nombreUsuario,cliente.nombre,cliente.apellido,cliente.contrasena,clienteemail.email,tipocuenta.tipoDeCuenta FROM 
+//cliente INNER JOIN clienteemail ON cliente.nombreUsuario = clienteemail.nombreUsuario INNER JOIN tipocuenta ON cliente.nombreUsuario 
+//WHERE rut = '$rut', nombreUsuario = '$nombreUsuario', $nombre='$nombre', $apellido='$apellido', $contrasena='contrasena', $tipocuenta = 'tipoDeCuenta'";
+  
+//$resultado = mysqli_query($conn, $sql);  
+
+//$filas = mysqli_num_rows($resultado);
+
+
+//echo "PÁGINA PRINCIPAL<br />";
+	//echo "================<p />";
+
+	// Mostrar información del objeto en la sesión:
+	//echo "NombreUsuario: [".$_SESSION['usuario']->getNombrecuenta()."]<br/>";
+	//echo "Email: [".$_SESSION['usuario']->getEmail()."]<p/>";
+?>
+
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -53,9 +102,9 @@
     </div>
   </div>
   
-  <a id="noregistrado" href="#">No tengo una cuenta aun.</a>
+  <a id="noregistrado" href="registro.php">No tengo una cuenta aun.</a>
   <br>
-  <button id="btngrande" type="submit" class="btn btn-primary">Iniciar</button>
+  <button id="btngrande" type="submit" name="enviar" class="btn btn-primary">Iniciar</button>
 </form>
 
     </div>
@@ -100,7 +149,7 @@
   
   <a id="noregistrado" href="#">No tengo una cuenta aun.</a>
   <br>
-  <button id="btninit" type="submit" class="btn btn-primary">Iniciar</button>
+  <button id="btninit" type="submit" name="enviar" class="btn btn-primary">Iniciar</button>
 </form>
 
     </div>
