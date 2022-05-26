@@ -32,9 +32,9 @@
     $comuna = $_REQUEST["comuna"];
     $nombreUsuario = $_REQUEST["nombreUsuario"];
     $contrasena = $_REQUEST["contrasena"];
-    $imgperfil = $_REQUEST["imgperfil"];
+    $imgperfil = $_REQUEST["imgperfil"]; 
 
-    $consulta = "INSERT INTO clientes(rut_cliente,nombre,apellido,telefono,email)VALUE('$rut_cliente','$nombre','$apellido','$telefono','$email')";
+    $consulta = "INSERT INTO";
     //creo variable de resultado
     $resultado1 = $mysqli->query($consulta);
     //redirecciona hacia la tabla de listar usuarios
