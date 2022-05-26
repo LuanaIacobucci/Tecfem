@@ -38,18 +38,12 @@ $resultado = mysqli_query($conn, $sql);
 
 $filas = mysqli_num_rows($resultado);
 
-	
-
-
-
-echo "PÁGINA PRINCIPAL<br />";
+	echo "PÁGINA PRINCIPAL<br />";
 	echo "================<p />";
 
 	// Mostrar información del objeto en la sesión:
 	echo "NombreUsuario: [".$_SESSION['usuario']->getNombrecuenta()."]<br/>";
 	echo "Email: [".$_SESSION['usuario']->getEmail()."]<p/>";
-
-
 
 ?>
 
