@@ -258,7 +258,7 @@
 <div class="row"> <!--Contenedor fila3 "row" grado académico y expertiz excel-->
     <div class="col">
         <label>Descripción del grado académico:</label>
-      <input type="textarea" name="descripgradoacadem" class="form-control" placeholder="Descripcion Grado Académico">
+      <input type="textarea" name="gradoacademico" class="form-control" placeholder="Descripcion Grado Académico">
     </div>
     <div class="col">
       <label>Nivel de expertiz en Excel:</label>
@@ -275,7 +275,7 @@
   </div> <!--Fin contenedor fila3 "row"-->
   <br>
   <div class="row"> <!--Contenedor fila4 "row" grado académico y expertiz excel-->
-    <div class="col-6"> <!--Columna 1---->
+    <div class="col"> <!--Columna 1---->
       <label>Nivel en uso de herramientas Ofimáticas:</label> <a href="#" data-toggle="popover" title="Ofimáticas: Herramientas Office(Word, PowerPoint, otros)">?</a>
 </span>
       <br>
@@ -287,7 +287,12 @@
   <option value="sinexperiencia">Sin experiencia</option>
 </select>
 </div>
-  <br>
+  
+  <div class="col">
+        <label>Costo del servicio:</label>
+      <input type="text" name="costo" class="form-control" placeholder="Ingrese el costo apróximado a cobrar por servicio">
+    </div>
+    <br>
   </div> <!--Fin contenedor fila4 "row"-->
   <br>
   <p>Seleccione los idiomas:</p>

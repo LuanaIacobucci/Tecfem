@@ -18,9 +18,11 @@
 <body>
 <div class="row">
     <div class="col">
-    <h1>Captura de Datos</h1>
+    <h1>Captura de Datos Registro</h1>
 
     <?php  
+    //Captura de datos
+    //Variables tipo de cuenta y Datos Personales
     $rut = $_REQUEST["rut"];
     $nombre = $_REQUEST["nombre"];
     $apellido = $_REQUEST["apellido"];
@@ -32,12 +34,31 @@
     $comuna = $_REQUEST["comuna"];
     $nombreUsuario = $_REQUEST["nombreUsuario"];
     $contrasena = $_REQUEST["contrasena"];
-    $imgperfil = $_REQUEST["imgperfil"];
+    $imgperfil = $_REQUEST["imgperfil"]; 
+    //area STEM
 
-    $consulta = "INSERT INTO clientes(rut_cliente,nombre,apellido,telefono,email)VALUE('$rut_cliente','$nombre','$apellido','$telefono','$email')";
+    //Captura de datos de prestación de servicios
+$servicios = $_REQUEST["servicios"];
+$profesion = $_REQUEST["profesion"];
+$descripcion = $_REQUEST["descripcion"];
+$certificacion = $_REQUEST["certificacion"];
+$gradoacademico = $_REQUEST["gradoacademico"];
+//Nivel expertiz en excel 
+//Nivel de uso de herramientas Ofimáticas
+$costo = $_REQUEST["costo"];
+ //Consultas a la base de datos para ingresar la información de registro de clienta
+ //Realizar JOINS
+    $consulta1 = "INSERT INTO cliente (nombreUsuario,nombre,apellido,contrasena) VALUES ($nombreUsuario,$nombre,$apellido,$contrasena)";
+    $consulta2 = "INSERT INTO clienterut (nombreUsuario,rut) VALUES ($nombreUsuario,$rut)";
+    $consulta3 = "INSERT INTO clienteemail (nombreUsuario,email) VALUES ($nombreUsuario,$email)";
+    $consulta4 = "INSERT INTO clientetelefono (nombreUsuario,telefono) VALUES ($nombreUsuario,$telefono)";
+    //Consulta5 Direccion
+    //Consulta6 comuna
+    $consulta6 = "INSERT INTO imagen (imgperfil) VALUES ($imgperfil)";
     //creo variable de resultado
-    $resultado1 = $mysqli->query($consulta);
+    //$resultado1 = $mysqli->query($consulta);
     //redirecciona hacia la tabla de listar usuarios
+    
     //dispatcher
     header('Location:listarClientes.php');
 
