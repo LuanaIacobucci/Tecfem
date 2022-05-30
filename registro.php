@@ -182,28 +182,28 @@
     </div>
   </div> <!--Fin contenedor fila6 "row"-->
   <br>
-  <p>¿Pertenece al área STEM? (Si: Marque una categoría/No: Marque Otros)</p>
+  <p>¿Pertenece al área STEM? (Si su respuesta es si: Marque una categoría/Si es No: Marque Otros)</p>
   <div class="row"> <!--Contenedor fila7 "row"-->
     <div class="col">
         <label>Ciencias</label>
-        <input type="checkbox" name="ciencias" id="cboxcien" value="ciencias">
+        <input type="checkbox" name="area[]" id="cboxcien" value="ciencias">
     </div>
     <div class="col"> 
     <label>Tecnología</label>
-    <input type="checkbox" name="tecnologia" id="cboxtec" value="tecnologia">
+    <input type="checkbox" name="area[]" id="cboxtec" value="tecnologia">
     </div>
     <div class="col">
         <label>Ingeniería y Servicios técnicos</label>
-      <input type="checkbox" name="ingenieria" class="cboxing" value="ingenieria">
+      <input type="checkbox" name="area[]" class="cboxing" value="ingenieria">
     </div>
     <div class="col"> 
     <label>Matemáticas</label>
-    <input type="checkbox" name="matematicas" class="cboxmate" value="matematicas">
+    <input type="checkbox" name="area[]" class="cboxmate" value="matematicas">
     <br>
     </div>
     <div class="col"> 
     <label>Otros</label>
-    <input type="checkbox" class="cboxotros" value="otros">
+    <input type="checkbox" name="area[]" class="cboxotros"  value="otros">
     <br>
     <br>
     </div>

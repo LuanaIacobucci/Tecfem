@@ -36,7 +36,7 @@
     $contrasena = $_REQUEST["contrasena"];
     $imgperfil = $_REQUEST["imgperfil"]; 
     //area STEM
-
+    
 //Captura de datos de prestación de servicios
 $servicios = $_REQUEST["servicios"];
 $profesion = $_REQUEST["profesion"];
