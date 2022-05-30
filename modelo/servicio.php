@@ -10,9 +10,9 @@ class servicio {
   public $fechaPublicacion; //date
 
   //Constructores
-  function __construct($nombreCuenta, $nombre, $categoria,$descripcion,$costoPorHora,  $fechaPublicacion) {
+  function __construct($idServicio,$nombreCuenta, $nombre, $categoria,$descripcion,$costoPorHora,  $fechaPublicacion) {
     //Mas adelante podemos dejarle que suab un archivo
-    $this->idServicio = generarIdServicio();
+    $this->idServicio =$idServicio;
     $this->nombreCuenta = $nombreCuenta; 
     $this->nombre = $nombre;
     $this->categoria = $categoria;
