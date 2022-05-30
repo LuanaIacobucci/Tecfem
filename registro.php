@@ -182,7 +182,7 @@
     </div>
   </div> <!--Fin contenedor fila6 "row"-->
   <br>
-  <p>¿Pertenece al área STEM? (Si su respuesta es si: Marque una categoría/Si es No: Marque Otros)</p>
+  <p>¿Pertenece al área STEM? ( Si su respuesta es si: Marque una categoría / No: Marque Otros)</p>
   <div class="row"> <!--Contenedor fila7 "row"-->
     <div class="col">
         <label>Ciencias</label>
