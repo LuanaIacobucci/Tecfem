@@ -277,7 +277,7 @@
 
              </div>
              <!--Inicio tarjeta modelo-->
-                <div class="container">
+                <div id="tarjetaservicio" class="container">
                         <div class="row">
                             <div class="col-lg-4">
                                 <div class="card card-margin">
