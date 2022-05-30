@@ -279,7 +279,7 @@
       <label>Nivel en uso de herramientas Ofimáticas:</label> <a href="#" data-toggle="popover" title="Ofimáticas: Herramientas Office(Word, PowerPoint, otros)">?</a>
 </span>
       <br>
-      <select class="form-select" aria-label="Default select example">
+      <select class="form-select" aria-label="Default select example" name="dominioofimatica">
   <option selected>Seleccione su nivel</option>
   <option value="avanzado">Avanzado</option>
   <option value="intermedio">Intermedio</option>

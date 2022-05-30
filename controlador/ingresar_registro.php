@@ -44,7 +44,7 @@ $descripcion = $_REQUEST["descripcion"];
 $certificacion = $_REQUEST["certificacion"];
 $gradoacademico = $_REQUEST["gradoacademico"];
 $dominioexcel = $_REQUEST["dominioexcel"]; 
-//Nivel de uso de herramientas Ofimáticas
+$dominioofimatica = $_REQUEST["dominioofimatica"];
 $costo = $_REQUEST["costo"];
 
 //Verificar si correo electrónico esta bien escrito
