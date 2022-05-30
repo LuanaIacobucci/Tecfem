@@ -46,6 +46,21 @@ $gradoacademico = $_REQUEST["gradoacademico"];
 //Nivel expertiz en excel 
 //Nivel de uso de herramientas Ofimáticas
 $costo = $_REQUEST["costo"];
+
+//Verificar si correo electrónico esta bien escrito
+$email = mysql_escape_string($_POST['email']);            
+if(!eregi("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$", $email)){
+    // Devuelve error
+    $msg = 'El correo ingresado es inválido, intente nuevamente.';
+}else{
+    // Retorno exitoso 
+    $msg = 'Su cuenta ha sido creada, <br /> verificar a través del link de activación enviado a su correo.';
+}
+
+if(isset($msg)){  // Check if $msg is not empty
+    echo '<div class="statusmsg">'.$msg.'</div>'; // Display our message and wrap it with a div with the class "statusmsg".
+} 
+
  //Consultas a la base de datos para ingresar la información de registro de clienta
  //Realizar JOINS
     $consulta1 = "INSERT INTO cliente (nombreUsuario,nombre,apellido,contrasena) VALUES ($nombreUsuario,$nombre,$apellido,$contrasena)";

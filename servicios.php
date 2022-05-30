@@ -46,7 +46,7 @@
 <br>
 <h3>Ciencias</h3>
 <p>Servicios relacionados al área de Ciencias</p>
-<button class="btn-servicio">Ver Servicios</button>
+<button class="btn-servicio" name="btnciencias">Ver Servicios</button>
 </div>
 </div>
 </div> 
@@ -62,7 +62,7 @@
 <br>
 <h3>Tecnología</h3>
 <p>Servicios relacionados al área de Tecnología</p>
-<button class="btn-servicio">Ver Servicios</button>
+<button class="btn-servicio" name="btntecnologia">Ver Servicios</button>
 </div>
 </div>
 </div> 
@@ -77,7 +77,7 @@
 <br>
 <h3>Ingeniería y Servicios Técnicos</h3>
 <p>Servicios relacionados al área de Ingeniería</p>
-<button class="btn-servicio">Ver Servicios</button>
+<button class="btn-servicio" name="btningenieria">Ver Servicios</button>
 </div>
 </div>
 </div> 
@@ -92,7 +92,7 @@
 <br>
 <h3>Matemáticas</h3>
 <p>Servicios relacionados al área de Matemáticas</p>
-<button class="btn-servicio">Ver Servicios</button>
+<button class="btn-servicio" name="btnmatematicas">Ver Servicios</button>
 </div>
 </div>
 </div> 
@@ -101,7 +101,7 @@
 </div> <!---Fin Contenedor categorías STEM----->
 <br>
 <br>
-<a class="boton_otroservicio" href="#">Otros Servicios</a> 
+<a class="boton_otroservicio" name="btnotrosservicios" href="#">Otros Servicios</a> 
 <br>
 <br>
 <br>
@@ -201,7 +201,7 @@
  <!--Box transformado en link--->
 <div class="card" style="width: 18rem;">
 <a id="tarjetaservicio"  href="detalleservicio.php">
-<img src="..." class="card-img-top" alt="FotoPerfil">
+<img src="..." class="card-img-top" alt="FotoPerfil"> <!---Servicio proveedora--->
 <div class="card-body">
 <p class="card-text">Proveedora:</p>
 <p class="card-text">Servicio:</p>
