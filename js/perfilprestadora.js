@@ -56,14 +56,19 @@ $('#misserv').click(function(){
             //listar de nuevo servicios 
             success: function(response){
                 //Ver si se agregó o no
+                alert(response);
                 if(response){
-                    alert("true");
+                    alert(response);
                 }else{
-                    alert("auxilio: "+response);
+                    alert("Error: ".response);
                 }
+             },
+             error: //Ver si se agregó o no
+             function(xhr,status,error){
+                alert("Error: ".error);
              }
             
-        })
+        });
         
         });
     });
