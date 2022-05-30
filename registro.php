@@ -69,6 +69,9 @@
                 </div>
   </div> <!----Fin fila----->
 </form>
+<br>
+<a class="siguiente" type="submit" name="siguiente" href="#">Siguiente</a> 
+<br>
 </div> <!------Fin id tipo cuenta---->
 </div> <!---Fin contenedor tipo cuenta----->
 
