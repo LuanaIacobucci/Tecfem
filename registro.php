@@ -263,7 +263,7 @@
     <div class="col">
       <label>Nivel de expertiz en Excel:</label>
       <br>
-      <select class="form-select" aria-label="Default select example">
+      <select class="form-select" aria-label="Default select example" name="dominioexcel">
   <option selected>Seleccione el nivel de dominio en Excel</option>
   <option value="avanzado">Avanzado</option>
   <option value="intermedio">Intermedio</option>

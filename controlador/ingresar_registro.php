@@ -37,13 +37,13 @@
     $imgperfil = $_REQUEST["imgperfil"]; 
     //area STEM
 
-    //Captura de datos de prestación de servicios
+//Captura de datos de prestación de servicios
 $servicios = $_REQUEST["servicios"];
 $profesion = $_REQUEST["profesion"];
 $descripcion = $_REQUEST["descripcion"];
 $certificacion = $_REQUEST["certificacion"];
 $gradoacademico = $_REQUEST["gradoacademico"];
-//Nivel expertiz en excel 
+$dominioexcel = $_REQUEST["dominioexcel"]; 
 //Nivel de uso de herramientas Ofimáticas
 $costo = $_REQUEST["costo"];
 
