@@ -353,7 +353,7 @@
 <div class="container">
 <div class="row"> 
   <div class="col">
-  <a class="boton_enviarregistro" type="submit" name="enviar" href="#">Enviar</a> 
+  <a class="boton_enviarregistro" type="submit" name="enviar">Enviar</a> 
 </div>
 </div>
 </div>
