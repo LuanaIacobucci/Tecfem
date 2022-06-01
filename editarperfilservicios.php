@@ -276,30 +276,32 @@
              </div>
 
              </div>
+
+             <div id="mostrartarjetas">
              <!--Inicio tarjeta modelo-->
-                <div id="tarjetaservicio" class="container">
-                        <div class="row">
+            <!--    <div id="tarjetaservicio" class="container">
+                        <div id="valorID" class="row">
                             <div class="col-lg-4">
                                 <div class="card card-margin">
                                     <div class="card-header no-border">
-                                        <h5 class="card-title ms-5 mt-3">Nombre servicio</h5>
+                                        <h5 id="nombreServicio" class="card-title ms-5 mt-3">Nombre servicio</h5>
                                        
                                     </div>
                                     <div class="card-body pt-0">
                                         <div class="widget-49">
                                             <div class="widget-49-title-wrapper">
                                                 <div class="widget-49-date-primary">
-                                                    <span class="widget-49-date-day">S</span>
+                                                    <span id="categoriaServicio" class="widget-49-date-day">S</span>
                                                   
                                                 </div>
                                                 <div class="widget-49-meeting-info">
-                                                    <span class="widget-49-pro-title">Fecha: </span>
-                                                    <span class="widget-49-meeting-time">dd/mm/aa/<span>
+                                                    <span class="widget-49-pro-title">Fecha: </span>  
+                                                    <span id="fecha" class="widget-49-meeting-time">dd/mm/aa/<span>
                                                 </div>
                                             </div>
                                             <ol class="widget-49-meeting-points">
-                                                <li class="widget-49-meeting-item"><span>Descripción: </span></li> <li class="widget-49-meeting-item"><span></li>
-                                                <li class="widget-49-meeting-item"><span>Costo:</span></li> <li class="widget-49-meeting-item"><span> <li class="widget-49-meeting-item"><span></li></li>
+                                                <li class="widget-49-meeting-item"><span>Descripción: </span></li> <li id="descripcion" class="widget-49-meeting-item"><span></li>
+                                                <li class="widget-49-meeting-item"><span>Costo:</span></li> <li id="costo" class="widget-49-meeting-item"><span> <li class="widget-49-meeting-item"><span></li></li>
                                                
                                             </ol>
                                             <div class="widget-49-meeting-action">
@@ -314,16 +316,16 @@
                             </div>
                             
                         </div>
-                        
+                            -->
 
              <!--FIn tarjeta modelo-->
-
+             </div>
           
 											<!-- Editar servicio Modal HTML -->
 											<div id="editServiceModal" class="modal">
 												<div class="modal-dialog">
 													<div class="modal-content">
-														<form>
+														<form action="controlador\controlador_proveedor.php" method="POST">
 															<div class="modal-header">						
 																<h4 class="modal-title">Editar Servicio</h4>
 																<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -372,7 +374,7 @@
 											<div id="addServiceModal" class="modal fade" role="dialog">
 												<div class="modal-dialog">
 													<div class="modal-content">
-														<form>
+														<form  method="POST">
 															<div class="modal-header">						
 																<h4 class="modal-title">Agregar Servicio</h4>
 																<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -406,7 +408,7 @@
                                                            
 															
 																<input id="cancel" type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
-																<input id="guardar" type="submit" class="btn btn-info" value="Guardar"> 
+																<input id="guardar" type="button" class="btn btn-info" value="Guardar"> 
 
 
 															</div>

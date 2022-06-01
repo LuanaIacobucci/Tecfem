@@ -1,5 +1,5 @@
 <?php
-include('modelo\cliente.php');
+include('../modelo/cliente.php');
 class proveedora extends cliente{
   public $listaServicios=[];
   public  $categoriaStem; //ENUM categoria_stem

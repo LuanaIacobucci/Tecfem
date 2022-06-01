@@ -1,4 +1,5 @@
-<?php
+<?php 
+include('../modelo/db.php');
 class servicio {
   public $idServicio; //int 10
   public $nombreCuenta; //fk del proveedor
@@ -10,9 +11,9 @@ class servicio {
   public $fechaPublicacion; //date
 
   //Constructores
-  function __construct($idServicio,$nombreCuenta, $nombre, $categoria,$descripcion,$costoPorHora,  $fechaPublicacion) {
+  function __construct($nombreCuenta, $nombre, $categoria,$descripcion,$costoPorHora,  $fechaPublicacion) {
     //Mas adelante podemos dejarle que suab un archivo
-    $this->idServicio =$idServicio;
+    //$this->idServicio =$idServicio;
     $this->nombreCuenta = $nombreCuenta; 
     $this->nombre = $nombre;
     $this->categoria = $categoria;
@@ -28,15 +29,17 @@ class servicio {
 
   //Getter y setter
 
- //no necesita setter pq es autogenerado al instanciar (ver constructor).
- function set_nombreCuenta($nombreCuenta) {
-  $this->nombreCuenta = $nombreCuenta;
+ 
+ function set_idServicio($idServicio) {
+  $this->idServicio = $idServicio;
 }
   function get_idServicio() {
     return $this->idServicio;
   }
 
- //no necesita setter pq es autogenerado al instanciar (ver constructor).
+  function set_nombreCuenta($nombreCuenta) {
+    $this->nombreCuenta = $nombreCuenta;
+  }
     function get_nombreCuenta() {
     return $this->nombreCuenta;
   }
@@ -83,15 +86,17 @@ class servicio {
     $resp=false; //Validamos si se agrega
 
     $calificaciones=array($calificacion); //Agregamos
-   
+  
     foreach($calificaciones as $valor){ 
-        if ($valor->get_idCalificacion() == $calificaciones->get_idCalificacion()){ //Si existe??
+      $posiarr=0;
+        if ($valor->get_idCalificacion() == $calificaciones[$posiarr]->get_idCalificacion()){ //Si existe??
          $resp=true;
+         $posiarr++;
          break;
         }
      }
         
-     return resp;
+     return $resp;
 }
 
 
@@ -111,19 +116,17 @@ class servicio {
  
   //Metodos de la clase
   //Para generar un id unico para el servicio
-  function generarIdServicio(){
-      $id;
-      $validacion==false;
+  function generarIdServicio($conn){
+    $id=0;
+      $validacion=false;
       do{
       $id=rand(1000000000,9999999999);
       //Validamos que este ID no exista
 
-      //Crear conexion bd
-      $conn = mysqli_connect("localhost","root","root","tecfem"); //Iniciar conexión BD
-      $sql = "Select idServicio from servicio where idServicio=$id"; //Crear sentencia sql
+      $sql = "Select idServicio from servicio where idServicio='$id'"; //Crear sentencia sql
       $resultado = mysqli_query($conn, $sql); //Ejecutar query
 
-      if($resultado->num_rows =0){
+      if($resultado->num_rows==0){
         //SI devuelve cero filas es un id unico
         $validacion==true;
         break;
