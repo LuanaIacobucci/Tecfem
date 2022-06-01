@@ -22,7 +22,7 @@ class administrador{
   }
 
         //Super admin
-        function __construct($nombreUsuario, $contrasena) {
+        function __construct2($nombreUsuario, $contrasena) {
             $this->nombreUsuario = $nombreUsuario;
             $this->contrasena = $contrasena;
           }
