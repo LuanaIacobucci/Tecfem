@@ -52,6 +52,9 @@
 <tr>
 <th scope="row">Servicio:</th>
 </tr>
+<tr>
+<th scope="row">Costo:</th>
+</tr>
 </tbody>
 </table> <!---Fin tabla--->
 </div>  

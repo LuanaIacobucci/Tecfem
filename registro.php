@@ -69,6 +69,9 @@
                 </div>
   </div> <!----Fin fila----->
 </form>
+<br>
+<a class="siguiente" type="submit" name="siguiente" href="#">Siguiente</a> 
+<br>
 </div> <!------Fin id tipo cuenta---->
 </div> <!---Fin contenedor tipo cuenta----->
 
@@ -182,28 +185,28 @@
     </div>
   </div> <!--Fin contenedor fila6 "row"-->
   <br>
-  <p>¿Pertenece al área STEM? (Si: Marque una categoría/No: Marque Otros)</p>
+  <p>¿Pertenece al área STEM? ( Si su respuesta es si: Marque una categoría / No: Marque Otros)</p>
   <div class="row"> <!--Contenedor fila7 "row"-->
     <div class="col">
         <label>Ciencias</label>
-        <input type="checkbox" name="ciencias" id="cboxcien" value="ciencias">
+        <input type="checkbox" name="area[]" id="cboxcien" value="ciencias">
     </div>
     <div class="col"> 
     <label>Tecnología</label>
-    <input type="checkbox" name="tecnologia" id="cboxtec" value="tecnologia">
+    <input type="checkbox" name="area[]" id="cboxtec" value="tecnologia">
     </div>
     <div class="col">
         <label>Ingeniería y Servicios técnicos</label>
-      <input type="checkbox" name="ingenieria" class="cboxing" value="ingenieria">
+      <input type="checkbox" name="area[]" class="cboxing" value="ingenieria">
     </div>
     <div class="col"> 
     <label>Matemáticas</label>
-    <input type="checkbox" name="matematicas" class="cboxmate" value="matematicas">
+    <input type="checkbox" name="area[]" class="cboxmate" value="matematicas">
     <br>
     </div>
     <div class="col"> 
     <label>Otros</label>
-    <input type="checkbox" class="cboxotros" value="otros">
+    <input type="checkbox" name="area[]" class="cboxotros"  value="otros">
     <br>
     <br>
     </div>
@@ -263,7 +266,7 @@
     <div class="col">
       <label>Nivel de expertiz en Excel:</label>
       <br>
-      <select class="form-select" aria-label="Default select example">
+      <select class="form-select" aria-label="Default select example" name="dominioexcel">
   <option selected>Seleccione el nivel de dominio en Excel</option>
   <option value="avanzado">Avanzado</option>
   <option value="intermedio">Intermedio</option>
@@ -279,7 +282,7 @@
       <label>Nivel en uso de herramientas Ofimáticas:</label> <a href="#" data-toggle="popover" title="Ofimáticas: Herramientas Office(Word, PowerPoint, otros)">?</a>
 </span>
       <br>
-      <select class="form-select" aria-label="Default select example">
+      <select class="form-select" aria-label="Default select example" name="dominioofimatica">
   <option selected>Seleccione su nivel</option>
   <option value="avanzado">Avanzado</option>
   <option value="intermedio">Intermedio</option>
@@ -350,7 +353,7 @@
 <div class="container">
 <div class="row"> 
   <div class="col">
-  <a class="boton_enviarregistro" type="submit" name="enviar" href="#">Enviar</a> 
+  <a class="boton_enviarregistro" type="submit" name="enviar">Enviar</a> 
 </div>
 </div>
 </div>

@@ -36,15 +36,15 @@
     $contrasena = $_REQUEST["contrasena"];
     $imgperfil = $_REQUEST["imgperfil"]; 
     //area STEM
-
-    //Captura de datos de prestación de servicios
+    
+//Captura de datos de prestación de servicios
 $servicios = $_REQUEST["servicios"];
 $profesion = $_REQUEST["profesion"];
 $descripcion = $_REQUEST["descripcion"];
 $certificacion = $_REQUEST["certificacion"];
 $gradoacademico = $_REQUEST["gradoacademico"];
-//Nivel expertiz en excel 
-//Nivel de uso de herramientas Ofimáticas
+$dominioexcel = $_REQUEST["dominioexcel"]; 
+$dominioofimatica = $_REQUEST["dominioofimatica"];
 $costo = $_REQUEST["costo"];
 
 //Verificar si correo electrónico esta bien escrito
