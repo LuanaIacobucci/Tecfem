@@ -120,7 +120,7 @@ class servicio {
     $id=0;
       $validacion=false;
       do{
-      $id=rand(1000000000,9999999999);
+      $id=rand(100000000,999999999);
       //Validamos que este ID no exista
 
       $sql = "Select idServicio from servicio where idServicio='$id'"; //Crear sentencia sql
