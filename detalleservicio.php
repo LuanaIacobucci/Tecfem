@@ -44,7 +44,7 @@
 $conn = mysqli_connect("localhost","root","root","tecfem");
 //Genero la consulta sql para listar los datos 
 //realizo la consulta SQL
-$sql = "SELECT nombreUsuario,nombre,descripcion,costo,fechaPublicacion FROM servicio WHERE idServicio = '$id'";
+$sql = "SELECT nombreUsuario,nombre,descripcion,costo,fechaPublicacion FROM servicio";
 //"WHERE 'idServicio' = '$idServicio'";
 //$query = "SELECT*FROM clienteemail WHERE 'email' = '$email'"; // Tabla Emailcliente
 //$query = "SELECT*FROM clientetelefono WHERE 'telefono' = '$telefono'"; // Tabla telefonocliente
