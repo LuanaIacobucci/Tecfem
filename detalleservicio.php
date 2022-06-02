@@ -1,3 +1,4 @@
+<?php include('modelo\conectar.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,25 +38,39 @@
 </div> <!-----Fin columna 1----->
 <div class="col"> <!----Columna 2 de la fila 1 datospersonales--->
 <br>
+<?php 
+
+//Conexión a la base de datos en PHPMyAdmin
+$conn = mysqli_connect("localhost","root","root","tecfem");
+//Genero la consulta sql para listar los datos 
+//realizo la consulta SQL
+$sql = "SELECT nombreUsuario,nombre,descripcion,costo,fechaPublicacion FROM servicio WHERE idServicio = '$id'";
+//"WHERE 'idServicio' = '$idServicio'";
+//$query = "SELECT*FROM clienteemail WHERE 'email' = '$email'"; // Tabla Emailcliente
+//$query = "SELECT*FROM clientetelefono WHERE 'telefono' = '$telefono'"; // Tabla telefonocliente
+$resultado = mysqli_query($conn, $sql); 
+?>
 <div class="table-responsive-xxl">
 <table class="table table-borderless"> <!---Tabla datos proveedora--->
 <tbody>
+<?php while($row=$resultado->fetch_assoc()) { ?>
 <tr>
-<th scope="row">Nombre Proveedora:</th>
+<th scope="row">Proveedora:<?php echo $row["nombreUsuario"] ?></th>
 </tr>
 <tr>
-<th scope="row">Teléfono:</th>
+<th scope="row">Servicio:<?php echo $row["nombre"] ?></th>
 </tr>
 <tr>
-<th scope="row">Correo:</th>
+<th scope="row">Descripción:<?php echo $row["descripcion"] ?></th>
 </tr>
 <tr>
-<th scope="row">Servicio:</th>
+<th scope="row">Costo:<?php echo $row["costo"] ?></th>
 </tr>
 <tr>
-<th scope="row">Costo:</th>
+<th scope="row">Fecha de Publicación:<?php echo $row["fechaPublicacion"] ?></th>
 </tr>
 </tbody>
+<?php } ?>
 </table> <!---Fin tabla--->
 </div>  
 <br>      
