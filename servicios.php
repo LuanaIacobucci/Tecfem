@@ -46,7 +46,7 @@
 <br>
 <h3>Ciencias</h3>
 <p>Servicios relacionados al área de Ciencias</p>
-<button class="btn-servicio" name="btnciencias">Ver Servicios</button>
+<button class="btn-servicio" name="btnciencias">Ver Servicios</button> <!--Botón que permite desplegar los servicios del área de Ciencias--->
 </div>
 </div>
 </div> 
@@ -62,7 +62,7 @@
 <br>
 <h3>Tecnología</h3>
 <p>Servicios relacionados al área de Tecnología</p>
-<button class="btn-servicio" name="btntecnologia">Ver Servicios</button>
+<button class="btn-servicio" name="btntecnologia">Ver Servicios</button> <!--Botón que permite desplegar los servicios del área de Tecnología--->
 </div>
 </div>
 </div> 
@@ -77,7 +77,7 @@
 <br>
 <h3>Ingeniería y Servicios Técnicos</h3>
 <p>Servicios relacionados al área de Ingeniería</p>
-<button class="btn-servicio" name="btningenieria">Ver Servicios</button>
+<button class="btn-servicio" name="btningenieria">Ver Servicios</button> <!--Botón que permite desplegar los servicios del área de Ingeniería y servicios ténicos--->
 </div>
 </div>
 </div> 
@@ -92,7 +92,7 @@
 <br>
 <h3>Matemáticas</h3>
 <p>Servicios relacionados al área de Matemáticas</p>
-<button class="btn-servicio" name="btnmatematicas">Ver Servicios</button>
+<button class="btn-servicio" name="btnmatematicas">Ver Servicios</button> <!--Botón que permite desplegar los servicios del área de matemáticas--->
 </div>
 </div>
 </div> 
