@@ -155,6 +155,9 @@
                     </div>
                    <hr class="line-color">
                     <div class="third mt-4">
+                    <button id="btnborrarProveedora" class="btn btn-outline-dark btn-sm "><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                   <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+                    </svg></button>
                     <button style="margin-left:5%; float:right" class="btn btn-success btn-block ms-5"><i class="fa fa-clock-o" ></i> Solicitar servicio</button>
                     </div>
                 </div>         <!--Fin de la tarjeta -->
@@ -276,37 +279,39 @@
              </div>
 
              </div>
+
+             <div id="mostrartarjetas" style="display:inline;">
              <!--Inicio tarjeta modelo-->
-                <div class="container">
-                        <div class="row">
+            <!--    <div id="tarjetaservicio" class="container">
+                        <div id="valorID" class="row">
                             <div class="col-lg-4">
                                 <div class="card card-margin">
                                     <div class="card-header no-border">
-                                        <h5 class="card-title ms-5 mt-3">Nombre servicio</h5>
+                                        <h5 id="nombreServicio" class="card-title ms-5 mt-3">Nombre servicio</h5>
                                        
                                     </div>
                                     <div class="card-body pt-0">
                                         <div class="widget-49">
                                             <div class="widget-49-title-wrapper">
                                                 <div class="widget-49-date-primary">
-                                                    <span class="widget-49-date-day">S</span>
+                                                    <span id="categoriaServicio" class="widget-49-date-day">S</span>
                                                   
                                                 </div>
                                                 <div class="widget-49-meeting-info">
-                                                    <span class="widget-49-pro-title">Fecha: </span>
-                                                    <span class="widget-49-meeting-time">dd/mm/aa/<span>
+                                                    <span class="widget-49-pro-title">Fecha: </span>  
+                                                    <span id="fecha" class="widget-49-meeting-time">dd/mm/aa/<span>
                                                 </div>
                                             </div>
                                             <ol class="widget-49-meeting-points">
-                                                <li class="widget-49-meeting-item"><span>Descripción: </span></li> <li class="widget-49-meeting-item"><span></li>
-                                                <li class="widget-49-meeting-item"><span>Costo:</span></li> <li class="widget-49-meeting-item"><span> <li class="widget-49-meeting-item"><span></li></li>
+                                                <li class="widget-49-meeting-item"><span>Descripción: </span></li> <li id="descripcion" class="widget-49-meeting-item"><span></li>
+                                                <li class="widget-49-meeting-item"><span>Costo:</span></li> <li id="costo" class="widget-49-meeting-item"><span> <li class="widget-49-meeting-item"><span></li></li>
                                                
                                             </ol>
                                             <div class="widget-49-meeting-action">
-                                            <button style=" float:right" class="btn btn-outline-dark btn-sm "><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                            <button id="btnborrar" style=" float:right" class="btn btn-outline-dark btn-sm "><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
                                                             <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
                                                               </svg></button>
-                                                <button class="btn btn-sm btn-flash-border-primary">Editar</button>
+                                                <button id="btneditar" class="btn btn-sm btn-flash-border-primary">Editar</button>
                                             </div>
                                         </div>
                                     </div>
@@ -314,16 +319,16 @@
                             </div>
                             
                         </div>
-                        
+                            -->
 
              <!--FIn tarjeta modelo-->
-
+             </div>
           
 											<!-- Editar servicio Modal HTML -->
 											<div id="editServiceModal" class="modal">
 												<div class="modal-dialog">
 													<div class="modal-content">
-														<form>
+														<form action="controlador\controlador_proveedor.php" method="POST">
 															<div class="modal-header">						
 																<h4 class="modal-title">Editar Servicio</h4>
 																<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -331,33 +336,34 @@
 															<div class="modal-body">					
 																<div class="form-group">
 																	<label>Nombre</label>
-																	<input type="text" class="form-control" required>
+																	<input id="nombreedit" type="text" class="form-control" required>
 																</div>
 																<div class="form-group">
 																	<label>Descripción</label>
-																	<textarea class="form-control" required></textarea>
+																	<textarea id="descripcionedit" class="form-control" required></textarea>
 																</div>
 																<div class="form-group">
 																	<label>Costo</label>
-                                                                    <input type="number" class="form-control" required>
+                                                                    <input id="costoedit" type="number" class="form-control" required>
 																	
 																</div>
 																<div class="form-group">
 																	<label>Categoría</label>
-																	<select name="cateservicio">
-                                                                    <option value="value1">Ciencia</option>
-                                                                    <option value="value2" >Tecnología</option>
-                                                                    <option value="value3">Ingeniería</option>
-                                                                    <option value="value4">Matemáticas</option>
-                                                                    <option value="value5">Otra</option>
+																	<select id="categoriaedit"name="cateservicio">
+                                                                    <option value="ciencia">Ciencia</option>
+                                                                    <option value="tecnologia" >Tecnología</option>
+                                                                    <option value="ingenieria">Ingeniería</option>
+                                                                    <option value="matematicas">Matemáticas</option>
+                                                                    <option value="otra">Otra</option>
+                                                                    </select>
                                                                     </select>
 																</div>					
 															</div>
                                                             <div class="modal-footer">
                                                            
 															
-																<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
-																<input type="submit" class="btn btn-info" value="Guardar"> 
+																<input id="canceledit" type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+																<input id="guardaredit" type="submit" class="btn btn-info" value="Guardar"> 
 
 
 															</div>
@@ -368,11 +374,11 @@
 
 
                                             <!--modal agregar servicio-->
-                                            	<!-- Editar servicio Modal HTML -->
+                                            	
 											<div id="addServiceModal" class="modal fade" role="dialog">
 												<div class="modal-dialog">
 													<div class="modal-content">
-														<form>
+														<form  method="POST">
 															<div class="modal-header">						
 																<h4 class="modal-title">Agregar Servicio</h4>
 																<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -406,7 +412,7 @@
                                                            
 															
 																<input id="cancel" type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
-																<input id="guardar" type="submit" class="btn btn-info" value="Guardar"> 
+																<input id="guardar" type="button" class="btn btn-info" value="Guardar"> 
 
 
 															</div>

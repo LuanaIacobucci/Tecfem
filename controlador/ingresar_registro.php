@@ -36,19 +36,30 @@
     $contrasena = $_REQUEST["contrasena"];
     $imgperfil = $_REQUEST["imgperfil"]; 
     //area STEM
-
-    //Captura de datos de prestación de servicios
+    
+//Captura de datos de prestación de servicios
 $servicios = $_REQUEST["servicios"];
 $profesion = $_REQUEST["profesion"];
 $descripcion = $_REQUEST["descripcion"];
 $certificacion = $_REQUEST["certificacion"];
 $gradoacademico = $_REQUEST["gradoacademico"];
-//Nivel expertiz en excel 
-//Nivel de uso de herramientas Ofimáticas
+$dominioexcel = $_REQUEST["dominioexcel"]; 
+$dominioofimatica = $_REQUEST["dominioofimatica"];
 $costo = $_REQUEST["costo"];
 
 //Verificar si correo electrónico esta bien escrito
+$email = mysql_escape_string($_POST['email']);            
+if(!eregi("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$", $email)){
+    // Devuelve error
+    $msg = 'El correo ingresado es inválido, intente nuevamente.';
+}else{
+    // Retorno exitoso 
+    $msg = 'Su cuenta ha sido creada, <br /> verificar a través del link de activación enviado a su correo.';
+}
 
+if(isset($msg)){  // Check if $msg is not empty
+    echo '<div class="statusmsg">'.$msg.'</div>'; // Display our message and wrap it with a div with the class "statusmsg".
+} 
 
  //Consultas a la base de datos para ingresar la información de registro de clienta
  //Realizar JOINS
