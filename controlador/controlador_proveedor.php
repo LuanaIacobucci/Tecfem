@@ -16,8 +16,9 @@ if (isset($_POST["funcion"]) and $_POST["funcion"]=="agregar"){
     $descripcion=$_POST['desc'];
     $costo=$_POST['cost'];
     $categoria=$_POST['cate'];
-  // var $usuaria=$_POST['usur']; 
- // $id->generarIdServicio($conn)
+    $usuaria=$_SESSION['nombreUsuario']; 
+ 
+    echo $usuaria;
 
         $id=0;
       $validacion=false;
@@ -39,7 +40,7 @@ if (isset($_POST["funcion"]) and $_POST["funcion"]=="agregar"){
         }
       }
        
-   echo agregarServicio($id,$nombre,$descripcion,$costo,$categoria,$conn);
+   echo agregarServicio($id,$usuaria,$nombre,$descripcion,$costo,$categoria,$conn);
 
  }
 
@@ -57,7 +58,8 @@ if (isset($_POST["funcion"]) and $_POST["funcion"]=="agregar"){
 
  if(isset($_GET["funcion"]) and $_GET["funcion"]=="listar"){
    // $usuaria=$_GET['usr'];
-   echo  listarServicios($conn);
+   $nomusuaria=$_SESSION['nombreUsuario']; 
+   echo  listarServicios($conn,$nomusuaria);
     
  }
 
@@ -72,26 +74,26 @@ if (isset($_POST["funcion"]) and $_POST["funcion"]=="agregar"){
   
     //Crear un CRUD para los servicios de cada proveedor
     //Agregar servicio
-    function agregarServicio($id,$nombreServicio, $descripcion,$costo,$categoriaStem,$conn){
+    function agregarServicio($id,$usuaria,$nombreServicio, $descripcion,$costo,$categoriaStem,$conn){
         
         //Validar valores pasados en parámetros
        // var $nomusuaria= $_SESSION['nombreUsuario'];
-       $nomusuaria="usuario1"; //solo para pruebas
+     
        $resp="";
-        if( isset($nomusuaria)){
+        if( isset($usuaria)){
         if($nombreServicio!=""){
             if($categoriaStem=="ciencia" or $categoriaStem=="matematicas" or $categoriaStem=="tecnologia" or $categoriaStem=="ingenieria" or $categoriaStem=="otra"){
                 if($costo>0 && $costo!=null){
                     if($descripcion!="" && $descripcion!=null){
 
                             //Intanciar servicio
-                             $nuevoServicio=new servicio($nomusuaria,$nombreServicio,$categoriaStem,$descripcion,$costo,date('d-m-y'));
+                             $nuevoServicio=new servicio($usuaria,$nombreServicio,$categoriaStem,$descripcion,$costo,date('d-m-y'));
                             
                             //Generar insert
                                           
                           $fecha=$nuevoServicio->get_fechaPublicacion();
                         
-                       $sql="INSERT INTO `servicio`(`idServicio`, `nombreUsuario`, `nombre`, `descripcion`, `costo`, `fechaPublicacion`, `categoria`) VALUES('$id','$nomusuaria','$nombreServicio','$descripcion','$costo','$fecha','$categoriaStem')";
+                       $sql="INSERT INTO `servicio`(`idServicio`, `nombreUsuario`, `nombre`, `descripcion`, `costo`, `fechaPublicacion`, `categoria`) VALUES('$id','$usuaria','$nombreServicio','$descripcion','$costo','$fecha','$categoriaStem')";
                        // $result=mysqli_query($link,$sql);
                                                   
                            
@@ -147,9 +149,9 @@ return $respu;
 
 
 //Listar Servicios de proveedor
-    function listarServicios($conn){
+    function listarServicios($conn,$nomusuaria){
   // $nomusuaria= $_SESSION['nombreUsuario'];
-    $nomusuaria= "usuario1";
+    
     $listaServicios=array();
     $sql="SELECT `idServicio`, `nombreUsuario`, `nombre`, `descripcion`, `costo`, `fechaPublicacion`, `categoria` FROM `servicio` WHERE nombreUsuario='$nomusuaria'";
     $resultado=mysqli_query($conn,$sql);

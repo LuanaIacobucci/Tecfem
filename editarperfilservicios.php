@@ -17,7 +17,7 @@
   </head>
   <body>
       <?php
-        @include('headerlogged.php');
+        include('headerlogged.php');
       ?>
 
 <!--Cuerpo-->
@@ -271,13 +271,22 @@
              <h3>Mis Servicios</h3>
              </div>
 
-             <div  class="col">
-                 <button  id="agregarserviciobtn" data-toggle="modal" data-target="#addServiceModal" style="float:right;" class="btn  btn-lg"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="36" fill="rgb(0,128,55)" class="bi bi-plus-circle" viewBox="0 0 16 16">
+
+
+             <div class="col" style="float:right;"> 
+            <button id="btnborrar" style="float:right;"  class="btn btn-outline-dark btn-md ms-1 "><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+           <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+            </svg></button>
+           
+
+          
+         <button id="btneditar" data-toggle="modal" data-target="editServiceModal" style="float:right;"  class="btn btn-outline-dark btn-md ms-1">Editar</button>
+           
+                 <button  id="agregarserviciobtn" data-toggle="modal" style="float:right;"  data-target="#addServiceModal" class="btn  btn-sm "><svg xmlns="http://www.w3.org/2000/svg" width="30" height="36" fill="rgb(0,128,55)" class="bi bi-plus-circle" viewBox="0 0 16 16">
             <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
             <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
             </svg></button>
-             </div>
-
+            
              </div>
 
              <div id="mostrartarjetas" style="display:inline;">

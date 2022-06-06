@@ -21,13 +21,13 @@
     <header>
         <div class="row">
         <div  class="col col-xs-1 col-sm-3 col-md-2 col-lg-3 col-xl-3  float-left m-0">
-        <img  id="logoHeader" src="img/logopng.png" alt="Logo tefem">
+        <a href="index.php"><img  id="logoHeader" src="img/logopng.png" alt="Logo tefem"></a>
             </div>
 
             <div id="navdesktop" class="col col-md-8 col-lg-9 float-right  mt-5">
                 <nav  class="float-right ">
                     <a href="#">Bolsa de Trabajo</a>
-                    <a href="#">Prestación de Servicios</a>
+                    <a href="servicios.php">Prestación de Servicios</a>
                     <a href="#">Capacitaciones</a>
                     <a href="#">Beneficios para mujeres</a>
                     <a href="#">Donar</a>
@@ -45,7 +45,7 @@
 			
 				        <ul class="nav2">
                             <li><a href="#">Bolsa de Trabajo</a></li>
-                            <li><a href="#">Prestación de Servicios</a></li>
+                            <li><a href="servicios.php">Prestación de Servicios</a></li>
                             <li><a href="#">Capacitaciones</a></li>
                             <li><a href="#">Beneficios para mujeres</a></li>
                             <li><a href="#">Donar</a></li>

@@ -1,3 +1,17 @@
+<?php
+session_start(); 
+//Vamos a chequear a que perfil vamos a redirigir
+
+$url="";
+
+if($_SESSION["tipoCuenta"]=="cliente"){
+    $url="editarperfilcliente.php";
+}else if ($_SESSION["tipoCuenta"]=="proveedor"){
+    $url="editarperfilservicios.php";
+}else if($_SESSION["tipoCuenta"]=="admin"){
+    $url="consolaadmin2.php";
+}
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -25,21 +39,21 @@
 
             <div  id="navdesktop"  class="row">
             <div  class="row">
-             <img  id="logoHeader" src="img/logopng.png" alt="Logo tefem">
+            <a href="index.php"><img  id="logoHeader" src="img/logopng.png" alt="Logo tefem"></a>
       
             </div>
                 <div id="links" class="col col-md-8 col-lg-9  mt-3 ">
                 <nav  class="navbar">
                     <a href="#">Bolsa de Trabajo</a>
-                    <a href="#">Prestación de Servicios</a>
+                    <a href="servicios.php">Prestación de Servicios</a>
                     <a href="#">Capacitaciones</a>
                     <a href="#">Beneficios para mujeres</a>
                     <a href="#">Donar</a>
                     <!--Ir a mi perfil--->
-                    <a  href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                    <a  href="<?php echo $url; ?>"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
                     <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg></a> 
                     <!--cerrar sesión --->
-                    <a  href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-door-open-fill" viewBox="0 0 16 16">
+                    <a  href="cerrarsesion.php"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-door-open-fill" viewBox="0 0 16 16">
                     <path d="M1.5 15a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H13V2.5A1.5 1.5 0 0 0 11.5 1H11V.5a.5.5 0 0 0-.57-.495l-7 1A.5.5 0 0 0 3 1.5V15H1.5zM11 2h.5a.5.5 0 0 1 .5.5V15h-1V2zm-2.5 8c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1z"/>
                     </svg></a> 
                 </nav>
@@ -49,7 +63,7 @@
 
             <div id="navmovil" class="col col-md- col-lg-9 float-right">
             <div  class="col">
-             <img  id="logoHeader" src="img/logopng.png" alt="Logo tefem">
+            <a href="index.php"><img  id="logoHeader" src="img/logopng.png" alt="Logo tefem"></a>
       
             </div>
                 <nav class="col-xs-6">
@@ -64,11 +78,14 @@
                             <li><a href="#">Capacitaciones</a></li>
                             <li><a href="#">Beneficios para mujeres</a></li>
                             <li><a href="#">Donar</a></li>
-                            <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+
+                                                   
+                                                       
+                            <li><a href="<?php echo $url; ?>"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
                             <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
                             </svg></a></li>
                             <li><!--cerrar sesión --->
-                    <a  href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-door-open-fill" viewBox="0 0 16 16">
+                    <a  href="cerrarsesion.php"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-door-open-fill" viewBox="0 0 16 16">
                     <path d="M1.5 15a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H13V2.5A1.5 1.5 0 0 0 11.5 1H11V.5a.5.5 0 0 0-.57-.495l-7 1A.5.5 0 0 0 3 1.5V15H1.5zM11 2h.5a.5.5 0 0 1 .5.5V15h-1V2zm-2.5 8c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1z"/>
                     </svg></a>
                            </li>
