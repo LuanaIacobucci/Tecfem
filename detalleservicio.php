@@ -13,7 +13,7 @@ session_start();
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-<title>Tecfem- Detalle de Servicio</title>
+<title>Tecfem</title>
 </head>
 <body>
 
@@ -49,7 +49,7 @@ session_start();
 
 //Genero la consulta sql para listar los datos 
 //realizo la consulta SQL
-$sql = "SELECT nombreUsuario,nombre,descripcion,costo,fechaPublicacion FROM servicio WHERE idServicio = '$id'";
+$sql = "SELECT nombreUsuario,nombre,descripcion,costo,fechaPublicacion FROM servicio";
 //"WHERE 'idServicio' = '$idServicio'";
 //$query = "SELECT*FROM clienteemail WHERE 'email' = '$email'"; // Tabla Emailcliente
 //$query = "SELECT*FROM clientetelefono WHERE 'telefono' = '$telefono'"; // Tabla telefonocliente
