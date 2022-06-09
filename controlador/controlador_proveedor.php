@@ -87,7 +87,7 @@ if (isset($_POST["funcion"]) and $_POST["funcion"]=="agregar"){
                     if($descripcion!="" && $descripcion!=null){
 
                             //Intanciar servicio
-                             $nuevoServicio=new servicio($usuaria,$nombreServicio,$categoriaStem,$descripcion,$costo,date('d-m-y'));
+                             $nuevoServicio=new servicio($usuaria,$nombreServicio,$categoriaStem,$descripcion,$costo,date('Y-m-d'));
                             
                             //Generar insert
                                           

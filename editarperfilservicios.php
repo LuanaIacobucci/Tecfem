@@ -32,7 +32,13 @@
                 <span class="font-weight-bold">**NOMBRE**</span>
                 <span class="text-black-50">**MAIL**</span><br>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                    <button id="btnguardar" type="button" class="btn btn-primary btn-sm">Servicios</button>
+                  <!--  <button id="btnguardar" type="button" class="btn btn-primary btn-sm">Servicios</button> -->
+                
+                  <button id="btnEditarBlog" class="btn btn-primary " type="button">Editar Blog</button>
+                  <br>
+                   <button id="btnConfigWspp" class="btn btn-primary " type="button">WhatsApp</button>
+                  
+                   
                 </div></div>
         </div>
         <div class="col-md-5 border-right">
@@ -71,8 +77,9 @@
                     <div class="col-md-12"><label class="labels">Correo Elecrtónico</label><input type="text" class="form-control" placeholder="Correo electrónico" value=""></div><br>
                         <div class="d-grid gap-2 d-md-flex justify-content-md-center">
                             <button id="btnguardar" class="btn btn-primary me-md-2" type="button">Guardar Cambios</button>
-                        </div>
-                </div>
+                           
+                        </div></div>
+                       
 
 
         </div>
@@ -124,7 +131,7 @@
                 <!--Lista de proveedoras favoritas-->
                     
                         <!--Inicio de tarjeta genérica-->
-                    <div id="tarjetagenerica">
+           <!--         <div id="tarjetagenerica">
                         <div class="card p-4 mt-1">
                             <div class="first">
                                 <h6 class="heading">NOMBRE PROVEEDORA</h6>
@@ -160,8 +167,8 @@
                     </svg></button>
                     <button style="margin-left:5%; float:right" class="btn btn-success btn-block ms-5"><i class="fa fa-clock-o" ></i> Solicitar servicio</button>
                     </div>
-                </div>         <!--Fin de la tarjeta -->
-              
+                </div>         
+                            -->
              
                 </div>
 

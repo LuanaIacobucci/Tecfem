@@ -9,7 +9,7 @@ session_start();
 
 if (isset($_POST["funcion"]) and $_POST["funcion"]=="agregarP"){
     $nombre=$_POST['nom'];
-   agregarProveedoresFavoritos($nombre);
+   agregarProveedoresFavoritos($nombre,$conn);
 
  }
 
@@ -25,12 +25,12 @@ if (isset($_POST["funcion"]) and $_POST["funcion"]=="agregarP"){
     // $usuaria=$_GET['usr'];
     $nomUsuaria=$_POST['cliente'];
     $nombreProveedor=$_POST['proveedor'];
-    echo  eliminarProveedoresFavoritos($nomUsuaria, $nombreProveedor);
+    echo  eliminarProveedoresFavoritos($conn,$nomUsuaria, $nombreProveedor);
      
   }
 
  
-    function agregarProveedoresFavoritos($nombreProveedor){
+    function agregarProveedoresFavoritos($nombreProveedor,$conn){
         
        // var $nomusuaria= $_SESSION['nombreUsuario'];
        $nomusuaria="usuario1"; //solo para pruebas
@@ -43,7 +43,7 @@ if (isset($_POST["funcion"]) and $_POST["funcion"]=="agregarP"){
                                   
                                     $resp="Insertado.";
                             } else {
-                                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                                   
                                     $resp="No insertado";
                             }
                            
@@ -52,15 +52,15 @@ if (isset($_POST["funcion"]) and $_POST["funcion"]=="agregarP"){
     }
 
 
- function eliminarProveedoresFavoritos($nomUsuaria, $nombreProveedor){
+ function eliminarProveedoresFavoritos($conn,$nomUsuaria, $nombreProveedor){
     $sql="DELETE FROM `proveedoresfavoritos` WHERE nombreUsuarioCliente='$nomUsuaria' and nombreUsuarioProveedor='$nombreProveedor'";
                                
         
-         if (mysqli_query($conn, $sql)) {
+         if (mysqli_query($conn,$sql)) {
                
                  $respu="Eliminado.";
          } else {
-                 echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                 
                  $respu="No Eliminado";
          }
 
@@ -88,7 +88,7 @@ if (isset($_POST["funcion"]) and $_POST["funcion"]=="agregarP"){
 
 if (isset($_POST["funcion"]) and $_POST["funcion"]=="agregarS"){
     $idServicio=$_POST['id'];
-   agregarServicioFavoritos($idServicio);
+   agregarServicioFavoritos($idServicio,$conn);
 
  }
 
@@ -104,13 +104,13 @@ if (isset($_POST["funcion"]) and $_POST["funcion"]=="agregarS"){
     // $usuaria=$_GET['usr'];
     $nomUsuaria=$_POST['cliente'];
     $idservicio=$_POST['servicio'];
-    echo  eliminarServicioFavoritos($nomUsuaria, $idservicio);
+    echo  eliminarServicioFavoritos($nomUsuaria, $idservicio, $conn);
      
   }
 
   
  
-    function agregarServicioFavoritos($idServicio){
+    function agregarServicioFavoritos($idServicio,$conn){
         
        // var $nomusuaria= $_SESSION['nombreUsuario'];
        $nomusuaria="usuario1"; //solo para pruebas
@@ -132,7 +132,7 @@ if (isset($_POST["funcion"]) and $_POST["funcion"]=="agregarS"){
     }
 
 
- function eliminarServicioFavoritos($nomUsuaria, $idServicio){
+ function eliminarServicioFavoritos($nomUsuaria, $idServicio, $conn){
     $sql="DELETE FROM `serviciosfavoritos` WHERE nombreUsuarioCliente='$nomUsuaria' and idServicio='$idServicio'";
                                
         
