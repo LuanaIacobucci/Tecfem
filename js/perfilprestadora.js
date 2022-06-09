@@ -1,5 +1,6 @@
 $(document).ready(function(){
-
+var cajaServicio;//Para llmarle el event listener
+var idServicioOperar="";//Guaradamos un id para hacer funciones CRUD
     
     $('#proveedorasfavoritas').hide();
     $('#registroservicios').hide();
@@ -132,21 +133,24 @@ $(document).ready(function(){
                       tarjetas.innerHTML+=`<h6>Parece que aun no tienes ningún servicio agregado.</h6>`;
                   }else{
                 for(let servicio of listaServicios){
-                    //console.log(servicio);
+                  
             ////  `  `  esas comillas dejan hacer el siguiente paso
+              
                     
                   let cateSimbolo=valorCategoria(servicio.categoria);
                  
                     
                  tarjeta=document.createElement('div');
+                 tarjeta.classList.add('contenedorServicioEvent');
+                 tarjeta.value=servicio.idServicio;
                     tarjeta.innerHTML =  `
                     
-                    <div id=""serv"" value="${servicio.idServicio}" class="containerServicio" style="display:inline;float:left;width:33%;">
+                    <div  value="${servicio.idServicio}" class="containerServicio" style="display:inline;float:left;width:33%;margin-right:2%;">
                     
-                        <div class="col-lg-4">
-                            <div class="card card-margin">
+                        <div  class="col-lg-4">
+                            <div  id="${servicio.idServicio}" class="card card-margin">
                                 <div class="card-header no-border">
-                                    <h5 id="nombreServicio" class="card-title ms-5 mt-3">${servicio.nombre}</h5>
+                                    <h5  id="nombreServicio" class="card-title ms-5 mt-3">${servicio.nombre}</h5>
                                    
                                 </div>
                                 <div class="card-body pt-0">
@@ -172,21 +176,48 @@ $(document).ready(function(){
                        
                         
                     </div> </div> `; 
-
+                
                     document.getElementById("mostrartarjetas").appendChild(tarjeta);
-                 
+
+
                  }
+                 //Seleccionar div de servicio para operaciones crud. Agregar Event Listener
+             cajaServicio = Array.from(document.getElementsByClassName('contenedorServicioEvent'));
+             
+            cajaServicio.forEach(box => {
+                //Si no ha sido clickeado
+                var clickDeServico=false
+                
+                box.addEventListener('click', function handleClick(event) {
+                  let valId=box.value;
+                // alert(valId);
+
+                 //Aca voy a settear css para que se vea que servicio he seleccionado
+                 conte1=document.getElementById(valId);
+                if(clickDeServico==false){
+                    //Selecciono el servicio
+                  conte1.setAttribute('style', 'box-shadow: 5px 5px 20px 5px rgb(174, 51, 240,0.5);');
+                  clickDeServico=true;
+                  idServicioOperar=valId; //Le asigno a esta variable global el id;
 
 
-                 document.addEventListener('click', function (e) {
-                    if(e.target && e.target.id== 'serv'){
-                        alert(hello);
-                        servicioSeleccionado=document.querySelector('.containerServicio');
-                        
-                     let idServicio=servicioSeleccionado.value();
-                   }
-       
-                }); 
+                    //Deseleccionar otros servicios
+                    cajaServicio.forEach(box => { 
+                        let valIdNoSelect=box.value;
+                        if(valId!=valIdNoSelect){
+                        conteNoSelect=document.getElementById(valIdNoSelect);
+                        conteNoSelect.setAttribute('style', 'box-shadow: none;');
+                        }
+                    });
+                  
+
+                }else{
+                    //Deselecciono el servicio
+                    conte1.setAttribute('style', 'box-shadow: none;');
+                    clickDeServico=false;
+                    idServicioOperar=""; //Quito el id de var global para eviatr errores
+                }
+                     }); });
                 }
             },
 
@@ -197,63 +228,70 @@ $(document).ready(function(){
             }
             });
 
-
-            //Vamos a crear una funcione que reaccione al selleccione un/os servicios para poder hacer el editar y el borrar
-            /* La idea es poder borrar de a uno o de a varios (agrega a un array para borrar)
-            Para editar es solo de a uno
-            Se debe maracar el borde del seleccionado--> Capturamos su id de servicio (que esta en el css del elemento)*/
-
-                 //agregar eventlistener para botones agregados dinamicamente EDITAR
-                
-                 // Append to another element:
-              
+            
 
               
 
-                
-            function abrirmodaledit(num){
+            $('#btneditar').click(function(){    
+           // function abrirmodaledit(){
                   //Mostar modal 
-                  $('#editServiceModal').modal("show");
+                  
                 
                         //boton cancelar
                         $('#canceledit').click(function(){
                             $('#editServiceModal').modal("hide");
                             });
 
-                  $('#guardaredit').click(function(){
-                    let nombre=$('#nombreedit').val();
-                    let descripcion=$('#descripcionedit').val(); 
-                    let costo=$('#costoedit').val();
-                    let categoria=$('#categoriaedit').val();
 
+                let num=idServicioOperar;
+                    if(num==""){
+                        alert("Debes primero seleccionar un servicio.");
+                    }else{
+                        $('#editServiceModal').modal("show");
 
+                        $('#guardaredit').click(function(){
+                            let nombre=$('#nombreedit').val();
+                            let descripcion=$('#descripcionedit').val(); 
+                            let costo=$('#costoedit').val();
+                            let categoria=$('#categoriaedit').val();
+                            
+                                $.ajax({
+                                    url:"controlador\\controlador_proveedor.php",
+                                    method: 'POST',
+                                    data: {funcion: 'editar',nom:nombre,desc:descripcion,cost:costo,cate:categoria,id:num},
+                                    success: function(response){
+                                        //Ver si se agregó o no
+                                        alert("Editado correctamente.");
+                                    console.log(response);
+                                        listarServicios();
+                                        $('#editServiceModal').modal("hide");
+                                        idServicioOperar="";
+                                    },
+                                    error: 
+                                    function(error){
+                                        alert("Error al editar servicio");
+                                        console.log(error);
+                                        idServicioOperar="";
+                                    }
 
-                    $.ajax({
-                        url:"controlador\\controlador_proveedor.php",
-                        method: 'POST',
-                        data: {funcion: 'editar',nom:nombre,desc:descripcion,cost:costo,cate:categoria,id:num},
-                        success: function(response){
-                            //Ver si se agregó o no
-                            alert("Editado correctamente.");
-                        console.log(response);
-                            listarServicios();
-                        },
-                        error: 
-                        function(error){
-                            alert("Error al editar servicio");
-                            console.log(error);
-                        }
-
-                    });
-                    $('#editServiceModal').modal("hide");
-                    return false;
-                  });
+                                        
+                                
+                                });
+                                return false; }); 
+                    
+                       }});
                   
-                  listarServicios();    
-    
-                 }
+             
 
-                  function abrirmodalborrar(num){
+
+                $('#btnborrar').click(function(){
+
+                    num=idServicioOperar;
+
+                    if(num==""){
+                        alert("Debes seleccionar un servicio primero.");
+                    }else{
+                        
                     if (confirm("¿Seguro que quiere eliminar el registro?") == true) {
 
                         $.ajax({
@@ -263,7 +301,7 @@ $(document).ready(function(){
                             success: function(response){
                                 //Ver si se agregó o no
                                 alert("Eliminado correctamente.");
-                            console.log(response);
+                           // console.log(response);
                                 listarServicios();
                             },
                             error: 
@@ -275,6 +313,8 @@ $(document).ready(function(){
                         });
                   }
                 }
+
+                });
 
 
 
@@ -324,7 +364,7 @@ function listarProveedora(){
             ////  `  `  esas comillas dejan hacer el siguiente paso
 
                     tarjeta.innerHTML +=  `
-                    <div id="${servicio.idServicio}" class="container" style="display:inline;float:left;width:33%;">
+                    <div id="${proveedora.nombreProveedora}" class="container" style="display:inline;float:left;width:33%;">
                     
                         <div class="col-lg-4">
                             <div class="card card-margin">
