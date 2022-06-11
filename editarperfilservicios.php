@@ -128,6 +128,8 @@
         <div id="contenedorfuncionalidades" class="row m-1">
             <div id="proveedorasfavoritas">
                 <h3>Proveedoras favoritas</h3>
+
+                <div id="mostrartarjetasProveedora">
                 <!--Lista de proveedoras favoritas-->
                     
                         <!--Inicio de tarjeta genérica-->
@@ -169,7 +171,7 @@
                     </div>
                 </div>         
                             -->
-             
+                    </div>
                 </div>
 
              </div>
