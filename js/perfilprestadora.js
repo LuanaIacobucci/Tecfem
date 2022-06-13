@@ -369,30 +369,44 @@ function listarProveedora(){
                                                                                                     
                                                 </div>
 
-                                                <div>
+                                                <div id="bottomtarjeta">
 
-                                                    <button id="irBlog" tyle="margin-left:2%; float:right" class="btn btn-outline-dark btn-sm px-2 m-1">Calificar</button>
-                                                    <button id="calificar" style="margin-left:5%; float:right" class="btn btn-outline-dark btn-sm m-1">Ver su Blog</button>
+                                                    <button class="calificar" style="margin-left:2%; float:right" id="btn btn-outline-dark btn-sm px-2 m-1">Calificar</button>
+                                                    <button class="irBlog" style="margin-left:5%; float:right" id="btn btn-outline-dark btn-sm m-1">Ver su Blog</button>
                                                                                               
                                                 </div>
                                         </div> 
                     </div>
                    <hr class="line-color">
-                    <div class="third mt-4">
-                    <button id="btnborrarProveedora" class="btn btn-outline-dark btn-sm "><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
-                   <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
-                    </svg></button>
-                    <button id="contactar"style="margin-left:5%; float:right" class="btn btn-success btn-block ms-5"><i class="fa fa-clock-o" ></i>Contactar</button>
-                    </div>
+                    <div class="bottomtarjeta" lass="third mt-4">
+                    <button class="btnborrarProveedora" id="btn btn-outline-dark btn-sm "><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                    <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+                     </svg></button>
+                     <button class="contactar"style="margin-left:5%; float:right" id="btn btn-success btn-block ms-5"><i class="fa fa-clock-o" ></i>Contactar</button>
+                     
+                   </div>
                 </div>  
                     `;
 
+                     btnborra=document.createElement('button');
+                    btnborra.classList.add('btnborrarProveedora');
+                 
+                    btnwspp=document.createElement('button');
+                    btnwspp.classList.add('contactar');
+                   
+                    btnblog=document.createElement('button');
+                    btnblog.classList.add('irBlog');
+
+                    btncalificar=document.createElement('button');
+                    btncalificar.classList.add('calificar');
+
+                    
                     document.getElementById("mostrartarjetasProveedora").appendChild(tarjeta);
 
                   
                  }
 
-                 ///Vamos a agregar event listeners a botones
+                 
                  
                  //Seleccionar div de servicio para operaciones crud. Agregar Event Listener
                 cajaProvFav = Array.from(document.getElementsByClassName('contenedorProveedoraFavorita'));
@@ -440,59 +454,61 @@ function listarProveedora(){
                 
                    //Agregar funcionalidad de botones
                     //Borrar
-                    btnborrar=document.getElementById('btnborrarProveedora');
-                    btnborrar.addEventListener('click', function handleClick(event) {
-
-                        let nombreProveedora=box.value;;
-                        //Validar con alert
-                        $.ajax({
-                            url:"controlador\\controlador_cliente.php",
-                            method: 'POST',
-                            data: {funcion: 'eliminarP',nombre: nombreProveedora},
-                            success: function(response){
-                                //Ver si se agregó o no
-                                alert("Eliminado correctamente.");
-                             
-                                listarProveedora();
-                            },
-                            error: 
-                            function(error){
-                                alert("Error al eliminar servicio");
-                                console.log(error);
-                            }
-                                        
-                        });
-                    });
-
-                    //Wspp
-
-                    btnwspp=document.getElementById('contactar');
-                    btnwspp.addEventListener('click', function handleClick(event) {
-
-                        let nombreProveedora=box.value;
-
-                        alert("Requiere configuración");
+                    btnborrar=Array.from(document.getElementsByClassName('btnborrarProveedora'));
+                   btnborrar.forEach(box => {
                     
+                    box.addEventListener('click', function handleClick(event) {
+                     alert("help");
+                     //Validar con alert
+                     $.ajax({
+                        url:"controlador\\controlador_cliente.php",
+                        method: 'POST',
+                        data: {funcion: 'eliminarP',nombre: nombreProveedora},
+                        success: function(response){
+                            //Ver si se agregó o no
+                            alert("Eliminado correctamente.");
+                         
+                            listarProveedora();
+                        },
+                        error: 
+                        function(error){
+                            alert("Error al eliminar servicio");
+                            console.log(error);
+                        }
+                                    
                     });
+                   
+                    });
+                });
+
+
+                //Wspp
+
+                btnwspp=Array.from(document.getElementsByClassName('contactar'));
+                btnwspp.forEach(box => {
+                    
+                    box.addEventListener('click', function handleClick(event) {
+                     alert("Requiere configuración.");
+                   
+                    });
+            
+                });
+
+                        
                     //Blog
-                    btnblog=document.getElementById('irBlog');
-                    btnblog.addEventListener('click', function handleClick(event) {
-
-                        let nombreProveedora=box.value;
-
-                        alert("Requiere configuración");
+                    btnblogS=Array.from(document.getElementsByClassName('irBlog'));
+                    btnblogS.forEach(box => {
+                    
+                        box.addEventListener('click', function handleClick(event) {
+                         alert("Requiere configuración. xd");
+                       
+                        });
                        
                     });
 
-                    //calificar
-                    btncalificar=document.getElementById('calificar');
-                    btncalificar.addEventListener('click', function handleClick(event) {
 
-                        let nombreProveedora=box.value;
+            
 
-                        alert("Requiere configuración");
-                        
-                    });
 
 
             

@@ -1,7 +1,9 @@
 <?php
 include('../modelo/db.php');
 session_start();
-
+$_SESSION["nombreUsuario"]="";
+$_SESSION["nombre"]="";
+$_SESSION["apellido"]="";
 
 
 $nombreUsuario = $_POST["nombreUsuario"]; 
@@ -48,7 +50,7 @@ if($filas and $filas>0){
                 header("Location: ../editarperfilservicios.php");
             }
             
-            echo "¿Qué pasó?";
+            
 
 
     }else{
