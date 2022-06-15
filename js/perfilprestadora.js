@@ -22,12 +22,56 @@ var cajaProvFav; //Para llamar al event listener de proveedora favorita
 
         });
 
+        //Listado de servicios prestados
 
         $('#servreg').click(function(){
 
             $('#registroservicios').toggle('slow');
+            $.ajax({
+                url:"controlador\\controlador_proveedor.php",
+                method: 'GET',
+                data: {funcion: 'listarRegistro'},
+                contentType: 'json; charset=utf-8',
+                success: function(response){
+                    try {
+                        var listaRegistroServicios = JSON.parse(response);
+                      } catch (err) {
+                      
+                        console.log('Error: ', err.message);
+                      }
+                    
+                    let tabla=document.querySelector("#cuerpoTablaRegistro");
+                      tabla.innerHTML='';
+    
+                      if (isEmpty( listaRegistroServicios)){
+                         tabla.innerHTML+=`<h6>Parece que aun nohas solicitado ningún servicio agregado.</h6>`;
+                      }else{
+                    for(let servicio of  listaRegistroServicios){
+                 
+                    fila=document.createElement('div');
+                     fila.classList.add('contenedorServicioEvent');
+                     fila.value=servicio.idServicio;
+                        fila.innerHTML =  `
+                       `; 
+                    
+                        document.getElementById("cuerpoTablaRegistro").appendChild(fila);
+                    }
+                }},
+              
+              error: function(error){
+                    alert("Error al listar servicios");
+                    console.log(error);
+                }
+
+            
+                });
+
 
         });
+
+
+
+        //MOSTAR SERVICIOS AGREGADOS
 
         $('#misserv').click(function(){
 
@@ -371,8 +415,9 @@ function listarProveedora(){
 
                                                 <div id="bottomtarjeta">
 
-                                                    <button class="calificar" style="margin-left:2%; float:right" id="btn btn-outline-dark btn-sm px-2 m-1">Calificar</button>
-                                                    <button class="irBlog" style="margin-left:5%; float:right" id="btn btn-outline-dark btn-sm m-1">Ver su Blog</button>
+                                                    <button class="calificar" style="margin-left:2%; float:right;" id="btn btn-outline-dark btn-sm px-2 m-1">Calificar</button>
+                                                    <br>
+                                                    <button class="irBlog" style="margin-left:5%; float:right; background-color: white; border-color:black;" id="btn btn-outline-dark btn-sm m-1">Ver su Blog</button>
                                                                                               
                                                 </div>
                                         </div> 
@@ -397,8 +442,8 @@ function listarProveedora(){
                     btnblog=document.createElement('button');
                     btnblog.classList.add('irBlog');
 
-                    btncalificar=document.createElement('button');
-                    btncalificar.classList.add('calificar');
+                    btncalifica=document.createElement('button');
+                    btncalifica.classList.add('calificar');
 
                     
                     document.getElementById("mostrartarjetasProveedora").appendChild(tarjeta);
@@ -507,6 +552,17 @@ function listarProveedora(){
                     });
 
 
+                    //Blog
+                    btncalificarS=Array.from(document.getElementsByClassName('calificar'));
+                    btncalificarS.forEach(box => {
+                    
+                        box.addEventListener('click', function handleClick(event) {
+                         alert("Requiere configuración.");
+                       
+                        });
+                       
+                    });
+
             
 
 
@@ -532,5 +588,20 @@ function listarProveedora(){
         function isEmpty(value){
             return (value == null || value.length === 0);
           }
+
+
+
+          ///MODAL DE MOSTRAR EL MODAL DE EDITAR BLOG
+
+         
+
+
+          ///LISTAR EL REGISTRO DE SERVICIO
+
+
+        
+
+
+
 
 });

@@ -34,7 +34,7 @@
                 <div class="d-grid gap-2 d-md-flex justify-content-md-center">
                   <!--  <button id="btnguardar" type="button" class="btn btn-primary btn-sm">Servicios</button> -->
                 
-                  <button id="btnEditarBlog" class="btn btn-primary " type="button">Editar Blog</button>
+                  <button data-toggle="modal" data-target="#editBlogModal" id="btnEditarBlog" class="btn btn-primary " type="button">Editar Blog</button>
                   <br>
                    <button id="btnConfigWspp" class="btn btn-primary " type="button">WhatsApp</button>
                   
@@ -208,63 +208,10 @@
                                     <th scope="col" class="text-end" width="20%"><span>Valor</span></th>
                                     </tr>
                                 </thead>
-                            <tbody>
-                                <tr>
-                               
-                                <td>12</td>
-                                <td>1 Oct, 21</td>
-                                <td><i class="fa fa-check-circle-o green"></i><span class="ms-1">Paid</span></td>
-                                <td><img src="https://i.imgur.com/VKOeFyS.png" width="25"> Althan Travis</td>
-                                <td>Wirecard for figma</td>
-                                <td class="text-end"><span class="fw-bolder">$0.99</span> <i class="fa fa-ellipsis-h  ms-2"></i></td>
-                                </tr>
-                                
-                                <tr>
-                                
-                                <td>14</td>
-                                <td>12 Oct, 21</td>
-                                <td><i class="fa fa-dot-circle-o text-danger"></i><span class="ms-1">Failed</span></td>
-                                <td><img src="https://i.imgur.com/nmnmfGv.png" width="25"> Tomo arvis</td>
-                                <td>Altroz furry</td>
-                                <td class="text-end"><span class="fw-bolder">$0.19</span> <i class="fa fa-ellipsis-h  ms-2"></i></td>
-                                </tr>
-                                
-                                
-                                <tr>
-                               
-                                <td>17</td>
-                                <td>1 Nov, 21</td>
-                                <td><i class="fa fa-check-circle-o green"></i><span class="ms-1">Paid</span></td>
-                                <td><img src="https://i.imgur.com/VKOeFyS.png" width="25"> Althan Travis</td>
-                                <td>Apple Macbook air</td>
-                                <td class="text-end"><span class="fw-bolder">$1.99</span> <i class="fa fa-ellipsis-h  ms-2"></i></td>
-                                </tr>
-                                
-                                
-                                <tr>
-                                
-                                <td>90</td>
-                                <td>19 Oct, 21</td>
-                                <td><i class="fa fa-check-circle-o green"></i><span class="ms-1">Paid</span></td>
-                                <td><img src="https://i.imgur.com/VKOeFyS.png" width="25"> Travis head</td>
-                                <td>Apple Macbook Pro</td>
-                                <td class="text-end"><span class="fw-bolder">$9.99</span> <i class="fa fa-ellipsis-h  ms-2"></i></td>
-                                </tr>
-                                
-                                
-                                <tr>
-                              
-                                <td>12</td>
-                                <td>1 Oct, 21</td>
-                                <td><i class="fa fa-check-circle-o green"></i><span class="ms-1">Paid</span></td>
-                                <td><img src="https://i.imgur.com/nmnmfGv.png" width="25"> Althan Travis</td>
-                                <td>Wirecard for figma</td>
-                                <td class="text-end"><span class="fw-bolder">$0.99</span> <i class="fa fa-ellipsis-h  ms-2"></i></td>
-                                </tr>
-                            
-                           
+                            <tbody id="cuerpoTablaRegistro">
+                                 <!--Acá vamos a mostar los datos de al bd-->   
 
-                </tbody> 
+                            </tbody> 
                  
             </table> 
            <!--poner paginacion de tabla-->                 
