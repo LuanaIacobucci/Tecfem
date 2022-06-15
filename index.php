@@ -1,3 +1,7 @@
+
+<?php 
+session_start();
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -18,10 +22,14 @@
     <title>Tecfem</title>
 </head>
 
-<body onload="interval()">
+<body>
   <?php
-    @include('header.php');
-   
+    if(isset($_SESSION["nombreUsuario"])){
+      @include('headerlogged.php');
+    
+    }else{
+        @include('header.php');
+    } 
     ?>
     <!--Div del cuerpo-->
   

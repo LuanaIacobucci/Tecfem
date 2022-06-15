@@ -1,3 +1,8 @@
+<?php 
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,8 +18,12 @@
 </head>
 <body>
 <?php
+if(isset($_SESSION["nombreUsuario"])){
+  @include('headerlogged.php');
+
+}else{
     @include('header.php');
-   
+}  
     ?>
 
     <div id="cuerpo" class="row">

@@ -9,31 +9,31 @@ session_start();
 
 if (isset($_POST["funcion"]) and $_POST["funcion"]=="agregarP"){
     $nombre=$_POST['nom'];
-   agregarProveedoresFavoritos($nombre);
+    $nomusuaria= $_SESSION['nombreUsuario'];
+   agregarProveedoresFavoritos($nombre,$conn, $nomusuaria);
 
  }
 
 
  if(isset($_GET["funcion"]) and $_GET["funcion"]=="listarP"){
    // $usuaria=$_GET['usr'];
-   echo  listarProveedoresFavoritos($conn);
+   $nomusuaria= $_SESSION['nombreUsuario'];
+   echo  listarProveedoresFavoritos($conn,$nomusuaria);
     
  }
 
 
  if(isset($_POST["funcion"]) and $_POST["funcion"]=="eliminarP"){
     // $usuaria=$_GET['usr'];
-    $nomUsuaria=$_POST['cliente'];
-    $nombreProveedor=$_POST['proveedor'];
-    echo  eliminarProveedoresFavoritos($nomUsuaria, $nombreProveedor);
+    $nomUsuaria=$_SESSION['nombreUsuario'];
+    $nombreProveedor=$_POST['nombre'];
+    echo  eliminarProveedoresFavoritos($conn,$nomUsuaria, $nombreProveedor);
      
   }
 
  
-    function agregarProveedoresFavoritos($nombreProveedor){
-        
-       // var $nomusuaria= $_SESSION['nombreUsuario'];
-       $nomusuaria="usuario1"; //solo para pruebas
+    function agregarProveedoresFavoritos($nombreProveedor,$conn,$nomusuaria){
+    
        $resp="";
                                             
      $sql="INSERT INTO `proveedoresfavoritos`(`nombreUsuarioCliente`, `nombreUsuarioProveedor`) VALUES ('$nomusuaria','$nombreProveedor')";
@@ -43,7 +43,7 @@ if (isset($_POST["funcion"]) and $_POST["funcion"]=="agregarP"){
                                   
                                     $resp="Insertado.";
                             } else {
-                                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                                   
                                     $resp="No insertado";
                             }
                            
@@ -52,35 +52,36 @@ if (isset($_POST["funcion"]) and $_POST["funcion"]=="agregarP"){
     }
 
 
- function eliminarProveedoresFavoritos($nomUsuaria, $nombreProveedor){
+ function eliminarProveedoresFavoritos($conn,$nomUsuaria, $nombreProveedor){
     $sql="DELETE FROM `proveedoresfavoritos` WHERE nombreUsuarioCliente='$nomUsuaria' and nombreUsuarioProveedor='$nombreProveedor'";
                                
         
-         if (mysqli_query($conn, $sql)) {
+         if (mysqli_query($conn,$sql)) {
                
                  $respu="Eliminado.";
          } else {
-                 echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                 
                  $respu="No Eliminado";
          }
 
          return $respu;
 }
 
- function listarProveedoresFavoritos($conn){
-  // $nomusuaria= $_SESSION['nombreUsuario'];
-    $nomusuaria= "usuario1";
-    $listaServicios=array();
-    $sql="SELECT * FROM `proveedoresfavoritos` WHERE  nombreUsuario='$nomusuaria'";
+ function listarProveedoresFavoritos($conn,  $nomusuaria){
+  
+   
+    $listaProveedoras=array();
+    
+   $sql="SELECT cliente.nombre, cliente.apellido, cliente.nombreUsuario FROM `cliente` CROSS JOIN `proveedoresfavoritos` ON cliente.nombreUsuario=proveedoresfavoritos.nombreUsuarioProveedor WHERE  proveedoresfavoritos.nombreUsuarioCliente='$nomusuaria'";
     $resultado=mysqli_query($conn,$sql);
-        if ($resultado->num_rows!=0){
+        if ($resultado){
             while($row =mysqli_fetch_assoc($resultado)){
                 $listaProveedoras[]=$row;
             }
 
         }
 
-        return json_encode($listaServicios);
+        return json_encode($listaProveedoras);
 }
 
 
@@ -88,33 +89,31 @@ if (isset($_POST["funcion"]) and $_POST["funcion"]=="agregarP"){
 
 if (isset($_POST["funcion"]) and $_POST["funcion"]=="agregarS"){
     $idServicio=$_POST['id'];
-   agregarServicioFavoritos($idServicio);
+    $nomusuaria= $_SESSION['nombreUsuario'];
+   agregarServicioFavoritos($idServicio,$conn, $nomusuaria);
 
  }
 
 
  if(isset($_GET["funcion"]) and $_GET["funcion"]=="listarS"){
-   // $usuaria=$_GET['usr'];
-   echo  listarServicioFavoritos($conn);
+  
+   $nomusuaria= $_SESSION['nombreUsuario'];
+   echo  listarServicioFavoritos($conn, $nomusuaria);
     
  }
 
 
  if(isset($_POST["funcion"]) and $_POST["funcion"]=="eliminarS"){
-    // $usuaria=$_GET['usr'];
-    $nomUsuaria=$_POST['cliente'];
+   $nomusuaria= $_SESSION['nombreUsuario'];
     $idservicio=$_POST['servicio'];
-    echo  eliminarServicioFavoritos($nomUsuaria, $idservicio);
+    echo  eliminarServicioFavoritos($nomusuaria, $idservicio, $conn);
      
   }
 
   
  
-    function agregarServicioFavoritos($idServicio){
-        
-       // var $nomusuaria= $_SESSION['nombreUsuario'];
-       $nomusuaria="usuario1"; //solo para pruebas
-       $resp="";
+    function agregarServicioFavoritos($idServicio,$conn, $nomusuaria){
+        $resp="";
                                             
      $sql="INSERT INTO `serviciosfavoritos`(`nombreUsuarioCliente`, `idServicio`) VALUES ('$nomusuaria','$idServicio')";
                                                   
@@ -132,7 +131,7 @@ if (isset($_POST["funcion"]) and $_POST["funcion"]=="agregarS"){
     }
 
 
- function eliminarServicioFavoritos($nomUsuaria, $idServicio){
+ function eliminarServicioFavoritos($nomUsuaria, $idServicio, $conn){
     $sql="DELETE FROM `serviciosfavoritos` WHERE nombreUsuarioCliente='$nomUsuaria' and idServicio='$idServicio'";
                                
         
@@ -147,9 +146,8 @@ if (isset($_POST["funcion"]) and $_POST["funcion"]=="agregarS"){
          return $respu;
 }
 
- function listarServicioFavoritos($conn){
-  // $nomusuaria= $_SESSION['nombreUsuario'];
-    $nomusuaria= "usuario1";
+ function listarServicioFavoritos($conn, $nomusuaria){
+
     $listaServicios=array();
     $sql="SELECT * FROM `serviciosfavoritos` WHERE nombreUsuario='$nomusuaria'";
     $resultado=mysqli_query($conn,$sql);

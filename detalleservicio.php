@@ -1,4 +1,7 @@
-<?php include('modelo\conectar.php'); ?>
+<?php 
+include('modelo/db.php');
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,8 +20,12 @@
 <!--header-->
 
 <?php
-    @include('header.php');
-   
+  if(isset($_SESSION["nombreUsuario"])){
+    @include('headerlogged.php');
+  
+  }else{
+      @include('header.php');
+  } 
     ?>
 
 <!--fin header--> 
@@ -40,8 +47,6 @@
 <br>
 <?php 
 
-//Conexión a la base de datos en PHPMyAdmin
-$conn = mysqli_connect("localhost","root","root","tecfem");
 //Genero la consulta sql para listar los datos 
 //realizo la consulta SQL
 $sql = "SELECT nombreUsuario,nombre,descripcion,costo,fechaPublicacion FROM servicio";

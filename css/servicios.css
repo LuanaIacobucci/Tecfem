@@ -1,7 +1,5 @@
 
-header{
-  color: rgb(169, 146, 175);
-}
+
 #cuerpo{
   height: 90%;
    margin-left: 8%;
@@ -23,6 +21,7 @@ header{
     border-radius: 2%;
 }
 
+/*
 
 h1{
   font-family: 'Bebas Neue',cursive;
@@ -45,27 +44,28 @@ h4{
   color:rgb(0,128,55);
   font-size: 40px;
 }
-
+*/
 p{
   font-family: Arial, Helvetica, sans-serif;
 }
 
 #tarjetaservicio:link {
     text-decoration: none;
-  color: rgb(125,35,182);
+ color: rgb(0,128,55);
   }
   
-  a:active {
+ /* a:active {
     text-decoration: underline;
-    color: rgb(125,35,182);
+    color: white;
+    
   }
 
   
 a:visited {
-    text-decoration: none;
-    color: rgb(125,35,182);
+  text-decoration: underline;
+  color: white;
   }
-
+*/
 .card{
   border: 2px solid purple;
 }

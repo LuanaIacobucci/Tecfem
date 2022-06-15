@@ -1,52 +1,3 @@
-<?php
-//@include('modelo\conectar.php');
-//require_once("cliente.php");
-// Iniciar la sesión
-//session_start();
-
-	// Crear una instancia del objeto:
-	//$objcliente = new Cliente();
-  //$objcliente->SetNombreUsuario(""); 
-  //$objcliente->setRut(""); 
-	//$objcliente->setNombre(""); 
-	//$objcliente->setApellido("");              
-      //$objemail->setEmail(""); 
-      //$objcontrasena->setContrasena("");     
-      //$objtipoCuenta->setTipocuenta("");      
-                                                  
-	// Variables de sesión:
-	//$_SESSION['usuario'] = $objcliente;
-
-//Consulta a la base de datos
-      //$nombreUsuario = _$POST['nombreUsuario'];
-      //$rut = _$POST['rut'];
-      //$nombre = _$POST['nombre'];
-      //$apellido = _$POST['apellido'];
-      //$email = $_POST['email'];
-      //$contrasena = $_POST['contrasena'];
-      //$tipocuenta = $_POST['tipoDeCuenta'];
-    
-//$conn = mysqli_connect("localhost","root","root","tecfem");
-
-//$sql = "SELECT cliente.nombreUsuario,cliente.nombre,cliente.apellido,cliente.contrasena,clienteemail.email,tipocuenta.tipoDeCuenta FROM 
-//cliente INNER JOIN clienteemail ON cliente.nombreUsuario = clienteemail.nombreUsuario INNER JOIN tipocuenta ON cliente.nombreUsuario 
-//WHERE rut = '$rut', nombreUsuario = '$nombreUsuario', $nombre='$nombre', $apellido='$apellido', $contrasena='contrasena', $tipocuenta = 'tipoDeCuenta'";
-  
-//$resultado = mysqli_query($conn, $sql);  
-
-//$filas = mysqli_num_rows($resultado);
-
-
-//echo "PÁGINA PRINCIPAL<br />";
-	//echo "================<p />";
-
-	// Mostrar información del objeto en la sesión:
-	//echo "NombreUsuario: [".$_SESSION['usuario']->getNombrecuenta()."]<br/>";
-	//echo "Email: [".$_SESSION['usuario']->getEmail()."]<p/>";
-?>
-
-
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -57,7 +8,9 @@
     <!-- Bootstrap CSS -->
     <link href="bootstrap-5.1.3-dist\css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
     <link rel="stylesheet" href="css\login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -175,7 +128,7 @@
     <!--Fin de footer -->
 
       <!--js de bootstap-->
-  <script src="\bootstrap-5.1.3-dist\js"></script>
+ 
     
   
   </body>
