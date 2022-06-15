@@ -441,6 +441,8 @@ function listarProveedora(){
                    
                     btnblog=document.createElement('button');
                     btnblog.classList.add('irBlog');
+                    btnblog.value=proveedora.nombreUsuario;
+
 
                     btncalifica=document.createElement('button');
                     btncalifica.classList.add('calificar');
@@ -546,6 +548,7 @@ function listarProveedora(){
                     
                         box.addEventListener('click', function handleClick(event) {
                          alert("Requiere configuración. xd");
+                         
                        
                         });
                        
@@ -557,7 +560,21 @@ function listarProveedora(){
                     btncalificarS.forEach(box => {
                     
                         box.addEventListener('click', function handleClick(event) {
-                         alert("Requiere configuración.");
+                            nombreProveedora=btnblog.val();
+                            $.ajax({
+                                url:"controlador\\controlador_cliente.php",
+                                method: 'POST',
+                                data: {funcion: 'irBlog',nombreUsuario: nombreProveedora},
+                                success: function(response){
+                                   console.log("te fuiste");
+                                },
+                                error: 
+                                function(error){
+                                    alert("Error");
+                                    console.log(error);
+                                }
+                                            
+                            });
                        
                         });
                        

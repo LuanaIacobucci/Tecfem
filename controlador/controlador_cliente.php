@@ -14,6 +14,13 @@ if (isset($_POST["funcion"]) and $_POST["funcion"]=="agregarP"){
 
  }
 
+ if (isset($_POST["funcion"]) and $_POST["funcion"]=="irBlog"){
+        $nombre=$_POST['nombreUsuario'];
+
+        header("Location:..\blog.php");
+    
+     }
+
 
  if(isset($_GET["funcion"]) and $_GET["funcion"]=="listarP"){
    // $usuaria=$_GET['usr'];
