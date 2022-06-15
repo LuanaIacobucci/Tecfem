@@ -64,6 +64,8 @@
 
         </section>
 
+        <?php include("graficos.php") ?>
+
         <section class="gallery" id="portafolio">
             <div class="contenedor" >
                 <h2 class="subtitulo" >Galería</h2>
@@ -87,6 +89,7 @@
         <?php include ("calificacion.php") ?>
        
         <?php include ("comentarios.php") ?>
+        <?php include ("rating.php") ?>
     
       
 
