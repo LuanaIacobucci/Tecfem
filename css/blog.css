@@ -23,7 +23,7 @@ font-family: 'Lato', sans-serif;
 
 .header{
     height: 65vh; /*100% de lo que ocupa la pantalla*/
-    background-image: linear-gradient(to top, rgba(152, 144, 227, 0.49) 0%, rgba(177, 244, 207, 0.495) 100%), url(img/banner1.jpg);
+    background-image: linear-gradient(to top, rgba(152, 144, 227, 0.49) 0%, rgba(177, 244, 207, 0.495) 100%), url(/banner1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position:center ;
