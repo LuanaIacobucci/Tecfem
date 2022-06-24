@@ -58,14 +58,14 @@
               <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
               <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
             </svg>
-           <label><input type="radio" id="cliente" value="cliente" name="tipocuenta">Cliente</label><br> 
+           <label><input type="radio"  value="cliente" name="tipocuenta">Cliente</label><br> 
         </div> <!----Fin Columna Cliente---->
         <div class="col"> <!---Columna Checkbox Proveedor de servicio--->
               <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="rgb(125,35,182)" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
             <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
             <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
           </svg>
-          <label><input type="radio" id="proveedor" value="proveedor" name="tipocuenta">Proveedor de Servicio</label><br>
+          <label><input type="radio" value="proveedor" name="tipocuenta">Proveedor de Servicio</label><br>
                 </div>
   </div> <!----Fin fila----->
 </form>
@@ -103,19 +103,20 @@
     <div class="row"> <!---Contenedor fila1----> 
   <p>Ingrese sus datos personales:</p>
     <div class="col">
+ 
         <label>RUT:</label>
-      <input type="text" name="rut" class="form-control" placeholder="Ingrese su rut">
+      <input id="rut" type="text" name="rut" class="form-control" placeholder="Ingrese su rut">
     </div>
     <div class="col">
     <label>Nombre:</label>
-    <input type="text" name="nombre" class="form-control" placeholder="Ingrese su nombre">
+    <input id="nombre" type="text" name="nombre" class="form-control" placeholder="Ingrese su nombre">
     </div>
   </div><!--Contenedor fin de la fila1 "row"-->
   <br>
   <div class="row"> <!--Contenedor fila2 "row"-->
     <div class="col">
         <label>Apellido:</label>
-      <input type="text" name="apellido" class="form-control" placeholder="Ingrese su apellido">
+      <input id="apellido" type="text" name="apellido" class="form-control" placeholder="Ingrese su apellido">
     </div>
     <div class="col"> 
     <label>Edad:</label>
@@ -170,14 +171,14 @@
     </div>
     <div class="col"> 
     <label>Nombre de Usuario:</label>
-    <input type="text" name="nombreUsuario" class="form-control" placeholder="Ingrese un nombre de usuario">
+    <input id="nombreUsuario" type="text" name="nombreUsuario" class="form-control" placeholder="Ingrese un nombre de usuario">
     </div>
   </div> <!--Fin contenedor fila5 "row"-->
   <br>
   <div class="row"> <!--Contenedor fila6 "row"-->
   <div class="col"> 
     <label>Contraseña:</label>
-    <input type="password" name="contrasena" class="form-control" placeholder="Ingrese su contraseña">
+    <input id="contrasena" type="password" name="contrasena" class="form-control" placeholder="Ingrese su contraseña">
     </div>
     <div class="col">
     <label class="form-label" for="customFile">Ingrese una imagen para su foto de perfil</label>
@@ -344,18 +345,18 @@
 </div><!--Fin columna 1 fila6-->
 </div> <!----Fin fila 6----->
 <br>
+
 </form>
 </div> <!---Fin ID servicios--->
 </div>    
 <!---Fin Prestación de servicios---->
 <br>
 <br>
-<div class="container">
-<div class="row"> 
-  <div class="col">
-  <a class="boton_enviarregistro" type="submit" name="enviar">Enviar</a> 
-</div>
-</div>
+
+  
+<button id="finishRegistro" class="boton_enviarregistro"  name="enviar">Enviar</button> 
+  <br>
+<br>
 </div>
 <br>
 <br>

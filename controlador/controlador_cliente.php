@@ -5,6 +5,45 @@
 
 session_start();
 
+//Crear una nueva usuaria--> Registro
+if (isset($_POST["funcion"]) and $_POST["funcion"]=="registrarse"){
+        $nombre=$_POST['nombre'];
+        $apellido=$_POST['apellido'];
+        $tipoCuenta=$_POST['tipoUsuario'];
+        $pass=$_POST['contrasena'];
+        $nombreUsario=$_POST['nombreusuario'];
+       
+
+       crearcuenta($nombreUsario,$conn, $pass, $tipoCuenta, $nombre, $apellido);
+    
+     }
+
+     function crearcuenta($nombreUsario,$conn, $pass, $tipoCuenta, $nombre, $apellido){
+        $resp="";
+                                            
+        $sql="INSERT INTO `cliente`(`nombreUsuario`, `nombre`, `apellido`, `contrasena`) VALUES ('$nombreUsario','$nombre','$apellido','$pass')";
+                                                     
+                              
+                               if (mysqli_query($conn, $sql)) {
+                                     
+                                       $resp="Insertado.";
+
+                                       $sql2="INSERT INTO `tipocuenta`(`nombreUsuario`, `tipoDeCuenta`) VALUES ('$nombreUsario','$tipoCuenta')";
+                                       if (mysqli_query($conn, $sql2)) {
+                                        $resp="Insertado completo.";
+                                       }else{
+                                        $resp="Insertado incompleto.";
+                                       }
+                               } else {
+                                      
+                                       $resp="No insertado";
+                               }
+                              
+                  
+           return $resp;
+     }
+    
+
 /**CRUD para lista de proveedores favoritos */
 
 if (isset($_POST["funcion"]) and $_POST["funcion"]=="agregarP"){
@@ -17,7 +56,10 @@ if (isset($_POST["funcion"]) and $_POST["funcion"]=="agregarP"){
  if (isset($_POST["funcion"]) and $_POST["funcion"]=="irBlog"){
         $nombre=$_POST['nombreUsuario'];
 
-        header("Location:..\blog.php");
+        //header("Location:..\blog.php");
+        Header("Location: ..\blog.php?user=".$nombre); //Redirecciona pasando el usuario
+        //Así debemos capturar en el blog
+        //$user = $_REQUEST['user'];
     
      }
 
