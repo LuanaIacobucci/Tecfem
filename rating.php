@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="container">
-    	<h1 class="mt-5 mb-5">Reseñas</h1>
+    	<h1 class="mt-5 mb-5" id="=reseñas">Reseñas</h1>
     	<div class="card">
     		<div class="card-header">Calificación</div>
     		<div class="card-body">

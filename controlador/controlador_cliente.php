@@ -51,6 +51,9 @@ if (isset($_POST["funcion"]) and $_POST["funcion"]=="agregarP"){
     $nomusuaria= $_SESSION['nombreUsuario'];
    agregarProveedoresFavoritos($nombre,$conn, $nomusuaria);
 
+
+
+
  }
 
  if (isset($_POST["funcion"]) and $_POST["funcion"]=="irBlog"){

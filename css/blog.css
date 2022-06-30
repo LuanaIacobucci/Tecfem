@@ -23,7 +23,7 @@ font-family: 'Lato', sans-serif;
 
 .header{
     height: 65vh; /*100% de lo que ocupa la pantalla*/
-    background-image: linear-gradient(to top, rgba(152, 144, 227, 0.49) 0%, rgba(177, 244, 207, 0.495) 100%), url(/banner1.jpg);
+    background-image: linear-gradient(to top, rgba(152, 144, 227, 0.79) 0%, rgba(177, 244, 207, 0.45) 100%), url(/Tecfem/img/banner1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position:center ;
@@ -58,15 +58,16 @@ font-family: 'Lato', sans-serif;
     position: fixed;
     top: 0;
     right: 0;
-    width: 30vw;
-    height: 100%;
-    background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+    width: 15vw;
+    height: 30%;
+    background-image: linear-gradient(-20deg, #e9defa 0%, #b5acfb 100%);
+    color: #764ba2;
     display: flex; 
     flex-direction: column; 
-    justify-content: space-evenly; /*espacio equitativamente haci abajo*/
+    justify-content: space-evenly; /*espacio equitativamente hacia abajo*/
     align-items: center;
-    transition:transform .3 ease-in-out;  /*aparicion del menu*/
-    transform: translate(100%);
+    transition:transform .3s ease-in-out;  /*aparicion del menu*/
+    transform: translate(80%);
     box-shadow: 0 0 6px rgba(0, 0,0, .5);
 }
 
@@ -121,6 +122,7 @@ font-family: 'Lato', sans-serif;
     width: auto;
     
 }
+
 
 /*.service{
     margin-bottom: 5px;
@@ -178,7 +180,7 @@ font-family: 'Lato', sans-serif;
     justify-content: center;
     align-items: center;
     transform: translate(100%);
-    transition: transform 2. ease-in-out; /**/
+    transition: transform 2.s ease-in-out; /**/
 }
 
 .show{
@@ -191,7 +193,7 @@ font-family: 'Lato', sans-serif;
     width: 60%;
     border-radius: 10px;
     transform: scale(0);
-    transition: transoform .3.2s; /*para transform*/
+    transition: transoform .3 .2s; /*para transform*/
 }
 
 .showImg{ /*clase se activa cuando se hace click a la imagen*/

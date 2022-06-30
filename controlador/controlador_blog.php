@@ -1,19 +1,21 @@
 <?php
-$conexion = mysqli_connect("localhost", "","", "bd_blog");
+$conexion = mysqli_connect("localhost", "root","root", "blog");
 
 $nombreapellido = $_POST["nombreapellido"];
 $fecha = $_POST["fecha"];
 $acercademi = $_POST["acercademi"];
+$archivo = $_POST["archivo"];
+
 
 if(!empty($nombreapellido) || !empty($fecha) || !empty($acercademi)){
     //
     $host ="localhost";
     $dbusername = "root";
-    $dbpasword = "";
+    $dbpasword = "root";
     $dbname = "blog";
     
     //Conexion con los datos que estan reflejados en la base datos 
-    $conn = new mysqli($host, $dbusername, $dbpasword, $dbname);
+    //$conn = new mysqli($host, $dbusername, $dbpasword, $dbname);
    //verificacion de error en la ultima conexion y veremos 
    //sifunciona con los datos disponibles con la BD
     if(mysqli_connect_error()){
@@ -23,6 +25,8 @@ if(!empty($nombreapellido) || !empty($fecha) || !empty($acercademi)){
     else{
 
     }
+
+    
 
 }
 else{
@@ -38,11 +42,13 @@ if($_FILES["archivo"]){
     $nombre_base = basename($_FILES["archivo"]["name"]);
     //agregar la hora en donde se agrego el archivo adjunto
     // junto al nombre del arvhivo
-    $nombre_final = date ("d-m-y"). "-". date("H-i-s"). "-". $nombre_base;
+    $nombre_final = date ("Y-m-d"). " a las ". date("H:i:s"). "-". $nombre_base;
     //
-    $insertar = "INSERT INTO bd_blog (nombreapellido, fecha, acercademi, archivo) VALUES ('$nombreapellido', '$fecha' , '$acercademi', '$nombre_final')";
+   // $insertar = "INSERT INTO bd_blog (nombreapellido, fecha, acercademi, archivo) VALUES ('$nombreapellido', '$fecha' , 'archivo','$acercademi', '$nombre_final')";
 
-    $resultado = mysqli_query($conexion, $insertarSQL);
+   $insertar = "INSERT INTO `bd_blog`(`id`, `nombreapellido`, `fecha`, `acercademi`, `archivo`) VALUES ('$nombreapellido', '$fecha' , 'archivo','$acercademi', '$nombre_final')";
+
+    $resultado = mysqli_query($conexion, $insertar);
     if ($resultado){
         echo "<script> alert('Se ha creado su Blog'); window.location='blog.php'</script>";
     }
@@ -52,5 +58,6 @@ if($_FILES["archivo"]){
 
 }
 
+header("Location: ../blog.php");
 
 ?>

@@ -1,0 +1,67 @@
+* {
+box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: sans-serif;
+   background: plum;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /*background-image: url("/Tecfem/img/leaves.moradas.jpg");*/
+}
+
+
+.form-register{
+    width: 95%;
+    max-width: 50%;
+    background: whitesmoke;
+    padding: 20px;
+}
+
+.fomr__title{
+    margin-top: 0;
+    font-size: 1.7em;
+    text-align: center;
+    
+}
+
+.form__label, .form__input{
+    display: block;
+}
+
+.form__label{
+    width: 30%;
+}
+
+.form__input{
+    width: 70%;
+   
+}
+
+.form__file{
+    font-size: 1em;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.container--flex{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.btn_blog{
+    width: 100%;
+    background: rgb(153, 46, 141);
+    padding: 10px;
+    border-radius: 5px;
+    color: aliceblue;
+    font-size: 1em;
+    margin-top: 10px;
+    cursor: pointer;
+
+}

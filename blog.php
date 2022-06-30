@@ -10,8 +10,7 @@
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconectar" href="https://fonts.gstatic.com">
-    <link href="https: //fonts.googleapis.com/css2? family= Lato:ital,wght@0,100;0,400;1,400 & display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a437438fcd.js" crossorigin="anonymous"></script>
+    
 
 
     <title>Blog</title>
@@ -20,24 +19,27 @@
 
     <header class="header" id="inicio" >
         <img src="img/icono.menu.svg" alt="icono menu" class="menu">
-        <nav class="menu-navegacion">
+        <nav class="menu-navegacion spread " >
         <a href="#inicio">Inicio</a>
-        <a href="#servicio">Servicio</a>
+        <a href="#servicio">Acerca De Mi </a>
         <a href="#portafolio">Galeria</a>
-        <a href="#expertos">Testimonios</a>
-        <a href="#contacto">Contacto</a>
+        <a href="#contacto">Reseñas</a>
     </nav>
 
+<!--------PAra mostrar los datos desde la base de datos-------->
+
+
+
     <div class="contenedor head" >
-        <h1 class="titulo" >Bienvenida a mi Blog</h1>
+        <h1 class="titulo" >Bienvenida a mi Blog </h1>
+  
         <p class="copy" >Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         
-        <i class="fa-duotone fa-heart"></i>
+     
     </div>
     
     </header>
 
-    <div><i class="fa-duotone fa-heart"></i></div>
 
    
 
@@ -69,7 +71,7 @@
 
         </section>
 
-        <?php include("graficos.php") ?>
+        <!--------------php include("graficos.php") ?>-------->
 
         <section class="gallery" id="portafolio">
             <div class="contenedor" >
@@ -86,21 +88,18 @@
 
         </section>
         
-        <!--<section class="imagen-light">
+        <section class="imagen-light">
             <img src="img/icono.x.svg" alt="cerrar" class="cerrar">
             <img src="img/foto.jpg" alt="" class="agregar-imagen" >
-        </section>--->
-
-
-        <!----
-        php include ("calificacion.php") ?>
        
-        php include ("comentarios.php") ?>
-        ---->
+
+        </section>
+
+
+
         <?php include ("rating.php") ?>
     
-      
-
+  
     </main>
     
     <footer id="contacto" >
