@@ -1,52 +1,97 @@
-function TipoCuenta() {
-  var x = document.getElementById("tipocuenta");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
+$(document).ready(function(){
+  var tipoCuenta="";
+  //Cuando se toque tipo de cuenta se abre el tipo de cuenta
+  $("#ContenedorCuenta").click(function() {
+    $("#tipocuenta").show();
+  });
+  //Si preciona siguiente 
+  $("#buttonSeguir").click(function() {
+   
+  if( $('input:radio[name=tipocuenta]:checked').is(':checked') ){
+    tipoCuenta=$('input:radio[name=tipocuenta]:checked').val();
+    
+   
+      $("#datospersonales").show();
+    
+
+    
+}
+else{
+  alert("Debe elegir tipo de cuenta para continuar");
 }
 
-function DatosPersonales() {
-  var x = document.getElementById("datospersonales");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
+
+    
+  });
+ 
+  $("#buttonSeguir2").click(function() {
+//Validar de que haya completado todos los campos
+nombreUsuario=$('#nombreUsuario').val();
+contra=$('#contrasena').val();
+fechanacimiento=$('#edad').val();
+nombre=$('#nombre').val();
+apellido=$('#apellido').val();
+comuna=$('#comuna').val();
+direccion=$('#direccion').val();
+rut=$('#rut').val();
+region=$('#region').val();
+telefono=$('#telefono').val();
+fotoperfil=$('#imgperfil').val();
+catestem=$('input:radio[name=area]:checked').val();
+correo=$('#email').val();
+
+if(nombreUsuario!=undefined && contra!=undefined && fechanacimiento!=undefined && nombre!=undefined && apellido!=undefined && comuna!=undefined && direccion!=undefined && rut!=undefined && region!=undefined && telefono!=undefined && fotoperfil!=undefined && catestem!=undefined && correo!=undefined){
+  if (tipoCuenta=="proveedor"){
+    $("#servicios").show();
+  }else{
+    alert("Ya ha completado todos los campos necesarios para su tipo de usuario. Porfavor envie sus datos.");
   }
+
+}else{
+  alert("Rellene todos los campos por favor");
 }
 
-function Servicios() {
-  var x = document.getElementById("servicios");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-  
-  $(document).ready(function(){
-    $('[data-toggle="popover"]').popover();
-  
+});
 
 
   $('#finishRegistro').click(function(){
-alert("wenas");
+
     //Capturamos valores
           //Falta validarlos!!!!!
-          let nombreUsuario=$('#nombreUsuario').val();
-          let contrasenna=$('#contrasena').val(); 
-          let tipo=$("input[name='tipocuenta']:checked").val();
-          let nombre=$('#nombre').val();
-          let apellido=$('#apellido').val();
+          nombreUsuario=$('#nombreUsuario').val();
+          contra=$('#contrasena').val();
+          fechanacimiento=$('#edad').val();
+          nombre=$('#nombre').val();
+          apellido=$('#apellido').val();
+          comuna=$('#comuna').val();
+          direccion=$('#direccion').val();
+          rut=$('#rut').val();
+          region=$('#region').val();
+          telefono=$('#telefono').val();
+          fotoperfil=$('#imgperfil').val();
+          catestem=$('input:radio[name=area]:checked').val();
+          correo=$('#email').val();
+
+          //si es proveedora capturamos sobre lso servicios
+          if (tipoCuenta=="proveedor"){
+            profesion=$('#profesion').val();
+           desc=$('#descripcion').val();
+            cert=$('#Certificaciones').val();
+            gradAcad=$('#descGradoAcad').val();
+            excel=$('#excel').val();
+            ofi=$('#ofimatica').val();
+           
+
+          }
+
   $.ajax({
     url:"controlador\\controlador_cliente.php",
     method: 'POST',
-    data: {funcion: 'registrarse',nombreusuario:nombreUsuario, contrasena: contrasenna, tipoUsuario:tipo, nombre:nombre,apellido:apellido},
+    data: {funcion: 'registrarse',nombreusuario:nombreUsuario, contrasena: contra, tipoUsuario:tipoCuenta, nombre:nombre,apellido:apellido, nacimiento:fechanacimiento,comuna:comuna,direccion:direccion,rut:rut,region:region,telefono:telefono,correo:correo},
     contentType: 'json; charset=utf-8',
     success: function(response){
         try {
-            alert("Agregado "+response);
+            console.log(response);
           } catch (err) {
           
             console.log('Error: ', err.message);
@@ -60,6 +105,7 @@ alert("wenas");
 
 
     });
+  
 
   }); 
 });

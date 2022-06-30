@@ -374,9 +374,13 @@ function listarProveedora(){
             data: {funcion: 'listarP'},
             contentType: 'json; charset=utf-8',
             success: function(response){
-              
+            try{
                 var listaProveedores = JSON.parse(response);
                 console.log(JSON.parse(response));
+
+            }catch (err){
+                console.log(err);
+            }
                 let tarjetas=document.querySelector('#mostrartarjetasProveedora');
                   tarjetas.innerHTML='';
 
