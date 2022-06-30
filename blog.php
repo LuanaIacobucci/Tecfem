@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,9 +11,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconectar" href="https://fonts.gstatic.com">
     <link href="https: //fonts.googleapis.com/css2? family= Lato:ital,wght@0,100;0,400;1,400 & display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a437438fcd.js" crossorigin="anonymous"></script>
 
 
-    <title>Document</title>
+    <title>Blog</title>
 </head>
 <body>
 
@@ -29,16 +32,18 @@
         <h1 class="titulo" >Bienvenida a mi Blog</h1>
         <p class="copy" >Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         
-        <form action='destroy.php'>
-        <input type="submit" name="destroysession" value="Cerrar sesion"/>
-        </form>
-        <!---<a href="destroy.php" > Cerrar sesion</a>-->
-
+        <i class="fa-duotone fa-heart"></i>
     </div>
+    
     </header>
+
+    <div><i class="fa-duotone fa-heart"></i></div>
+
+   
 
     <!------Contenido dentro del main---------->
     <main>
+    
         <section class="contenedor" id="servicio">
             <h2 class="subtitulo" >Acerca de Mi</h2>
             <div class="contenedor-servicio" >
@@ -86,9 +91,12 @@
             <img src="img/foto.jpg" alt="" class="agregar-imagen" >
         </section>--->
 
-        <?php include ("calificacion.php") ?>
+
+        <!----
+        php include ("calificacion.php") ?>
        
-        <?php include ("comentarios.php") ?>
+        php include ("comentarios.php") ?>
+        ---->
         <?php include ("rating.php") ?>
     
       
