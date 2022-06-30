@@ -18,7 +18,6 @@ if (isset($_POST["funcion"]) and $_POST["funcion"]=="agregar"){
     $categoria=$_POST['cate'];
     $usuaria=$_SESSION['nombreUsuario']; 
  
-    echo $usuaria;
 
         $id=0;
       $validacion=false;
